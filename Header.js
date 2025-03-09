@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { FaBars } from 'react-icons/fa'; // Hamburger icon
+import { FaBars } from 'react-icons/fa'; // Hamburger and close icons
 
 const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false); // State to toggle mobile navigation
@@ -60,30 +60,30 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobile Navigation (Toggled on click of hamburger icon) */}
-      <div
-        className={`${
-          isNavOpen ? 'block' : 'hidden'
-        } md:hidden flex flex-col items-start bg-white shadow-md absolute w-full top-16 left-10 py-4 transition-all duration-300 ease-in-out z-10 pl-6`}
-        >
-        <Link to="/" className="font-bold text-lg hover:text-green-600 mb-4" onClick={toggleNav}>
-          Home
-        </Link>
-        <Link to="/about-us" className="font-bold text-lg hover:text-green-600 mb-4" onClick={toggleNav}>
-          About Us
-        </Link>
-        <Link to="/what-we-do" className="font-bold text-lg hover:text-green-600 mb-4" onClick={toggleNav}>
-          What We Do
-        </Link>
-        <Link to="/get-involved" className="font-bold text-lg hover:text-green-600 mb-4" onClick={toggleNav}>
-          Get Involved
-        </Link>
-        <Link to="/donate">
-          <button className="bg-green-600 text-white py-2 px-6 rounded-lg text-lg hover:bg-green-800" onClick={toggleNav}>
-            Donate
-          </button>
-        </Link>
-      </div>
+    {/* Mobile Navigation (Toggled on click of hamburger icon) */}
+    <div
+      className={`${
+        isNavOpen ? 'block' : 'hidden'
+      } md:hidden flex flex-col items-end bg-white shadow-md absolute w-full top-16 left-0 py-4 transition-all duration-300 ease-in-out z-10`}
+    >
+      <Link to="/" className="font-bold text-lg hover:text-green-600 mb-4" onClick={toggleNav}>
+        Home
+      </Link>
+      <Link to="/about-us" className="font-bold text-lg hover:text-green-600 mb-4" onClick={toggleNav}>
+        About Us
+      </Link>
+      <Link to="/what-we-do" className="font-bold text-lg hover:text-green-600 mb-4" onClick={toggleNav}>
+        What We Do
+      </Link>
+      <Link to="/get-involved" className="font-bold text-lg hover:text-green-600 mb-4" onClick={toggleNav}>
+        Get Involved
+      </Link>
+      <Link to="/donate">
+        <button className="bg-green-600 text-white py-2 px-6 rounded-lg text-lg hover:bg-green-800" onClick={toggleNav}>
+          Donate
+        </button>
+      </Link>
+    </div>
     </header>
   );
 };
