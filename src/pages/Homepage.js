@@ -48,9 +48,12 @@ const Homepage = () => {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-16 max-w-7xl mx-auto">
-          <img src="/weo/images/vision.webp" alt="Our Vision" className="w-full rounded-lg shadow-lg" />
-          <div className="flex flex-col justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-7xl mx-auto">
+          {/* Image first on mobile */}
+          <img src="/weo/images/vision.webp" alt="Our Vision" className="w-full rounded-lg shadow-lg order-1 md:order-0" />
+          
+          {/* Content */}
+          <div className="flex flex-col justify-center order-0 md:order-1">
             <h2 className="text-4xl md:text-6xl font-bold mb-4 text-gray-800">Our Vision</h2>
             <p className="text-lg text-gray-600 mb-8">We envision a future where nature and humanity coexist in harmony, ensuring clean air, pure water, and a thriving planet for generations to come.</p>
           </div>
@@ -59,20 +62,24 @@ const Homepage = () => {
 
       {/* CSR */}
       <motion.section 
-        id="csr-section" 
-        className="py-16 md:py-32 bg-white flex justify-center items-center text-left px-8 sm:px-16 relative"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-      >
-        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-16 max-w-7xl mx-auto">
-          <div className="flex flex-col justify-center">
-            <h2 className="text-4xl md:text-6xl font-bold mb-4 text-gray-800">Corporate Social Responsibility (CSR)</h2>
-            <p className="text-lg text-gray-600 mb-8">Collaborating with companies to implement green initiatives, reduce carbon footprints, and create a lasting environmental impact.</p>
-          </div>
-          <img src="/weo/images/csr.jpg" alt="CSR" className="w-full rounded-lg shadow-lg" />
+      id="csr-section" 
+      className="py-16 md:py-32 bg-white flex justify-center items-center text-left px-8 sm:px-16 relative"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-7xl mx-auto">
+        {/* Content first on mobile */}
+        <div className="flex flex-col justify-center order-0 md:order-1">
+          <h2 className="text-4xl md:text-6xl font-bold mb-4 text-gray-800">Corporate Social Responsibility (CSR)</h2>
+          <p className="text-lg text-gray-600 mb-8">Collaborating with companies to implement green initiatives, reduce carbon footprints, and create a lasting environmental impact.</p>
         </div>
-      </motion.section>
+
+        {/* Image */}
+        <img src="/weo/images/csr.jpg" alt="CSR" className="w-full rounded-lg shadow-lg order-1 md:order-0" />
+      </div>
+    </motion.section>
+
 
       {/* Our Team */}
       <motion.section 

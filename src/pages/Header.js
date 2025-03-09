@@ -64,7 +64,7 @@ const Header = () => {
       <div
         className={`${
           isNavOpen ? 'block' : 'hidden'
-        } md:hidden flex flex-col items-start bg-white shadow-md absolute w-full top-16 left-10 py-4 transition-all duration-300 ease-in-out z-10 pl-6`}
+        } md:hidden flex flex-col items-start bg-white shadow-md absolute w-full top-16 left-10 py-4 transition-all duration-300 ease-in-out z-50 pl-6`}
         >
         <Link to="/" className="font-bold text-lg hover:text-green-600 mb-4" onClick={toggleNav}>
           Home
