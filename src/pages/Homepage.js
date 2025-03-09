@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 import Layout from './Layout';
 
 const images = [
-  '/images/hero1.jpg',
-  '/images/hero2.jpg'
+  '/weo/images/hero1.jpg',
+  '/weo/images/hero2.jpg'
 ];
 
 const Homepage = () => {
@@ -26,7 +26,7 @@ const Homepage = () => {
         style={{ backgroundImage: `url(${images[currentImageIndex]})` }}
       >
         <div className="bg-black bg-opacity-50 p-12 rounded-lg">
-          <h1 className="text-7xl font-extrabold mb-6">Let's Unite to Protect Our Environment</h1>
+          <h1 className="text-7xl font-extrabold mb-6">Let Us Unite to Protect Our Environment</h1>
           <p className="text-3xl">Save Nature, Save Future</p>
         </div>
 
@@ -50,7 +50,7 @@ const Homepage = () => {
               transition={{ duration: 1 }}
             >
               <div className="grid grid-cols-2 gap-16 max-w-7xl mx-auto">
-                <img src="/images/vision.webp" alt="Our Vision" className="w-full rounded-lg shadow-lg" />
+                <img src="/weo/images/vision.webp" alt="Our Vision" className="w-full rounded-lg shadow-lg" />
                 <div className="flex flex-col justify-center">
                   <h2 className="text-6xl font-bold mb-4 text-gray-800">Our Vision</h2>
                   <p className="text-lg text-gray-600 mb-8">We envision a future where nature and humanity coexist in harmony, ensuring clean air, pure water, and a thriving planet for generations to come.</p>
@@ -71,7 +71,7 @@ const Homepage = () => {
                   <h2 className="text-6xl font-bold mb-4 text-gray-800">Corporate Social Responsibility (CSR)</h2>
                   <p className="text-lg text-gray-600 mb-8">Collaborating with companies to implement green initiatives, reduce carbon footprints, and create a lasting environmental impact.</p>
                 </div>
-                <img src="/images/csr.jpg" alt="CSR" className="w-full rounded-lg shadow-lg" />
+                <img src="/weo/images/csr.jpg" alt="CSR" className="w-full rounded-lg shadow-lg" />
               </div>
             </motion.section>
 
@@ -84,7 +84,7 @@ const Homepage = () => {
         transition={{ duration: 1 }}
       >
         <div className="grid grid-cols-2 gap-16 max-w-7xl mx-auto">
-          <img src="/images/ourteam.jpeg" alt="Our Team" className="w-full rounded-lg shadow-lg" />
+          <img src="/weo/images/ourteam.jpeg" alt="Our Team" className="w-full rounded-lg shadow-lg" />
           <div className="flex flex-col justify-center">
             <h2 className="text-6xl font-bold mb-4 text-gray-800">Meet Our Team</h2>
             <p className="text-lg text-gray-600 mb-8">We come from diverse backgrounds and have varied skills and expertise, but are united by our common love for nature.</p>

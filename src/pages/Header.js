@@ -12,10 +12,10 @@ const Header = () => {
           {/* Always show the logo in the navbar, wrap it in a Link to go home */}
           <Link to="/">
             <img
-              src="/images/logo.png"
+              src="/weo/images/logo.png"
               alt="WEO Logo"
-              className="h-12 w-auto"
-              style={{ maxWidth: '250px' }}
+              className="h-16 w-auto"
+              style={{ maxWidth: '500px' }}
             />
           </Link>
 

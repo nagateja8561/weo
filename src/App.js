@@ -1,4 +1,3 @@
-// App.js
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Homepage from './pages/Homepage';
@@ -10,7 +9,7 @@ import Donate from './pages/Donate';
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/weo">
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/about-us" element={<AboutUs />} />
