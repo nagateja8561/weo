@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Homepage from './pages/Homepage';
+import AboutUs from './pages/AboutUs';
+import Team from './pages/Team';
+import WhatWeDo from './pages/WhatWeDo';
+import GetInvolved from './pages/GetInvolved';
+import Donate from './pages/Donate';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/team" element={<Team />} />
+        <Route path="/what-we-do" element={<WhatWeDo />} />
+        <Route path="/get-involved" element={<GetInvolved />} />
+        <Route path="/donate" element={<Donate />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
