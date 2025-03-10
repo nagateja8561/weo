@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 import Homepage from './pages/Homepage';
 import AboutUs from './pages/AboutUs';
 import Team from './pages/Team';
@@ -7,10 +8,12 @@ import WhatWeDo from './pages/WhatWeDo';
 import GetInvolved from './pages/GetInvolved';
 import Donate from './pages/Donate';
 
-const App = () => {
+const AnimatedRoutes = () => {
+  const location = useLocation();
+
   return (
-    <Router basename="/weo">
-      <Routes>
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Homepage />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/team" element={<Team />} />
@@ -18,8 +21,14 @@ const App = () => {
         <Route path="/get-involved" element={<GetInvolved />} />
         <Route path="/donate" element={<Donate />} />
       </Routes>
-    </Router>
+    </AnimatePresence>
   );
 };
+
+const App = () => (
+  <Router basename="/weo">
+    <AnimatedRoutes />
+  </Router>
+);
 
 export default App;
