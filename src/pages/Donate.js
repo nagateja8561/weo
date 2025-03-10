@@ -1,9 +1,11 @@
 // AboutUs.js
 import React from 'react';
+import PageTransition from './PageTransition';
 import Layout from './Layout';
 
 const AboutUs = () => {
   return (
+    <PageTransition>
     <Layout>
       <div className="py-32 text-center text-gray-800">
         <h1 className="text-6xl font-bold">Donate</h1>
@@ -11,6 +13,7 @@ const AboutUs = () => {
         {/* Additional about us content */}
       </div>
     </Layout>
+    </PageTransition>
   );
 };
 

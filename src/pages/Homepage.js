@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import PageTransition from './PageTransition';
 import Layout from './Layout';
 
 const images = [
@@ -19,6 +20,7 @@ const Homepage = () => {
   }, []);
 
   return (
+    <PageTransition>
     <Layout>
       <motion.section 
         className="h-screen bg-cover bg-center flex flex-col items-center justify-center text-center text-white relative transition-all duration-1000"
@@ -102,6 +104,7 @@ const Homepage = () => {
         </div>
       </motion.section>
     </Layout>
+    </PageTransition>
   );
 };
 
