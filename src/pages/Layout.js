@@ -2,7 +2,7 @@
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
-import SocialIcons from './SocialIcons';
+// import SocialIcons from './SocialIcons';
 
 const Layout = ({ children }) => {
   return (
@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
       <Header />
       {children}
       <Footer />
-      <SocialIcons />
+      {/* <SocialIcons /> */}
     </div>
   );
 };
