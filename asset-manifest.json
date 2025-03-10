@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/weo/static/css/main.304abd15.css",
-    "main.js": "/weo/static/js/main.56c7dc4f.js",
+    "main.css": "/weo/static/css/main.512207b2.css",
+    "main.js": "/weo/static/js/main.ec3d8828.js",
     "static/js/453.d50adc07.chunk.js": "/weo/static/js/453.d50adc07.chunk.js",
     "index.html": "/weo/index.html",
-    "main.304abd15.css.map": "/weo/static/css/main.304abd15.css.map",
-    "main.56c7dc4f.js.map": "/weo/static/js/main.56c7dc4f.js.map",
+    "main.512207b2.css.map": "/weo/static/css/main.512207b2.css.map",
+    "main.ec3d8828.js.map": "/weo/static/js/main.ec3d8828.js.map",
     "453.d50adc07.chunk.js.map": "/weo/static/js/453.d50adc07.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.304abd15.css",
-    "static/js/main.56c7dc4f.js"
+    "static/css/main.512207b2.css",
+    "static/js/main.ec3d8828.js"
   ]
 }
