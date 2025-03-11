@@ -32,42 +32,59 @@ const Homepage = () => {
     <PageTransition>
       <Layout>
         {/* Hero Section */}
-        <motion.section 
-          className="h-screen bg-cover bg-center flex flex-col items-center justify-center text-center text-white relative"
-          style={{ backgroundImage: `url(${images[currentImageIndex]})` }}
-          initial="hidden"
-          animate="visible"
-        >
-          <motion.div
-            className="bg-black bg-opacity-50 p-12 rounded-lg"
-            variants={fadeIn}
-            custom={0.5}
-          >
-            <motion.h1 className="text-5xl md:text-7xl font-extrabold mb-6" variants={fadeIn} custom={1}>
-              Let Us Unite to Protect Our Environment
-            </motion.h1>
-            <motion.p className="text-xl md:text-3xl" variants={fadeIn} custom={1.5}>
-              Save Nature, Save Future
-            </motion.p>
-          </motion.div>
+        <motion.section
+  className="relative w-full flex flex-col md:flex-row items-center justify-center text-white"
+  initial="hidden"
+  animate="visible"
+>
+  {/* Image Section */}
+  <div className="relative w-full h-[60vh] md:h-screen">
+    <img
+      src={images[currentImageIndex]}
+      alt="Background"
+      className="w-full h-full object-cover"  // Ensure full cover on desktop
+    />
 
-          {/* Dots */}
-          <motion.div 
-            className="absolute bottom-8 flex space-x-3"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.5 }}
-          >
-            {images.map((_, index) => (
-              <span 
-                key={index} 
-                className={`h-4 w-4 rounded-full transition-all duration-300 ${
-                  index === currentImageIndex ? 'bg-white' : 'bg-gray-500'
-                }`}
-              />
-            ))}
-          </motion.div>
-        </motion.section>
+    {/* Dots Navigation - Positioned on top of the image */}
+    <motion.div
+      className="absolute bottom-8 flex space-x-3 z-10 w-full justify-center"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 1.5 }}
+    >
+      {images.map((_, index) => (
+        <span
+          key={index}
+          className={`h-4 w-4 rounded-full transition-all duration-300 ${index === currentImageIndex ? 'bg-white' : 'bg-gray-500'}`}
+        />
+      ))}
+    </motion.div>
+  </div>
+
+  {/* Text Section (Overlay Text for Desktop and Below Image for Mobile) */}
+  <motion.div
+    className="flex flex-col items-center justify-center text-center p-6 sm:p-12 bg-black bg-opacity-40 md:bg-opacity-50 z-10 w-full md:absolute md:inset-0 md:bottom-0 md:text-left md:flex-row md:justify-start md:p-8 mt-[-20vh] md:mt-0"  // Adjusted margin-top for mobile
+    variants={fadeIn}
+    custom={0.5}
+  >
+    <motion.div className="text-center md:text-left">
+      <motion.h1 className="text-3xl sm:text-4xl md:text-7xl font-extrabold mb-6" variants={fadeIn} custom={1}>
+        Let Us Unite to Protect Our Environment
+      </motion.h1>
+      <motion.p className="text-lg sm:text-xl md:text-3xl" variants={fadeIn} custom={1.5}>
+        Save Nature, Save Future
+      </motion.p>
+    </motion.div>
+  </motion.div>
+
+</motion.section>
+
+
+
+
+
+
+
 
         {/* Our Vision Section */}
         <motion.section 
