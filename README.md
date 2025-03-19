@@ -21,6 +21,8 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ### `npm run build`
 
+https://api.waqi.info/feed/here/?token=ec40e7ffaa83d7bb949f27038a04637bb6cb14fc
+
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 

@@ -18,7 +18,7 @@ const Header = () => {
             <img
               src="/weo/images/logo.png"
               alt="WEO Logo"
-              className="h-16 w-auto"
+              className="h-14 w-auto"
               style={{ maxWidth: '500px' }}
             />
           </Link>

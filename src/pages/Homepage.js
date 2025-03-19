@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import PageTransition from './PageTransition';
 import Layout from './Layout';
+import AQISection from './AQISection';
 
 const images = [
   '/weo/images/hero1.jpg',
@@ -31,6 +32,9 @@ const Homepage = () => {
   return (
     <PageTransition>
       <Layout>
+         {/* AQI Section - Placed on top of the page */}
+         <AQISection />  {/* Insert AQISection here */}
+         
         {/* Hero Section */}
         <motion.section
           className="relative w-full flex flex-col md:flex-row items-center justify-center text-white"
