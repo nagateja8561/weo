@@ -2,58 +2,56 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const AQISection = () => {
-  const [aqiData, setAqiData] = useState(null);
-  const [pollutionData, setPollutionData] = useState(null);
+  const [hyderabadAQI, setHyderabadAQI] = useState(null);
+  const [indiaAQI, setIndiaAQI] = useState(null);
+  const [hyderabadData, setHyderabadData] = useState(null);
+  const [indiaData, setIndiaData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const fetchAQI = async () => {
-    setLoading(true);
-    setError(null);
+  const fetchAQI = async (city, setAQI, setData) => {
     try {
-      // Use the correct AQICN endpoint for Hyderabad
       const response = await axios.get(
-        'https://api.waqi.info/feed/hyderabad/?token=ec40e7ffaa83d7bb949f27038a04637bb6cb14fc'
+        `https://api.waqi.info/feed/${city}/?token=ec40e7ffaa83d7bb949f27038a04637bb6cb14fc`
       );
 
-      // Log the full response from the API
-      console.log('API Response:', response);
-
-      if (response && response.data && response.data.data) {
+      if (response?.data?.data) {
         const data = response.data.data;
-        setAqiData(data.aqi);  // Extract AQI value
-        setPollutionData({
+        setAQI(data.aqi);
+        setData({
           pm10: data.iaqi.pm10?.v ? data.iaqi.pm10.v.toFixed(1) : 'N/A',
           pm2_5: data.iaqi.pm25?.v ? data.iaqi.pm25.v.toFixed(1) : 'N/A',
           o3: data.iaqi.o3?.v ? data.iaqi.o3.v.toFixed(1) : 'N/A',
           no2: data.iaqi.no2?.v ? data.iaqi.no2.v.toFixed(1) : 'N/A',
           so2: data.iaqi.so2?.v ? data.iaqi.so2.v.toFixed(1) : 'N/A',
           co: data.iaqi.co?.v ? data.iaqi.co.v.toFixed(1) : 'N/A',
-          temperature: data.iaqi.t?.v ? data.iaqi.t.v.toFixed(1) : 'N/A',  // Rounded temperature
-          humidity: data.iaqi.h?.v ? data.iaqi.h.v.toFixed(1) : 'N/A',    // Rounded humidity
+          temperature: data.iaqi.t?.v ? data.iaqi.t.v.toFixed(1) : 'N/A',
+          humidity: data.iaqi.h?.v ? data.iaqi.h.v.toFixed(1) : 'N/A',
         });
       } else {
         setError('Invalid data received from API');
       }
     } catch (err) {
-      console.error("Error fetching AQI:", err);
-      setError('Failed to fetch AQI data. Please check your internet connection.');
+      setError('Failed to fetch AQI data.');
     }
     setLoading(false);
   };
 
   useEffect(() => {
-    fetchAQI();
+    setLoading(true);
+    fetchAQI('hyderabad', setHyderabadAQI, setHyderabadData);
+    fetchAQI('india', setIndiaAQI, setIndiaData);
 
     const interval = setInterval(() => {
-      fetchAQI();
-    }, 300000);  // Refresh every 5 minutes
+      fetchAQI('hyderabad', setHyderabadAQI, setHyderabadData);
+      fetchAQI('india', setIndiaAQI, setIndiaData);
+    }, 300000);
 
     return () => clearInterval(interval);
   }, []);
 
   const getAQICategory = (aqi) => {
-    if (!aqi) return 'Unknown';
+    if (!aqi) return { category: 'Unknown', color: 'bg-gray-400', textColor: 'text-gray-800' };
     switch (true) {
       case aqi <= 50:
         return { category: 'Good', color: 'bg-green-500', textColor: 'text-green-900' };
@@ -70,60 +68,39 @@ const AQISection = () => {
     }
   };
 
-  const { category, color, textColor } = getAQICategory(aqiData);
-
   return (
-    <div className="bg-gray-50 py-16 px-8 sm:px-16">
-      <div className="max-w-7xl mx-auto text-center">
-        <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-800">Air Quality Index (AQI) - Hyderabad</h2>
-        {loading ? (
-          <p className="text-xl text-gray-600">Loading AQI data...</p>
-        ) : error ? (
-          <p className="text-xl text-red-600">{error}</p>
-        ) : (
-          <div className="text-xl text-gray-800">
-            {/* AQI Value Box with dynamic background color */}
-            <div className={`p-6 rounded-lg shadow-lg mb-6 ${color} ${textColor}`}>
-              <h3 className="text-3xl font-bold">Current AQI: {aqiData}</h3>
-              <p className="text-2xl font-semibold mt-2">{category}</p>
-            </div>
+    <div className="bg-gray-50 pt-20 px-6 sm:px-16 min-h-screen"> {/* pt-20 to prevent overlap */}
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+        {[{ city: 'Hyderabad', aqi: hyderabadAQI, data: hyderabadData }, { city: 'India', aqi: indiaAQI, data: indiaData }].map(({ city, aqi, data }, index) => {
+          const { category, color, textColor } = getAQICategory(aqi);
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="p-6 bg-white rounded-lg shadow-lg border border-gray-200">
-                <h4 className="font-bold text-xl text-gray-800">PM10 (µg/m³)</h4>
-                <p className="text-2xl font-medium text-gray-600">{pollutionData.pm10}</p>
-              </div>
-              <div className="p-6 bg-white rounded-lg shadow-lg border border-gray-200">
-                <h4 className="font-bold text-xl text-gray-800">PM2.5 (µg/m³)</h4>
-                <p className="text-2xl font-medium text-gray-600">{pollutionData.pm2_5}</p>
-              </div>
-              <div className="p-6 bg-white rounded-lg shadow-lg border border-gray-200">
-                <h4 className="font-bold text-xl text-gray-800">Ozone (O₃) (µg/m³)</h4>
-                <p className="text-2xl font-medium text-gray-600">{pollutionData.o3}</p>
-              </div>
-              <div className="p-6 bg-white rounded-lg shadow-lg border border-gray-200">
-                <h4 className="font-bold text-xl text-gray-800">NO₂ (µg/m³)</h4>
-                <p className="text-2xl font-medium text-gray-600">{pollutionData.no2}</p>
-              </div>
-              <div className="p-6 bg-white rounded-lg shadow-lg border border-gray-200">
-                <h4 className="font-bold text-xl text-gray-800">SO₂ (µg/m³)</h4>
-                <p className="text-2xl font-medium text-gray-600">{pollutionData.so2}</p>
-              </div>
-              <div className="p-6 bg-white rounded-lg shadow-lg border border-gray-200">
-                <h4 className="font-bold text-xl text-gray-800">CO (µg/m³)</h4>
-                <p className="text-2xl font-medium text-gray-600">{pollutionData.co}</p>
-              </div>
-              <div className="p-6 bg-white rounded-lg shadow-lg border border-gray-200">
-                <h4 className="font-bold text-xl text-gray-800">Temperature (°C)</h4>
-                <p className="text-2xl font-medium text-gray-600">{pollutionData.temperature}</p>
-              </div>
-              <div className="p-6 bg-white rounded-lg shadow-lg border border-gray-200">
-                <h4 className="font-bold text-xl text-gray-800">Humidity (%)</h4>
-                <p className="text-2xl font-medium text-gray-600">{pollutionData.humidity}</p>
-              </div>
+          return (
+            <div key={index} className="bg-white shadow-lg rounded-lg p-6 w-full h-full flex flex-col">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 text-center mb-4">{`Air Quality Index (AQI) - ${city}`}</h2>
+              {loading ? (
+                <p className="text-xl text-gray-600 text-center flex-grow">Loading AQI data...</p>
+              ) : error ? (
+                <p className="text-xl text-red-600 text-center flex-grow">{error}</p>
+              ) : (
+                <div className="flex flex-col flex-grow">
+                  <div className={`p-6 rounded-lg shadow-md text-center ${color} ${textColor}`}>
+                    <h3 className="text-4xl font-bold">{aqi}</h3>
+                    <p className="text-2xl font-semibold mt-2">{category}</p>
+                  </div>
+
+                  <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-4">
+                    {data && Object.entries(data).map(([key, value]) => (
+                      <div key={key} className="p-4 bg-gray-100 rounded-lg text-center shadow">
+                        <h4 className="font-semibold text-gray-800 capitalize">{key.replace(/_/g, ' ')}</h4>
+                        <p className="text-lg font-medium text-gray-600">{value}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
-          </div>
-        )}
+          );
+        })}
       </div>
     </div>
   );
