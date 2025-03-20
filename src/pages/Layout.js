@@ -2,6 +2,7 @@
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
+import ScrollToTopButton from './ScrollToTopButton';
 // import SocialIcons from './SocialIcons';
 
 const Layout = ({ children }) => {
@@ -10,6 +11,7 @@ const Layout = ({ children }) => {
       <Header />
       {children}
       <Footer />
+      <ScrollToTopButton />
       {/* <SocialIcons /> */}
     </div>
   );
