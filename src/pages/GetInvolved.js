@@ -1,31 +1,89 @@
 import React from "react";
+import { motion } from "framer-motion"; // Import framer-motion for animations
 import PageTransition from "./PageTransition";
 import Layout from "./Layout";
 import { Link } from "react-router-dom";
+
+// Animation Configuration
+const fadeIn = {
+  hidden: { opacity: 0, y: 50 },
+  visible: (delay = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 1, delay },
+  }),
+};
 
 const GetInvolved = () => {
   return (
     <PageTransition>
       <Layout>
         <div className="bg-gray-50 text-gray-800">
-          {/* Hero Section */}
-          <section className="bg-green-600 text-white py-20 text-center">
-            <h1 className="text-5xl font-bold mb-4">Get Involved</h1>
-            <p className="text-lg">
-              Join hands with us to create a lasting impact. Together, we can
-              make a difference.
-            </p>
-          </section>
+          {/* Hero Section with Image and Animation */}
+          <motion.section
+            className="relative bg-green-600 text-white text-center"
+            initial="hidden"
+            animate="visible"
+          >
+            {/* Hero Image */}
+            <img
+              src="/weo/images/get-involved.jpg" // Replace with your actual image path
+              alt="Get Involved Hero"
+              className="absolute w-full h-[600px] object-cover opacity-800"
+            />
+            <motion.div
+              className="relative z-10 flex flex-col justify-center items-center h-[600px]"
+              variants={fadeIn}
+              custom={0.5}
+            >
+              <motion.h1
+                className="text-5xl font-bold mb-4"
+                variants={fadeIn}
+                custom={1}
+              >
+                Get Involved
+              </motion.h1>
+              <motion.p className="text-lg" variants={fadeIn} custom={1.5}>
+                Join hands with us to create a lasting impact. Together, we can
+                make a difference.
+              </motion.p>
+            </motion.div>
+          </motion.section>
 
-          {/* Ways to Support Section */}
-          <section className="py-16 px-4 sm:px-8">
+          {/* Ways to Support Section with Animations */}
+          <motion.section
+            className="py-16 px-4 sm:px-8"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            variants={{
+              visible: {
+                transition: {
+                  staggerChildren: 0.3, // Stagger child animations
+                },
+              },
+            }}
+          >
             <div className="max-w-7xl mx-auto">
-              <h2 className="text-3xl font-bold text-center mb-12">
+              <motion.h2
+                className="text-3xl font-bold text-center mb-12"
+                variants={fadeIn}
+                custom={0}
+              >
                 Ways to Support Us
-              </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              </motion.h2>
+              <motion.div
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+                variants={{
+                  visible: { transition: { staggerChildren: 0.2 } },
+                }}
+              >
                 {/* Support Option 1 */}
-                <div className="bg-white rounded-lg shadow-lg p-6 text-center">
+                <motion.div
+                  className="bg-white rounded-lg shadow-lg p-6 text-center"
+                  variants={fadeIn}
+                  custom={0.5}
+                >
                   <h3 className="text-xl font-bold mb-4 text-green-600">
                     Volunteer With Us
                   </h3>
@@ -37,11 +95,16 @@ const GetInvolved = () => {
                     to="/contact-us"
                     className="mt-4 inline-block bg-green-600 text-white py-2 px-6 rounded-lg font-bold hover:bg-green-700 transition"
                   >
-                    ContactUs
+                    Contact Us
                   </Link>
-                </div>
+                </motion.div>
+
                 {/* Support Option 2 */}
-                <div className="bg-white rounded-lg shadow-lg p-6 text-center">
+                <motion.div
+                  className="bg-white rounded-lg shadow-lg p-6 text-center"
+                  variants={fadeIn}
+                  custom={0.8}
+                >
                   <h3 className="text-xl font-bold mb-4 text-green-600">
                     Donate
                   </h3>
@@ -55,9 +118,14 @@ const GetInvolved = () => {
                   >
                     Donate Now
                   </Link>
-                </div>
+                </motion.div>
+
                 {/* Support Option 3 */}
-                <div className="bg-white rounded-lg shadow-lg p-6 text-center">
+                <motion.div
+                  className="bg-white rounded-lg shadow-lg p-6 text-center"
+                  variants={fadeIn}
+                  custom={1.1}
+                >
                   <h3 className="text-xl font-bold mb-4 text-green-600">
                     Corporate Partnerships
                   </h3>
@@ -69,25 +137,43 @@ const GetInvolved = () => {
                     to="/contact-us"
                     className="mt-4 inline-block bg-green-600 text-white py-2 px-6 rounded-lg font-bold hover:bg-green-700 transition"
                   >
-                    ContactUs
+                    Contact Us
                   </Link>
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
             </div>
-          </section>
+          </motion.section>
 
-          {/* Call-to-Action Section */}
-          <section className="py-16 bg-green-600 text-white text-center">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-4">
+          {/* Call-to-Action Section with Animations */}
+          <motion.section
+            className="py-16 bg-green-600 text-white text-center"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+          >
+            <motion.div
+              className="max-w-4xl mx-auto"
+              variants={{
+                visible: { transition: { staggerChildren: 0.3 } },
+              }}
+            >
+              <motion.h2
+                className="text-3xl font-bold mb-4"
+                variants={fadeIn}
+                custom={0}
+              >
                 Become a Part of the Change
-              </h2>
-              <p className="text-lg leading-relaxed mb-8">
+              </motion.h2>
+              <motion.p
+                className="text-lg leading-relaxed mb-8"
+                variants={fadeIn}
+                custom={0.5}
+              >
                 Whether it’s through volunteering, donations, or partnerships,
                 your support helps us create a sustainable future.
-              </p>
-            </div>
-          </section>
+              </motion.p>
+            </motion.div>
+          </motion.section>
         </div>
       </Layout>
     </PageTransition>

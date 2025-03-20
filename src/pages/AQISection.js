@@ -9,6 +9,7 @@ const AQISection = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  // Fetch AQI Data Function
   const fetchAQI = async (city, setAQI, setData) => {
     try {
       const response = await axios.get(
@@ -36,6 +37,7 @@ const AQISection = () => {
     }
   };
 
+  // Fetch Data on Mount
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
@@ -58,6 +60,7 @@ const AQISection = () => {
     return () => clearInterval(interval);
   }, []);
 
+  // Get AQI Category
   const getAQICategory = (aqi) => {
     if (!aqi)
       return {
@@ -126,7 +129,7 @@ const AQISection = () => {
             return (
               <div
                 key={index}
-                className={`bg-white shadow-lg rounded-lg overflow-hidden p-0 sm:p-4 flex flex-col ${color} ${textColor}`}
+                className={`shadow-lg rounded-lg overflow-hidden p-4 flex flex-col ${color} ${textColor}`}
               >
                 <div className="flex-grow">
                   <div className={`p-6 text-center`}>

@@ -1,29 +1,81 @@
 import React from "react";
+import { motion } from "framer-motion"; // Import framer-motion
 import PageTransition from "./PageTransition";
 import Layout from "./Layout";
+
+const fadeIn = {
+  hidden: { opacity: 0, y: 50 },
+  visible: (delay = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 1, delay },
+  }),
+};
 
 const ContactUs = () => {
   return (
     <PageTransition>
       <Layout>
         <div className="bg-gray-50 text-gray-800">
-          {/* Hero Section */}
-          <section className="bg-green-600 text-white py-20 text-center">
-            <h1 className="text-5xl font-bold mb-4">Contact Us</h1>
-            <p className="text-lg">
-              Have questions, feedback, or want to get involved? Reach out to
-              us!
-            </p>
-          </section>
+          {/* Hero Section with Image and Animation */}
+          <motion.section
+            className="relative bg-green-600 text-white text-center"
+            initial="hidden"
+            animate="visible"
+          >
+            <img
+              src="/weo/images/contact-us.jpg" // Replace with your actual image path
+              alt="Contact Us"
+              className="absolute w-full h-[600px] object-cover"
+            />
+            <motion.div
+              className="relative z-10 flex flex-col justify-center items-center h-[600px]"
+              variants={fadeIn}
+              custom={0.5}
+            >
+              <motion.h1
+                className="text-5xl font-bold mb-4"
+                variants={fadeIn}
+                custom={1}
+              >
+                Contact Us
+              </motion.h1>
+              <motion.p className="text-lg" variants={fadeIn} custom={1.5}>
+                Have questions, feedback, or want to get involved? Reach out to
+                us!
+              </motion.p>
+            </motion.div>
+          </motion.section>
 
-          {/* Contact Form Section */}
-          <section className="py-16 px-4 sm:px-8">
+          {/* Contact Form Section with Animation */}
+          <motion.section
+            className="py-16 px-4 sm:px-8"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            variants={{
+              visible: {
+                transition: {
+                  staggerChildren: 0.3,
+                },
+              },
+            }}
+          >
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-8 text-center">
+              <motion.h2
+                className="text-3xl font-bold mb-8 text-center"
+                variants={fadeIn}
+                custom={0}
+              >
                 Get in Touch
-              </h2>
-              <form className="bg-white shadow-lg rounded-lg p-8 space-y-6">
-                <div>
+              </motion.h2>
+              <motion.form
+                className="bg-white shadow-lg rounded-lg p-8 space-y-6"
+                variants={{
+                  visible: { transition: { staggerChildren: 0.2 } },
+                }}
+              >
+                <motion.div variants={fadeIn} custom={0.5}>
                   <label
                     htmlFor="name"
                     className="block text-lg font-medium text-gray-700"
@@ -36,8 +88,8 @@ const ContactUs = () => {
                     className="w-full mt-2 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
                     placeholder="Enter your name"
                   />
-                </div>
-                <div>
+                </motion.div>
+                <motion.div variants={fadeIn} custom={0.8}>
                   <label
                     htmlFor="email"
                     className="block text-lg font-medium text-gray-700"
@@ -50,8 +102,8 @@ const ContactUs = () => {
                     className="w-full mt-2 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
                     placeholder="Enter your email"
                   />
-                </div>
-                <div>
+                </motion.div>
+                <motion.div variants={fadeIn} custom={1.1}>
                   <label
                     htmlFor="message"
                     className="block text-lg font-medium text-gray-700"
@@ -64,41 +116,71 @@ const ContactUs = () => {
                     className="w-full mt-2 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
                     placeholder="Write your message"
                   ></textarea>
-                </div>
-                <button
+                </motion.div>
+                <motion.button
                   type="submit"
                   className="w-full bg-green-600 text-white py-3 rounded-lg font-bold text-lg hover:bg-green-700 transition"
+                  variants={fadeIn}
+                  custom={1.5}
                 >
                   Submit
-                </button>
-              </form>
+                </motion.button>
+              </motion.form>
             </div>
-          </section>
+          </motion.section>
 
           {/* Contact Information Section */}
-          <section className="py-16 px-4 sm:px-8 bg-gray-100">
+          <motion.section
+            className="py-16 px-4 sm:px-8 bg-gray-100"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={{
+              visible: {
+                transition: {
+                  staggerChildren: 0.3,
+                },
+              },
+            }}
+          >
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
+              <motion.div variants={fadeIn} custom={0}>
                 <h3 className="text-xl font-bold mb-2">Our Address</h3>
                 <p>H No- 8-3-231/A/11/1</p>
                 <p>Sri Krishna Nagar Main Road, Jubilee Hills</p>
                 <p>India, Hyderabad-500033</p>
-              </div>
-              <div className="text-center">
+              </motion.div>
+              <motion.div variants={fadeIn} custom={0.3}>
                 <h3 className="text-xl font-bold mb-2">Call Us</h3>
                 <p>+91 7075576601</p>
                 <p>Mon - Fri, 9:00 AM - 6:00 PM</p>
-              </div>
-              <div className="text-center">
+              </motion.div>
+              <motion.div variants={fadeIn} custom={0.6}>
                 <h3 className="text-xl font-bold mb-2">Email Us</h3>
                 <p>info@weo.com</p>
-              </div>
+              </motion.div>
             </div>
-          </section>
+          </motion.section>
 
           {/* Map Section */}
-          <section className="py-16 px-4 sm:px-8">
-            <div className="max-w-7xl mx-auto">
+          <motion.section
+            className="py-16 px-4 sm:px-8"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={{
+              visible: {
+                transition: {
+                  staggerChildren: 0.3,
+                },
+              },
+            }}
+          >
+            <motion.div
+              className="max-w-7xl mx-auto"
+              variants={fadeIn}
+              custom={0}
+            >
               <h2 className="text-3xl font-bold text-center mb-8">
                 Our Location
               </h2>
@@ -109,8 +191,8 @@ const ContactUs = () => {
                 allowFullScreen=""
                 loading="lazy"
               ></iframe>
-            </div>
-          </section>
+            </motion.div>
+          </motion.section>
         </div>
       </Layout>
     </PageTransition>
