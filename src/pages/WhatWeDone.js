@@ -48,11 +48,12 @@ const WhatWeDone = () => {
           {/* Achievements Section */}
           <motion.section
             className="py-12 px-4 sm:px-8"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
+            initial="hidden" // Animation will start immediately
+            animate="visible" // Animation will run once visible
             variants={{
+              hidden: { opacity: 0 },
               visible: {
+                opacity: 1,
                 transition: { staggerChildren: 0.3 },
               },
             }}
@@ -62,8 +63,10 @@ const WhatWeDone = () => {
                 <motion.div
                   key={achievement.id}
                   className="bg-white shadow-md rounded-lg overflow-hidden"
-                  variants={fadeIn}
+                  variants={fadeIn} // Reuse the fadeIn animation
                   custom={index * 0.3}
+                  initial="hidden" // Start from hidden
+                  animate="visible" // Animate into view
                 >
                   <img
                     src={achievement.image}
