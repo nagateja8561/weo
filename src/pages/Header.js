@@ -61,7 +61,7 @@ const Header = () => {
 
         <div className="hidden md:block">
           <Link to="/donate">
-            <button className="bg-primary text-white py-2 px-6 rounded-lg text-lg font-medium hover:bg-secondary transition-all duration-300">
+            <button className="bg-green-500 text-white py-2 px-6 rounded-lg text-lg font-medium hover:bg-green-700 transition-all duration-300">
               Donate
             </button>
           </Link>
@@ -136,7 +136,7 @@ const Header = () => {
         </Link>
 
         <Link to="/donate" onClick={toggleNav}>
-          <button className="bg-primary text-white py-3 px-8 rounded-lg text-lg font-medium hover:bg-secondary transition-all duration-300">
+          <button className="bg-green-500 text-white py-3 px-8 rounded-lg text-lg font-medium hover:bg-green-700 transition-all duration-300">
             Donate
           </button>
         </Link>

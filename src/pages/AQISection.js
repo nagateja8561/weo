@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion"; // Import framer-motion for animations
 import axios from "axios";
+import { motion } from "framer-motion"; // Import Framer Motion
 
 const AQISection = () => {
   const [hyderabadAQI, setHyderabadAQI] = useState(null);
@@ -80,25 +80,25 @@ const AQISection = () => {
         return {
           category: "Moderate",
           color: "bg-yellow-400",
-          textColor: "text-yellow-1000",
+          textColor: "text-yellow-800",
         };
       case aqi <= 150:
         return {
           category: "Unhealthy for Sensitive Groups",
           color: "bg-orange-500",
-          textColor: "text-orange-1000",
+          textColor: "text-orange-900",
         };
       case aqi <= 200:
         return {
           category: "Unhealthy",
           color: "bg-red-600",
-          textColor: "text-red-1000", // Ensure readability on red background
+          textColor: "text-red-900",
         };
       case aqi <= 300:
         return {
           category: "Very Unhealthy",
           color: "bg-purple-700",
-          textColor: "text-purple-1000",
+          textColor: "text-purple-100",
         };
       default:
         return {
@@ -112,86 +112,48 @@ const AQISection = () => {
   return (
     <div className="bg-gray-50 pt-20 px-2 sm:px-4 md:px-8 min-h-screen">
       {loading ? (
-        <motion.div
-          className="text-center py-10"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
-        >
+        <div className="text-center py-10">
           <p className="text-xl text-gray-600">Loading AQI data...</p>
-        </motion.div>
+        </div>
       ) : error ? (
-        <motion.div
-          className="text-center py-10"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
-        >
+        <div className="text-center py-10">
           <p className="text-xl text-red-600">{error}</p>
-        </motion.div>
+        </div>
       ) : (
-        <motion.div
-          className="max-w-7xl mx-auto grid grid-cols-1 gap-4 sm:grid-cols-2"
-          initial="hidden"
-          animate="visible"
-          variants={{
-            visible: {
-              transition: { staggerChildren: 0.3 },
-            },
-          }}
-        >
-          {[
-            { city: "Hyderabad", aqi: hyderabadAQI, data: hyderabadData },
-            { city: "India", aqi: indiaAQI, data: indiaData },
-          ].map(({ city, aqi, data }, index) => {
-            const { category, color, textColor } = getAQICategory(aqi);
+        <div className="max-w-7xl mx-auto grid grid-cols-1 gap-4 sm:grid-cols-2">
+          {[{ city: "Hyderabad", aqi: hyderabadAQI, data: hyderabadData }, { city: "India", aqi: indiaAQI, data: indiaData }]
+            .map(({ city, aqi, data }, index) => {
+              const { category, color, textColor } = getAQICategory(aqi);
 
-            return (
-              <motion.div
-                key={index}
-                className={`shadow-lg rounded-lg overflow-hidden p-4 flex flex-col ${color} ${textColor}`}
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-                whileHover={{ scale: 1.05 }}
-              >
-                <motion.div className="flex-grow p-6 text-center">
-                  <h2 className="text-xl sm:text-2xl md:text-3xl font-bold">
-                    {`${city} (AQI: ${aqi ?? "N/A"})`}
-                  </h2>
-                  <div className="text-4xl font-semibold my-2">{aqi}</div>
-                  <p className="text-lg font-medium">{category}</p>
-                </motion.div>
+              return (
                 <motion.div
-                  className="grid grid-cols-2 gap-3 p-4 sm:gap-4"
-                  initial="hidden"
-                  animate="visible"
-                  variants={{
-                    hidden: { opacity: 0, scale: 0.8 },
-                    visible: { opacity: 1, scale: 1, transition: { duration: 0.3 } },
-                  }}
+                  key={index}
+                  className={`shadow-lg rounded-lg overflow-hidden p-4 flex flex-col ${color} ${textColor} hover:scale-105 hover:shadow-xl transition-transform duration-300`}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5 }}
                 >
-                  {data &&
-                    Object.entries(data).map(([key, value]) => (
-                      <motion.div
-                        key={key}
-                        className="p-2 sm:p-4 bg-gray-100 rounded-lg text-center shadow"
-                        variants={{
-                          hidden: { opacity: 0, scale: 0.9 },
-                          visible: { opacity: 1, scale: 1, transition: { duration: 0.3 } },
-                        }}
-                      >
-                        <h4 className="text-sm sm:text-base font-semibold capitalize">
-                          {key.replace(/_/g, " ")}
-                        </h4>
-                        <p className="text-sm sm:text-lg font-medium">{value}</p>
-                      </motion.div>
-                    ))}
+                  <div className="flex-grow">
+                    <div className={`p-6 text-center ${category === "Hazardous" ? "animate-scaleUp" : ""}`}>
+                      {/* Dynamically include AQI in city name */}
+                      <h2 className="text-xl sm:text-2xl md:text-3xl font-bold">{`${city} (AQI)`}</h2>
+                      <div className="text-4xl font-semibold my-2">{aqi}</div>
+                      <p className="text-lg font-medium">{category}</p>
+                    </div>
+                    <div className="grid grid-cols-2 gap-3 p-4 sm:gap-4">
+                      {data &&
+                        Object.entries(data).map(([key, value]) => (
+                          <div key={key} className="p-2 sm:p-4 bg-gray-100 rounded-lg text-center shadow">
+                            <h4 className="text-sm sm:text-base font-semibold capitalize">{key.replace(/_/g, " ")}</h4>
+                            <p className="text-sm sm:text-lg font-medium">{value}</p>
+                          </div>
+                        ))}
+                    </div>
+                  </div>
                 </motion.div>
-              </motion.div>
-            );
-          })}
-        </motion.div>
+              );
+            })}
+        </div>
       )}
     </div>
   );
