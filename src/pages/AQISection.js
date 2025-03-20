@@ -34,18 +34,26 @@ const AQISection = () => {
     } catch (err) {
       setError('Failed to fetch AQI data.');
     }
-    setLoading(false);
   };
 
   useEffect(() => {
-    setLoading(true);
-    fetchAQI('hyderabad', setHyderabadAQI, setHyderabadData);
-    fetchAQI('india', setIndiaAQI, setIndiaData);
+    const fetchData = async () => {
+      setLoading(true);
+      setError(null); // Reset error state before fetching data
+
+      await Promise.all([
+        fetchAQI('hyderabad', setHyderabadAQI, setHyderabadData),
+        fetchAQI('india', setIndiaAQI, setIndiaData),
+      ]);
+
+      setLoading(false);
+    };
+
+    fetchData();
 
     const interval = setInterval(() => {
-      fetchAQI('hyderabad', setHyderabadAQI, setHyderabadData);
-      fetchAQI('india', setIndiaAQI, setIndiaData);
-    }, 300000);
+      fetchData();
+    }, 300000); // Fetch every 5 minutes
 
     return () => clearInterval(interval);
   }, []);
@@ -69,39 +77,49 @@ const AQISection = () => {
   };
 
   return (
-    <div className="bg-gray-50 pt-20 px-6 sm:px-16 min-h-screen"> {/* pt-20 to prevent overlap */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-        {[{ city: 'Hyderabad', aqi: hyderabadAQI, data: hyderabadData }, { city: 'India', aqi: indiaAQI, data: indiaData }].map(({ city, aqi, data }, index) => {
-          const { category, color, textColor } = getAQICategory(aqi);
+    <div className="bg-gray-50 pt-20 px-2 sm:px-4 md:px-8 min-h-screen">
+      {loading ? (
+        <div className="text-center py-10">
+          <p className="text-xl text-gray-600">Loading AQI data...</p>
+        </div>
+      ) : error ? (
+        <div className="text-center py-10">
+          <p className="text-xl text-red-600">{error}</p>
+        </div>
+      ) : (
+        <div className="max-w-7xl mx-auto grid grid-cols-1 gap-4 sm:grid-cols-2">
+          {[{ city: 'Hyderabad', aqi: hyderabadAQI, data: hyderabadData }, { city: 'India', aqi: indiaAQI, data: indiaData }].map(({ city, aqi, data }, index) => {
+            const { category, color, textColor } = getAQICategory(aqi);
 
-          return (
-            <div key={index} className="bg-white shadow-lg rounded-lg p-6 w-full h-full flex flex-col">
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 text-center mb-4">{`Air Quality Index (AQI) - ${city}`}</h2>
-              {loading ? (
-                <p className="text-xl text-gray-600 text-center flex-grow">Loading AQI data...</p>
-              ) : error ? (
-                <p className="text-xl text-red-600 text-center flex-grow">{error}</p>
-              ) : (
-                <div className="flex flex-col flex-grow">
-                  <div className={`p-6 rounded-lg shadow-md text-center ${color} ${textColor}`}>
-                    <h3 className="text-4xl font-bold">{aqi}</h3>
-                    <p className="text-2xl font-semibold mt-2">{category}</p>
+            return (
+              <div
+                key={index}
+                className={`bg-white shadow-lg rounded-lg overflow-hidden p-0 sm:p-4 flex flex-col ${color} ${textColor}`}
+              >
+                <div className="flex-grow">
+                  <div className={`p-6 text-center`}>
+                    {/* Dynamically include AQI in city name */}
+                    <h2 className="text-xl sm:text-2xl md:text-3xl font-bold">
+                      {`${city} (AQI: ${aqi ?? 'N/A'})`}
+                    </h2>
+                    <div className={`text-4xl font-semibold my-2`}>{aqi}</div>
+                    <p className="text-lg font-medium">{category}</p>
                   </div>
-
-                  <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-4">
-                    {data && Object.entries(data).map(([key, value]) => (
-                      <div key={key} className="p-4 bg-gray-100 rounded-lg text-center shadow">
-                        <h4 className="font-semibold text-gray-800 capitalize">{key.replace(/_/g, ' ')}</h4>
-                        <p className="text-lg font-medium text-gray-600">{value}</p>
-                      </div>
-                    ))}
+                  <div className="grid grid-cols-2 gap-3 p-4 sm:gap-4">
+                    {data &&
+                      Object.entries(data).map(([key, value]) => (
+                        <div key={key} className="p-2 sm:p-4 bg-gray-100 rounded-lg text-center shadow">
+                          <h4 className="text-sm sm:text-base font-semibold capitalize">{key.replace(/_/g, ' ')}</h4>
+                          <p className="text-sm sm:text-lg font-medium">{value}</p>
+                        </div>
+                      ))}
                   </div>
                 </div>
-              )}
-            </div>
-          );
-        })}
-      </div>
+              </div>
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 };

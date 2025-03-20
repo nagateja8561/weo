@@ -32,8 +32,6 @@ const Homepage = () => {
   return (
     <PageTransition>
       <Layout>
-         {/* AQI Section - Placed on top of the page */}
-         <AQISection />  {/* Insert AQISection here */}
          
         {/* Hero Section */}
         <motion.section
@@ -82,6 +80,9 @@ const Homepage = () => {
           </motion.div>
 
         </motion.section>
+
+        {/* AQI Section - Placed on top of the page */}
+        <AQISection />  {/* Insert AQISection here */}
 
         {/* Our Vision Section */}
         <motion.section 
