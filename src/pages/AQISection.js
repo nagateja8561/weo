@@ -85,19 +85,19 @@ const AQISection = () => {
         return {
           category: "Unhealthy for Sensitive Groups",
           color: "bg-orange-500",
-          textColor: "text-orange-900",
+          textColor: "text-orange-1000",
         };
       case aqi <= 200:
         return {
           category: "Unhealthy",
           color: "bg-red-600",
-          textColor: "text-red-100",
+          textColor: "text-red-1000",
         };
       case aqi <= 300:
         return {
           category: "Very Unhealthy",
           color: "bg-purple-700",
-          textColor: "text-purple-100",
+          textColor: "text-purple-1000",
         };
       default:
         return {
