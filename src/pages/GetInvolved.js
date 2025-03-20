@@ -1,8 +1,7 @@
 import React from "react";
 import PageTransition from "./PageTransition";
 import Layout from "./Layout";
-import { Link } from 'react-router-dom';
-
+import { Link } from "react-router-dom";
 
 const GetInvolved = () => {
   return (
@@ -13,20 +12,26 @@ const GetInvolved = () => {
           <section className="bg-green-600 text-white py-20 text-center">
             <h1 className="text-5xl font-bold mb-4">Get Involved</h1>
             <p className="text-lg">
-              Join hands with us to create a lasting impact. Together, we can make a difference.
+              Join hands with us to create a lasting impact. Together, we can
+              make a difference.
             </p>
           </section>
 
           {/* Ways to Support Section */}
           <section className="py-16 px-4 sm:px-8">
             <div className="max-w-7xl mx-auto">
-              <h2 className="text-3xl font-bold text-center mb-12">Ways to Support Us</h2>
+              <h2 className="text-3xl font-bold text-center mb-12">
+                Ways to Support Us
+              </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 {/* Support Option 1 */}
                 <div className="bg-white rounded-lg shadow-lg p-6 text-center">
-                  <h3 className="text-xl font-bold mb-4 text-green-600">Volunteer With Us</h3>
+                  <h3 className="text-xl font-bold mb-4 text-green-600">
+                    Volunteer With Us
+                  </h3>
                   <p className="text-gray-600">
-                    Contribute your time and skills to our initiatives. Help us in creating sustainable solutions.
+                    Contribute your time and skills to our initiatives. Help us
+                    in creating sustainable solutions.
                   </p>
                   <Link
                     to="/contact-us"
@@ -37,9 +42,12 @@ const GetInvolved = () => {
                 </div>
                 {/* Support Option 2 */}
                 <div className="bg-white rounded-lg shadow-lg p-6 text-center">
-                  <h3 className="text-xl font-bold mb-4 text-green-600">Donate</h3>
+                  <h3 className="text-xl font-bold mb-4 text-green-600">
+                    Donate
+                  </h3>
                   <p className="text-gray-600">
-                    Your generous donations help us sustain and expand our initiatives to make a greater impact.
+                    Your generous donations help us sustain and expand our
+                    initiatives to make a greater impact.
                   </p>
                   <Link
                     to="/donate"
@@ -50,9 +58,12 @@ const GetInvolved = () => {
                 </div>
                 {/* Support Option 3 */}
                 <div className="bg-white rounded-lg shadow-lg p-6 text-center">
-                  <h3 className="text-xl font-bold mb-4 text-green-600">Corporate Partnerships</h3>
+                  <h3 className="text-xl font-bold mb-4 text-green-600">
+                    Corporate Partnerships
+                  </h3>
                   <p className="text-gray-600">
-                    Collaborate with us as a corporate partner and support impactful projects that align with your goals.
+                    Collaborate with us as a corporate partner and support
+                    impactful projects that align with your goals.
                   </p>
                   <Link
                     to="/contact-us"
@@ -68,9 +79,12 @@ const GetInvolved = () => {
           {/* Call-to-Action Section */}
           <section className="py-16 bg-green-600 text-white text-center">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-4">Become a Part of the Change</h2>
+              <h2 className="text-3xl font-bold mb-4">
+                Become a Part of the Change
+              </h2>
               <p className="text-lg leading-relaxed mb-8">
-                Whether it’s through volunteering, donations, or partnerships, your support helps us create a sustainable future.
+                Whether it’s through volunteering, donations, or partnerships,
+                your support helps us create a sustainable future.
               </p>
             </div>
           </section>

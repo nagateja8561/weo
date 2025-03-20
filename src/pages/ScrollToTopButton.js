@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -13,13 +13,13 @@ const ScrollToTopButton = () => {
       }
     };
 
-    window.addEventListener('scroll', toggleVisibility);
-    return () => window.removeEventListener('scroll', toggleVisibility);
+    window.addEventListener("scroll", toggleVisibility);
+    return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
 
   // Scroll to the top of the page
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
@@ -37,7 +37,11 @@ const ScrollToTopButton = () => {
           stroke="currentColor"
           className="w-6 h-6"
         >
-          <path strokeLinecap="round" strokeLinejoin="round" d="M5 15l7-7 7 7" />
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M5 15l7-7 7 7"
+          />
         </svg>
       </button>
     )

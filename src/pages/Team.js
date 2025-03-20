@@ -27,11 +27,16 @@ const OurTeam = () => {
       <Layout>
         <div className="py-32 text-center text-gray-800">
           <h1 className="text-6xl font-bold">Our Team</h1>
-          <p className="text-lg mt-4">Meet the passionate individuals behind our mission.</p>
+          <p className="text-lg mt-4">
+            Meet the passionate individuals behind our mission.
+          </p>
 
           <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 px-20">
             {teamMembers.map((member, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg p-6 text-center">
+              <div
+                key={index}
+                className="bg-white rounded-lg shadow-lg p-6 text-center"
+              >
                 <img
                   src={member.image}
                   alt={member.name}

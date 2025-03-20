@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -19,12 +19,12 @@ const Header = () => {
               src="/weo/images/logo.png"
               alt="WEO Logo"
               className="h-14 w-auto"
-              style={{ maxWidth: '500px' }}
+              style={{ maxWidth: "500px" }}
             />
           </Link>
 
           <nav className="hidden md:flex space-x-8 text-lg text-gray-800">
-            {location.pathname !== '/' && (
+            {location.pathname !== "/" && (
               <Link
                 to="/"
                 className="font-bold text-lg hover:text-green-600 hover:bg-green-100 hover:shadow-lg hover:rounded-full transition-all duration-300 px-4 py-2"
@@ -67,21 +67,28 @@ const Header = () => {
         >
           <FaBars
             size={20}
-            className={`text-gray-800 transition-opacity duration-700 ease-in-out ${isNavOpen ? 'opacity-0' : 'opacity-100'}`}
+            className={`text-gray-800 transition-opacity duration-700 ease-in-out ${
+              isNavOpen ? "opacity-0" : "opacity-100"
+            }`}
           />
           <FaTimes
             size={20}
-            className={`text-gray-800 transition-opacity duration-700 ease-in-out absolute ${isNavOpen ? 'opacity-100' : 'opacity-0'}`}
+            className={`text-gray-800 transition-opacity duration-700 ease-in-out absolute ${
+              isNavOpen ? "opacity-100" : "opacity-0"
+            }`}
           />
         </div>
       </div>
 
       <div
         className={`${
-          isNavOpen ? 'translate-x-0' : '-translate-x-full'
+          isNavOpen ? "translate-x-0" : "-translate-x-full"
         } fixed inset-0 bg-white bg-opacity-100 flex flex-col items-center justify-center space-y-8 transition-transform duration-[1500ms] ease-in-out z-50`}
       >
-        <div className="absolute top-5 right-5 cursor-pointer" onClick={toggleNav}>
+        <div
+          className="absolute top-5 right-5 cursor-pointer"
+          onClick={toggleNav}
+        >
           <FaTimes size={25} className="text-gray-800" />
         </div>
 

@@ -11,7 +11,8 @@ const Donate = () => {
           <section className="bg-green-600 text-white py-20 text-center">
             <h1 className="text-5xl font-bold mb-4">Donate</h1>
             <p className="text-lg">
-              Your contributions help us create a sustainable future and expand our impactful initiatives.
+              Your contributions help us create a sustainable future and expand
+              our impactful initiatives.
             </p>
           </section>
 
@@ -20,7 +21,8 @@ const Donate = () => {
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold mb-8">Scan to Donate</h2>
               <p className="text-lg leading-relaxed text-gray-600 mb-6">
-                Use your mobile device to scan the QR code below and make a donation conveniently.
+                Use your mobile device to scan the QR code below and make a
+                donation conveniently.
               </p>
               <div className="bg-white p-6 rounded-lg shadow-lg inline-block">
                 {/* QR Code Image */}
@@ -38,7 +40,8 @@ const Donate = () => {
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold mb-8">Direct Donation</h2>
               <p className="text-lg leading-relaxed text-gray-600 mb-6">
-                Prefer to donate directly? You can use the following details for bank transfers or other direct payments.
+                Prefer to donate directly? You can use the following details for
+                bank transfers or other direct payments.
               </p>
               <div className="bg-white p-6 rounded-lg shadow-lg inline-block text-left">
                 <p className="text-lg font-bold mb-2">Bank Details:</p>
@@ -53,10 +56,12 @@ const Donate = () => {
           {/* Call-to-Action Section */}
           <section className="py-16 bg-green-600 text-white text-center">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-4">Thank You for Your Support</h2>
+              <h2 className="text-3xl font-bold mb-4">
+                Thank You for Your Support
+              </h2>
               <p className="text-lg leading-relaxed mb-8">
-                Your contributions make a significant impact and bring us closer to our goals. Together, we can achieve
-                extraordinary things.
+                Your contributions make a significant impact and bring us closer
+                to our goals. Together, we can achieve extraordinary things.
               </p>
             </div>
           </section>

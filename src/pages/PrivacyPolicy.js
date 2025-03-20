@@ -11,7 +11,8 @@ const PrivacyPolicy = () => {
           <section className="bg-green-600 text-white py-20 text-center">
             <h1 className="text-5xl font-bold mb-4">Privacy Policy</h1>
             <p className="text-lg">
-              Your privacy is important to us. Learn how we collect, use, and protect your information.
+              Your privacy is important to us. Learn how we collect, use, and
+              protect your information.
             </p>
           </section>
 
@@ -22,27 +23,43 @@ const PrivacyPolicy = () => {
               <div>
                 <h2 className="text-3xl font-bold mb-4">Introduction</h2>
                 <p className="text-lg text-gray-600">
-                  This Privacy Policy outlines how we handle your personal information when you visit our website or use
-                  our services. By accessing our website, you agree to the terms of this Privacy Policy.
+                  This Privacy Policy outlines how we handle your personal
+                  information when you visit our website or use our services. By
+                  accessing our website, you agree to the terms of this Privacy
+                  Policy.
                 </p>
               </div>
 
               {/* Information We Collect */}
               <div>
-                <h2 className="text-3xl font-bold mb-4">Information We Collect</h2>
+                <h2 className="text-3xl font-bold mb-4">
+                  Information We Collect
+                </h2>
                 <ul className="list-disc list-inside text-lg text-gray-600 space-y-2">
-                  <li>Personal information such as your name, email address, and phone number.</li>
-                  <li>Usage data, including your IP address, browser type, and pages visited.</li>
-                  <li>Cookies and similar technologies to enhance your browsing experience.</li>
+                  <li>
+                    Personal information such as your name, email address, and
+                    phone number.
+                  </li>
+                  <li>
+                    Usage data, including your IP address, browser type, and
+                    pages visited.
+                  </li>
+                  <li>
+                    Cookies and similar technologies to enhance your browsing
+                    experience.
+                  </li>
                 </ul>
               </div>
 
               {/* How We Use Your Information */}
               <div>
-                <h2 className="text-3xl font-bold mb-4">How We Use Your Information</h2>
+                <h2 className="text-3xl font-bold mb-4">
+                  How We Use Your Information
+                </h2>
                 <p className="text-lg text-gray-600">
-                  We use your information to provide and improve our services, communicate with you, and ensure the
-                  security of our platform. Your data will never be sold to third parties.
+                  We use your information to provide and improve our services,
+                  communicate with you, and ensure the security of our platform.
+                  Your data will never be sold to third parties.
                 </p>
               </div>
 
@@ -50,8 +67,13 @@ const PrivacyPolicy = () => {
               <div>
                 <h2 className="text-3xl font-bold mb-4">Your Rights</h2>
                 <p className="text-lg text-gray-600">
-                  You have the right to access, update, or delete your personal information. If you have any concerns
-                  about your data, please contact us at <a href="mailto:privacy@weo.com" className="text-green-600">privacy@weo.com</a>.
+                  You have the right to access, update, or delete your personal
+                  information. If you have any concerns about your data, please
+                  contact us at{" "}
+                  <a href="mailto:privacy@weo.com" className="text-green-600">
+                    privacy@weo.com
+                  </a>
+                  .
                 </p>
               </div>
 
@@ -59,13 +81,18 @@ const PrivacyPolicy = () => {
               <div>
                 <h2 className="text-3xl font-bold mb-4">Contact Us</h2>
                 <p className="text-lg text-gray-600">
-                  If you have any questions about this Privacy Policy, please contact us at:
+                  If you have any questions about this Privacy Policy, please
+                  contact us at:
                 </p>
                 <p className="text-lg text-gray-600">
-                  <strong>Email:</strong> <a href="mailto:privacy@weo.com" className="text-green-600">privacy@weo.com</a>
+                  <strong>Email:</strong>{" "}
+                  <a href="mailto:privacy@weo.com" className="text-green-600">
+                    privacy@weo.com
+                  </a>
                 </p>
                 <p className="text-lg text-gray-600">
-                  <strong>Address:</strong> H No- 8-3-231/A/11/1, Sri Krishna Nagar Main Road, Jubilee Hills, Hyderabad-500033, India
+                  <strong>Address:</strong> H No- 8-3-231/A/11/1, Sri Krishna
+                  Nagar Main Road, Jubilee Hills, Hyderabad-500033, India
                 </p>
               </div>
             </div>

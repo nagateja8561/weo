@@ -1,14 +1,19 @@
-import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import { AnimatePresence, motion } from 'framer-motion'; // Ensure framer-motion is imported correctly
-import Homepage from './pages/Homepage';
-import AboutUs from './pages/AboutUs';
-import Team from './pages/Team';
-import WhatWeDo from './pages/WhatWeDo';
-import GetInvolved from './pages/GetInvolved';
-import Donate from './pages/Donate';
-import ContactUs from './pages/ContactUs';
-import PrivacyPolicy from './pages/PrivacyPolicy';
+import React, { useEffect } from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion"; // Ensure framer-motion is imported correctly
+import Homepage from "./pages/Homepage";
+import AboutUs from "./pages/AboutUs";
+import Team from "./pages/Team";
+import WhatWeDo from "./pages/WhatWeDo";
+import GetInvolved from "./pages/GetInvolved";
+import Donate from "./pages/Donate";
+import ContactUs from "./pages/ContactUs";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 // ScrollToTop Component to reset scroll position on route change
 const ScrollToTop = () => {
@@ -29,14 +34,70 @@ const AnimatedRoutes = () => {
       <ScrollToTop /> {/* Ensures the scroll resets on every route change */}
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
-          <Route path="/" element={<PageWrapper><Homepage /></PageWrapper>} />
-          <Route path="/about-us" element={<PageWrapper><AboutUs /></PageWrapper>} />
-          <Route path="/team" element={<PageWrapper><Team /></PageWrapper>} />
-          <Route path="/contact-us" element={<PageWrapper><ContactUs /></PageWrapper>} />
-          <Route path="/what-we-do" element={<PageWrapper><WhatWeDo /></PageWrapper>} />
-          <Route path="/get-involved" element={<PageWrapper><GetInvolved /></PageWrapper>} />
-          <Route path="/donate" element={<PageWrapper><Donate /></PageWrapper>} />
-          <Route path="/policy" element={<PageWrapper><PrivacyPolicy /></PageWrapper>} />
+          <Route
+            path="/"
+            element={
+              <PageWrapper>
+                <Homepage />
+              </PageWrapper>
+            }
+          />
+          <Route
+            path="/about-us"
+            element={
+              <PageWrapper>
+                <AboutUs />
+              </PageWrapper>
+            }
+          />
+          <Route
+            path="/team"
+            element={
+              <PageWrapper>
+                <Team />
+              </PageWrapper>
+            }
+          />
+          <Route
+            path="/contact-us"
+            element={
+              <PageWrapper>
+                <ContactUs />
+              </PageWrapper>
+            }
+          />
+          <Route
+            path="/what-we-do"
+            element={
+              <PageWrapper>
+                <WhatWeDo />
+              </PageWrapper>
+            }
+          />
+          <Route
+            path="/get-involved"
+            element={
+              <PageWrapper>
+                <GetInvolved />
+              </PageWrapper>
+            }
+          />
+          <Route
+            path="/donate"
+            element={
+              <PageWrapper>
+                <Donate />
+              </PageWrapper>
+            }
+          />
+          <Route
+            path="/policy"
+            element={
+              <PageWrapper>
+                <PrivacyPolicy />
+              </PageWrapper>
+            }
+          />
         </Routes>
       </AnimatePresence>
     </>
