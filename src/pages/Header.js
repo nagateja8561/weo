@@ -50,6 +50,12 @@ const Header = () => {
             >
               Get Involved
             </Link>
+            <Link
+              to="/team"
+              className="font-bold text-lg hover:text-green-600 hover:bg-green-100 hover:shadow-lg hover:rounded-full transition-all duration-300 px-4 py-2"
+            >
+              Our Team
+            </Link>
           </nav>
         </div>
 
@@ -119,6 +125,13 @@ const Header = () => {
           onClick={toggleNav}
         >
           Get Involved
+        </Link>
+        <Link
+          to="/team"
+          className="font-bold text-2xl text-gray-800 hover:text-green-600 focus:text-green-600 active:text-green-600 hover:bg-green-100 focus:bg-green-100 active:bg-green-100 hover:shadow-lg focus:shadow-lg active:shadow-lg hover:rounded-full focus:rounded-full active:rounded-full transition-all duration-300 px-4 py-2"
+          onClick={toggleNav}
+        >
+          Our Team
         </Link>
 
         <Link to="/donate" onClick={toggleNav}>
