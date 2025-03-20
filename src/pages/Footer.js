@@ -40,7 +40,7 @@ const Footer = () => {
 
         {/* Footer Bottom (Copyright & Links) */}
         <div className="border-t border-gray-700 mt-10 pt-6 text-center text-sm">
-          <p>&copy; 2025 WEO | <a href="/weo/policy" className="hover:underline">Privacy Policy</a></p>
+          <p>&copy; 2025 WEO | <Link to="/policy" className="hover:underline">Privacy Policy</Link></p>
         </div>
       </div>
     </footer>
