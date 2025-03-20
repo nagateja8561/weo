@@ -56,6 +56,12 @@ const Header = () => {
             >
               Our Team
             </Link>
+            <Link
+              to="/contact-us"
+              className="font-medium text-lg hover:text-primary hover:bg-accent hover:shadow-lg hover:rounded-full transition-all duration-300 px-4 py-2"
+            >
+              Contact Us
+            </Link>
           </nav>
         </div>
 
@@ -133,6 +139,13 @@ const Header = () => {
           onClick={toggleNav}
         >
           Our Team
+        </Link>
+        <Link
+          to="/contact-us"
+          className="font-medium text-2xl text-gray-800 hover:text-primary hover:bg-accent hover:shadow-lg hover:rounded-full transition-all duration-300 px-4 py-2"
+          onClick={toggleNav}
+        >
+          Contact Us
         </Link>
 
         <Link to="/donate" onClick={toggleNav}>

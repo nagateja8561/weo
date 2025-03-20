@@ -56,14 +56,17 @@ const WhatWeDo = () => {
           </motion.section>
 
           {/* Priority Areas Section */}
+          {/* Priority Areas Section */}
           <motion.section
             className="py-16 px-4 sm:px-8"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
+            initial="hidden" // Initially hidden before animation starts
+            animate="visible" // Immediately animate when the section is rendered
             variants={{
+              hidden: { opacity: 0, y: 50 }, // Hidden state (before animation starts)
               visible: {
-                transition: { staggerChildren: 0.3 },
+                opacity: 1,
+                y: 0,
+                transition: { staggerChildren: 0.3 }, // Stagger animation for children
               },
             }}
           >
