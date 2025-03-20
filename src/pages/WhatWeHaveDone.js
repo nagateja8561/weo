@@ -77,31 +77,30 @@ const WhatWeHaveDone = () => {
           </motion.section>
 
           {/* Lightbox Overlay */}
-{selectedImage && (
-  <div className="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center">
-    {/* Image container to position the close button relative to the image */}
-    <div className="relative w-full h-full flex items-center justify-center p-4">
-      {/* Close Button */}
-      <button
-        className="absolute bottom-2 center-2 z-50 bg-black bg-opacity-50 text-white text-lg rounded-full w-10 h-10 flex items-center justify-center cursor-pointer hover:bg-opacity-70"
-        onClick={() => setSelectedImage(null)} // Close lightbox
-      >
-        &times;
-      </button>
+          {selectedImage && (
+            <div className="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center">
+              {/* Image container to position the close button relative to the image */}
+              <div className="relative w-full h-full flex items-center justify-center p-4">
+                {/* Close Button */}
+                <button
+                  className="absolute bottom-2 center-2 z-50 bg-black bg-opacity-50 text-white text-lg rounded-full w-10 h-10 flex items-center justify-center cursor-pointer hover:bg-opacity-70"
+                  onClick={() => setSelectedImage(null)} // Close lightbox
+                >
+                  &times;
+                </button>
 
-      {/* Responsive Image */}
-      <motion.img
-        src={selectedImage}
-        alt="Selected Achievement"
-        className="rounded-lg max-w-full max-h-full object-contain"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.3 }}
-      />
-    </div>
-  </div>
-)}
-
+                {/* Responsive Image */}
+                <motion.img
+                  src={selectedImage}
+                  alt="Selected Achievement"
+                  className="rounded-lg max-w-full max-h-full object-contain"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.3 }}
+                />
+              </div>
+            </div>
+          )}
         </div>
       </Layout>
     </PageTransition>

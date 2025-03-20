@@ -207,7 +207,7 @@ const Header = () => {
                 className="block px-6 py-3 text-lg text-gray-800 hover:text-primary hover:bg-accent hover:shadow-lg hover:rounded-full transition-all duration-300 whitespace-nowrap"
                 onClick={toggleNav}
               >
-                What We Have Done
+                What We Done
               </Link>
               <Link
                 to="/team"

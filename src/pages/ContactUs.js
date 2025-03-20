@@ -167,12 +167,10 @@ const ContactUs = () => {
               </motion.div>
             </div>
           </motion.section>
-
-         
         </div>
       </Layout>
     </PageTransition>
   );
 };
 
-export default ContactUs
+export default ContactUs;

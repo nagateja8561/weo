@@ -42,8 +42,8 @@ const OurTeam = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            At <strong>World Environment Organization</strong>, we are united
-            by a shared vision of a sustainable planet. Meet the change-makers
+            At <strong>World Environment Organization</strong>, we are united by
+            a shared vision of a sustainable planet. Meet the change-makers
             leading our efforts to protect and nurture our environment.
           </motion.p>
         </div>

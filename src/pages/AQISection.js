@@ -121,38 +121,51 @@ const AQISection = () => {
         </div>
       ) : (
         <div className="max-w-7xl mx-auto grid grid-cols-1 gap-4 sm:grid-cols-2">
-          {[{ city: "Hyderabad", aqi: hyderabadAQI, data: hyderabadData }, { city: "India", aqi: indiaAQI, data: indiaData }]
-            .map(({ city, aqi, data }, index) => {
-              const { category, color, textColor } = getAQICategory(aqi);
+          {[
+            { city: "Hyderabad", aqi: hyderabadAQI, data: hyderabadData },
+            { city: "India", aqi: indiaAQI, data: indiaData },
+          ].map(({ city, aqi, data }, index) => {
+            const { category, color, textColor } = getAQICategory(aqi);
 
-              return (
-                <motion.div
-                  key={index}
-                  className={`shadow-lg rounded-lg overflow-hidden p-4 flex flex-col ${color} ${textColor} hover:scale-105 hover:shadow-xl transition-transform duration-300`}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <div className="flex-grow">
-                    <div className={`p-6 text-center ${category === "Hazardous" ? "animate-scaleUp" : ""}`}>
-                      {/* Dynamically include AQI in city name */}
-                      <h2 className="text-xl sm:text-2xl md:text-3xl font-bold">{`${city} (AQI)`}</h2>
-                      <div className="text-4xl font-semibold my-2">{aqi}</div>
-                      <p className="text-lg font-medium">{category}</p>
-                    </div>
-                    <div className="grid grid-cols-2 gap-3 p-4 sm:gap-4">
-                      {data &&
-                        Object.entries(data).map(([key, value]) => (
-                          <div key={key} className="p-2 sm:p-4 bg-gray-100 rounded-lg text-center shadow">
-                            <h4 className="text-sm sm:text-base font-semibold capitalize">{key.replace(/_/g, " ")}</h4>
-                            <p className="text-sm sm:text-lg font-medium">{value}</p>
-                          </div>
-                        ))}
-                    </div>
+            return (
+              <motion.div
+                key={index}
+                className={`shadow-lg rounded-lg overflow-hidden p-4 flex flex-col ${color} ${textColor} hover:scale-105 hover:shadow-xl transition-transform duration-300`}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+              >
+                <div className="flex-grow">
+                  <div
+                    className={`p-6 text-center ${
+                      category === "Hazardous" ? "animate-scaleUp" : ""
+                    }`}
+                  >
+                    {/* Dynamically include AQI in city name */}
+                    <h2 className="text-xl sm:text-2xl md:text-3xl font-bold">{`${city} (AQI)`}</h2>
+                    <div className="text-4xl font-semibold my-2">{aqi}</div>
+                    <p className="text-lg font-medium">{category}</p>
                   </div>
-                </motion.div>
-              );
-            })}
+                  <div className="grid grid-cols-2 gap-3 p-4 sm:gap-4">
+                    {data &&
+                      Object.entries(data).map(([key, value]) => (
+                        <div
+                          key={key}
+                          className="p-2 sm:p-4 bg-gray-100 rounded-lg text-center shadow"
+                        >
+                          <h4 className="text-sm sm:text-base font-semibold capitalize">
+                            {key.replace(/_/g, " ")}
+                          </h4>
+                          <p className="text-sm sm:text-lg font-medium">
+                            {value}
+                          </p>
+                        </div>
+                      ))}
+                  </div>
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
       )}
     </div>
