@@ -76,6 +76,12 @@ const Header = () => {
                     What We Do
                   </Link>
                   <Link
+                    to="/what-we-have-done"
+                    className="block text-lg text-gray-800 hover:text-primary hover:bg-accent hover:shadow-lg hover:rounded-full transition-all duration-300 px-6 py-2 whitespace-nowrap"
+                  >
+                    What We Have Done
+                  </Link>
+                  <Link
                     to="/team"
                     className="block text-lg text-gray-800 hover:text-primary hover:bg-accent hover:shadow-lg hover:rounded-full transition-all duration-300 px-6 py-2 whitespace-nowrap"
                   >
@@ -197,6 +203,13 @@ const Header = () => {
                 What We Do
               </Link>
               <Link
+                to="/what-we-have-done"
+                className="block px-6 py-3 text-lg text-gray-800 hover:text-primary hover:bg-accent hover:shadow-lg hover:rounded-full transition-all duration-300 whitespace-nowrap"
+                onClick={toggleNav}
+              >
+                What We Have Done
+              </Link>
+              <Link
                 to="/team"
                 className="block px-6 py-3 text-lg text-gray-800 hover:text-primary hover:bg-accent hover:shadow-lg hover:rounded-full transition-all duration-300 whitespace-nowrap"
                 onClick={toggleNav}
@@ -240,6 +253,13 @@ const Header = () => {
             </div>
           )}
         </div>
+
+        {/* Donate Button for Mobile */}
+        <Link to="/donate">
+          <button className="bg-green-500 text-white py-3 px-6 rounded-lg text-2xl font-medium hover:bg-green-700 transition-all duration-300">
+            Donate
+          </button>
+        </Link>
       </div>
     </header>
   );

@@ -77,10 +77,10 @@ const Donate = () => {
               </p>
               <div className="bg-gray-100 p-4 rounded-lg shadow-lg text-left">
                 <p className="text-lg font-bold mb-2">Bank Details:</p>
-                <p>Account Name: WEO Foundation</p>
-                <p>Account Number: 123456789</p>
-                <p>IFSC Code: ABCD0123456</p>
-                <p>Branch: Jubilee Hills, Hyderabad</p>
+                <p>Account Name: WORLD ENVIRONMENT ORGANIZATION</p>
+                <p>Account Number: 053411100006001</p>
+                <p>IFSC Code: UBIN0805343</p>
+                <p>Branch: Somajiguda, Hyderabad</p>
               </div>
             </motion.div>
           </div>
