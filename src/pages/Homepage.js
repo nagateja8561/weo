@@ -128,7 +128,10 @@ const Homepage = () => {
                 variants={fadeIn} 
                 custom={1}
               >
-                We envision a future where nature and humanity coexist in harmony, ensuring clean air, pure water, and a thriving planet for generations to come.
+                Our vision is a future where innovation and sustainability converge to create lasting positive change, 
+                empowering individuals and organizations to reach their full potential. We are committed to building a brighter, 
+                greener world where nature and humanity coexist in harmony, ensuring clean air, pure water, 
+                and a thriving planet for generations to come.
               </motion.p>
             </motion.div>
           </motion.div>
