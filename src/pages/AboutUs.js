@@ -27,11 +27,11 @@ const AboutUs = () => {
             <img
               src="/weo/images/about-us.png" // Add your actual image path here
               alt="About Us Hero"
-              className="absolute w-full h-[680px] object-cover opacity-80"
+              className="absolute w-full h-auto sm:h-[680px] object-cover opacity-800"
             />
             {/* Content Overlay */}
             <motion.div
-              className="relative z-10 flex flex-col justify-center items-center h-[680px]"
+              className="relative z-10 flex flex-col justify-center items-center sm:h-[680px] h-auto py-16"
               variants={fadeIn}
               custom={0.5}
             >
@@ -81,8 +81,8 @@ const AboutUs = () => {
                 At the core of our mission is a belief in empowering
                 communities, fostering innovation, and working tirelessly
                 towards building a greener planet. By tackling challenges such
-                as sustainability, equality, and development, we strive to
-                leave a lasting, positive impact on the world.
+                as sustainability, equality, and development, we strive to leave
+                a lasting, positive impact on the world.
               </motion.p>
             </div>
           </motion.section>
@@ -130,8 +130,8 @@ const AboutUs = () => {
                 </h2>
                 <p className="text-lg leading-relaxed">
                   We strive to empower communities and individuals by promoting
-                  environmental sustainability and innovation. Our mission is
-                  to build a world where progress is inclusive, impactful, and
+                  environmental sustainability and innovation. Our mission is to
+                  build a world where progress is inclusive, impactful, and
                   aligned with our planet's needs.
                 </p>
               </motion.div>

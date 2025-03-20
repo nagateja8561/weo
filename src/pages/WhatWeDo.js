@@ -4,7 +4,6 @@ import PageTransition from "./PageTransition";
 import Layout from "./Layout";
 import { Link } from "react-router-dom";
 
-
 // Animation Configuration
 const fadeIn = {
   hidden: { opacity: 0, y: 50 },
@@ -22,7 +21,7 @@ const WhatWeDo = () => {
         <div className="bg-gray-50 text-gray-800">
           {/* Hero Section with Image and Animation */}
           <motion.section
-            className="relative bg-green-600 text-white text-center"
+            className="relative bg-gray-600 text-white text-center"
             initial="hidden"
             animate="visible"
           >
@@ -30,22 +29,26 @@ const WhatWeDo = () => {
             <img
               src="/weo/images/whatwe-do.jpg" // Replace with your actual image path
               alt="What We Do"
-              className="absolute w-full h-[680px] object-cover opacity-50"
+              className="absolute w-full h-[300px] sm:h-[680px] object-cover opacity-500"
             />
             {/* Content Layer */}
             <motion.div
-              className="relative z-10 flex flex-col justify-center items-center h-[680px]"
+              className="relative z-10 flex flex-col justify-center items-center h-[300px] sm:h-[680px]"
               variants={fadeIn}
               custom={0.5}
             >
               <motion.h1
-                className="text-5xl font-bold mb-4"
+                className="text-3xl sm:text-5xl font-bold mb-4"
                 variants={fadeIn}
                 custom={1}
               >
                 What We Do
               </motion.h1>
-              <motion.p className="text-lg" variants={fadeIn} custom={1.5}>
+              <motion.p
+                className="text-base sm:text-lg"
+                variants={fadeIn}
+                custom={1.5}
+              >
                 We are committed to creating a sustainable future through
                 innovative solutions and impactful initiatives.
               </motion.p>

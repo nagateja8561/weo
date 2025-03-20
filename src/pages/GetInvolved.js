@@ -21,7 +21,7 @@ const GetInvolved = () => {
         <div className="bg-gray-50 text-gray-800">
           {/* Hero Section with Image and Animation */}
           <motion.section
-            className="relative bg-green-600 text-white text-center"
+            className="relative text-white text-center" // Removed bg-green-600 class
             initial="hidden"
             animate="visible"
           >
@@ -29,10 +29,10 @@ const GetInvolved = () => {
             <img
               src="/weo/images/get-involved.jpg" // Replace with your actual image path
               alt="Get Involved Hero"
-              className="absolute w-full h-[600px] object-cover opacity-80"
+              className="absolute w-full h-[300px] sm:h-[600px] object-cover opacity-80"
             />
             <motion.div
-              className="relative z-10 flex flex-col justify-center items-center h-[600px]"
+              className="relative z-10 flex flex-col justify-center items-center sm:h-[600px] h-[300px] py-16" // Removed background styling here
               variants={fadeIn}
               custom={0.5}
             >
