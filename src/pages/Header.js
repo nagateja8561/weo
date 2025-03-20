@@ -76,10 +76,10 @@ const Header = () => {
                     What We Do
                   </Link>
                   <Link
-                    to="/what-we-have-done"
+                    to="/what-we-done"
                     className="block text-lg text-gray-800 hover:text-primary hover:bg-accent hover:shadow-lg hover:rounded-full transition-all duration-300 px-6 py-2 whitespace-nowrap"
                   >
-                    What We Have Done
+                    What We Done
                   </Link>
                   <Link
                     to="/team"
@@ -203,7 +203,7 @@ const Header = () => {
                 What We Do
               </Link>
               <Link
-                to="/what-we-have-done"
+                to="/what-we-done"
                 className="block px-6 py-3 text-lg text-gray-800 hover:text-primary hover:bg-accent hover:shadow-lg hover:rounded-full transition-all duration-300 whitespace-nowrap"
                 onClick={toggleNav}
               >

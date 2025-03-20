@@ -14,7 +14,7 @@ import GetInvolved from "./pages/GetInvolved";
 import Donate from "./pages/Donate";
 import ContactUs from "./pages/ContactUs";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
-import WhatWeHaveDone from "./pages/WhatWeHaveDone";
+import WhatWeDone from "./pages/WhatWeDone";
 
 // ScrollToTop Component to reset scroll position on route change
 const ScrollToTop = () => {
@@ -99,15 +99,15 @@ const AnimatedRoutes = () => {
               </PageWrapper>
             }
           />
-        <Route
-            path="/what-we-have-done"
+          <Route
+            path="/what-we-done"
             element={
               <PageWrapper>
-                <WhatWeHaveDone />
+                <WhatWeDone />
               </PageWrapper>
             }
           />
-          </Routes>
+        </Routes>
       </AnimatePresence>
     </>
   );

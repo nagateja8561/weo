@@ -12,7 +12,7 @@ const fadeIn = {
   }),
 };
 
-const WhatWeHaveDone = () => {
+const WhatWeDone = () => {
   const [selectedImage, setSelectedImage] = useState(null); // Manage clicked image
 
   const achievements = [
@@ -41,7 +41,7 @@ const WhatWeHaveDone = () => {
               variants={fadeIn}
               custom={0.5}
             >
-              What We’ve Done
+              What We Done
             </motion.h1>
           </motion.section>
 
@@ -107,4 +107,4 @@ const WhatWeHaveDone = () => {
   );
 };
 
-export default WhatWeHaveDone;
+export default WhatWeDone;
