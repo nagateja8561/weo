@@ -1,6 +1,8 @@
 import React from 'react';
 import PageTransition from './PageTransition';
 import Layout from './Layout';
+import { Link } from 'react-router-dom';
+
 
 const AboutUs = () => {
   return (
@@ -46,12 +48,12 @@ const AboutUs = () => {
             <p className="text-lg leading-relaxed mb-8">
               Be a part of our mission to create sustainable solutions for the challenges of tomorrow.
             </p>
-            <a
-              href="/weo/get-involved"
+            <Link
+              to="/get-involved"
               className="bg-white text-green-600 py-3 px-8 rounded-lg font-bold shadow hover:bg-gray-200 transition"
             >
               Get Involved
-            </a>
+            </Link>
           </div>
         </section>
       </Layout>

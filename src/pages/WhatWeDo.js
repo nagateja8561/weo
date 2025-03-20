@@ -1,6 +1,7 @@
 import React from "react";
 import PageTransition from "./PageTransition";
 import Layout from "./Layout";
+import { Link } from 'react-router-dom';
 
 const WhatWeDo = () => {
   return (
@@ -59,12 +60,12 @@ const WhatWeDo = () => {
               <p className="text-lg leading-relaxed mb-8">
                 Together, we can create a sustainable future for generations to come. Be a part of the change today.
               </p>
-              <a
-                href="/weo/get-involved"
-                className="bg-white text-green-600 py-3 px-8 rounded-lg font-bold shadow hover:bg-gray-200 transition"
-              >
-                Get Involved
-              </a>
+              <Link
+              to="/get-involved"
+              className="bg-white text-green-600 py-3 px-8 rounded-lg font-bold shadow hover:bg-gray-200 transition"
+            >
+              Get Involved
+            </Link>
             </div>
           </section>
         </div>

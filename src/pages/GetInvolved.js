@@ -1,6 +1,8 @@
 import React from "react";
 import PageTransition from "./PageTransition";
 import Layout from "./Layout";
+import { Link } from 'react-router-dom';
+
 
 const GetInvolved = () => {
   return (
@@ -26,12 +28,12 @@ const GetInvolved = () => {
                   <p className="text-gray-600">
                     Contribute your time and skills to our initiatives. Help us in creating sustainable solutions.
                   </p>
-                  <a
-                    href="/weo/contact-us"
+                  <Link
+                    to="/contact-us"
                     className="mt-4 inline-block bg-green-600 text-white py-2 px-6 rounded-lg font-bold hover:bg-green-700 transition"
                   >
                     ContactUs
-                  </a>
+                  </Link>
                 </div>
                 {/* Support Option 2 */}
                 <div className="bg-white rounded-lg shadow-lg p-6 text-center">
@@ -39,12 +41,12 @@ const GetInvolved = () => {
                   <p className="text-gray-600">
                     Your generous donations help us sustain and expand our initiatives to make a greater impact.
                   </p>
-                  <a
-                    href="/weo/donate"
+                  <Link
+                    to="/donate"
                     className="mt-4 inline-block bg-green-600 text-white py-2 px-6 rounded-lg font-bold hover:bg-green-700 transition"
                   >
                     Donate Now
-                  </a>
+                  </Link>
                 </div>
                 {/* Support Option 3 */}
                 <div className="bg-white rounded-lg shadow-lg p-6 text-center">
@@ -52,12 +54,12 @@ const GetInvolved = () => {
                   <p className="text-gray-600">
                     Collaborate with us as a corporate partner and support impactful projects that align with your goals.
                   </p>
-                  <a
-                    href="/weo/contact-us"
+                  <Link
+                    to="/contact-us"
                     className="mt-4 inline-block bg-green-600 text-white py-2 px-6 rounded-lg font-bold hover:bg-green-700 transition"
                   >
                     ContactUs
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
