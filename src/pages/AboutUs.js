@@ -27,26 +27,22 @@ const AboutUs = () => {
             <img
               src="/weo/images/about-us.png" // Add your actual image path here
               alt="About Us Hero"
-              className="absolute w-full h-auto sm:h-[680px] object-cover opacity-800"
+              className="absolute w-full h-[300px] sm:h-[600px] object-cover opacity-800"
             />
             {/* Content Overlay */}
             <motion.div
-              className="relative z-10 flex flex-col justify-center items-center sm:h-[680px] h-auto py-16"
+              className="relative z-10 flex flex-col justify-center items-center sm:h-[600px] h-[300px] py-16" // Removed background styling here
               variants={fadeIn}
               custom={0.5}
             >
               <motion.h1
-                className="text-5xl sm:text-6xl font-bold"
+                className="text-5xl font-bold mb-4"
                 variants={fadeIn}
                 custom={1}
               >
                 About Us
               </motion.h1>
-              <motion.p
-                className="text-lg mt-4 max-w-3xl mx-auto leading-relaxed"
-                variants={fadeIn}
-                custom={1.5}
-              >
+              <motion.p className="text-lg" variants={fadeIn} custom={1.5}>
                 Discover our journey, mission, and the values driving us to
                 create a sustainable future.
               </motion.p>

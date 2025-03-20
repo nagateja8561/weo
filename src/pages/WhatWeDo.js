@@ -29,11 +29,11 @@ const WhatWeDo = () => {
             <img
               src="/weo/images/whatwe-do.jpg" // Replace with your actual image path
               alt="What We Do"
-              className="absolute w-full h-[300px] sm:h-[680px] object-cover opacity-500"
+              className="absolute w-full h-[300px] sm:h-[600px] object-cover opacity-500"
             />
             {/* Content Layer */}
             <motion.div
-              className="relative z-10 flex flex-col justify-center items-center h-[300px] sm:h-[680px]"
+              className="relative z-10 flex flex-col justify-center items-center h-[300px] sm:h-[600px]"
               variants={fadeIn}
               custom={0.5}
             >

@@ -58,6 +58,12 @@ const Header = () => {
               {isAboutUsOpen && (
                 <div className="absolute left-0 mt-2 bg-white shadow-lg rounded-lg flex flex-col space-y-4 py-2">
                   <Link
+                    to="/about-us"
+                    className="block text-lg text-gray-800 hover:text-primary hover:bg-accent hover:shadow-lg hover:rounded-full transition-all duration-300 px-6 py-2 whitespace-nowrap"
+                  >
+                    About Us
+                  </Link>
+                  <Link
                     to="/what-we-do"
                     className="block text-lg text-gray-800 hover:text-primary hover:bg-accent hover:shadow-lg hover:rounded-full transition-all duration-300 px-6 py-2 whitespace-nowrap"
                   >
@@ -87,6 +93,12 @@ const Header = () => {
               </button>
               {isGetInvolvedOpen && (
                 <div className="absolute left-0 mt-2 bg-white shadow-lg rounded-lg flex flex-col space-y-4 py-2">
+                  <Link
+                    to="/get-involved"
+                    className="block text-lg text-gray-800 hover:text-primary hover:bg-accent hover:shadow-lg hover:rounded-full transition-all duration-300 px-6 py-2 whitespace-nowrap"
+                  >
+                    Get Involved
+                  </Link>
                   <Link
                     to="/contact-us"
                     className="block text-lg text-gray-800 hover:text-primary hover:bg-accent hover:shadow-lg hover:rounded-full transition-all duration-300 px-6 py-2 whitespace-nowrap"
@@ -161,6 +173,13 @@ const Header = () => {
           {isAboutUsOpen && (
             <div className="absolute left-0 mt-2 bg-white shadow-lg rounded-lg w-full flex flex-col space-y-4 py-2 z-10">
               <Link
+                to="/about-us"
+                className="block px-6 py-3 text-lg text-gray-800 hover:text-primary hover:bg-accent hover:shadow-lg hover:rounded-full transition-all duration-300 whitespace-nowrap"
+                onClick={toggleNav}
+              >
+                About Us
+              </Link>
+              <Link
                 to="/what-we-do"
                 className="block px-6 py-3 text-lg text-gray-800 hover:text-primary hover:bg-accent hover:shadow-lg hover:rounded-full transition-all duration-300 whitespace-nowrap"
                 onClick={toggleNav}
@@ -192,6 +211,13 @@ const Header = () => {
           </button>
           {isGetInvolvedOpen && (
             <div className="absolute left-0 mt-2 bg-white shadow-lg rounded-lg w-full flex flex-col space-y-4 py-2 z-10">
+              <Link
+                to="/get-involved"
+                className="block px-6 py-3 text-lg text-gray-800 hover:text-primary hover:bg-accent hover:shadow-lg hover:rounded-full transition-all duration-300 whitespace-nowrap"
+                onClick={toggleNav}
+              >
+                Get Involved
+              </Link>
               <Link
                 to="/contact-us"
                 className="block px-6 py-3 text-lg text-gray-800 hover:text-primary hover:bg-accent hover:shadow-lg hover:rounded-full transition-all duration-300 whitespace-nowrap"
