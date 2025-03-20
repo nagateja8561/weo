@@ -17,37 +17,30 @@ const ContactUs = () => {
     <PageTransition>
       <Layout>
         <div className="bg-gray-50 text-gray-800">
-          {/* Hero Section with Image and Animation */}
+          {/* Top Section with Gradient Background */}
           <motion.section
-            className="relative bg-green-600 text-white text-center"
+            className="relative bg-gradient-to-r from-green-400 to-blue-500 text-white text-center py-24"
             initial="hidden"
             animate="visible"
           >
-            <img
-              src="/weo/images/contact-us.jpg" // Replace with your actual image path
-              alt="Contact Us"
-              className="absolute w-full h-[600px] object-cover"
-            />
-            <motion.div
-              className="relative z-10 flex flex-col justify-center items-center h-[600px]"
+            <motion.h1
+              className="text-6xl font-bold"
               variants={fadeIn}
               custom={0.5}
             >
-              <motion.h1
-                className="text-5xl font-bold mb-4"
-                variants={fadeIn}
-                custom={1}
-              >
-                Contact Us
-              </motion.h1>
-              <motion.p className="text-lg" variants={fadeIn} custom={1.5}>
-                Have questions, feedback, or want to get involved? Reach out to
-                us!
-              </motion.p>
-            </motion.div>
+              Contact Us
+            </motion.h1>
+            <motion.p
+              className="text-lg mt-4 max-w-2xl mx-auto"
+              variants={fadeIn}
+              custom={1}
+            >
+              Have questions, feedback, or want to get involved? Reach out to
+              us—we’d love to hear from you!
+            </motion.p>
           </motion.section>
 
-          {/* Contact Form Section with Animation */}
+          {/* Contact Form Section */}
           <motion.section
             className="py-16 px-4 sm:px-8"
             initial="hidden"
@@ -55,9 +48,7 @@ const ContactUs = () => {
             viewport={{ once: true, amount: 0.5 }}
             variants={{
               visible: {
-                transition: {
-                  staggerChildren: 0.3,
-                },
+                transition: { staggerChildren: 0.3 },
               },
             }}
           >
@@ -129,6 +120,21 @@ const ContactUs = () => {
             </div>
           </motion.section>
 
+          {/* Wave Section Divider */}
+          <div className="wave-divider bg-gradient-to-r from-blue-500 to-green-400">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 1440 320"
+              className="w-full"
+            >
+              <path
+                fill="white"
+                fillOpacity="1"
+                d="M0,224L30,229.3C60,235,120,245,180,240C240,235,300,213,360,186.7C420,160,480,128,540,117.3C600,107,660,117,720,133.3C780,149,840,171,900,160C960,149,1020,107,1080,112C1140,117,1200,171,1260,197.3C1320,224,1380,224,1410,224L1440,224L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"
+              ></path>
+            </svg>
+          </div>
+
           {/* Contact Information Section */}
           <motion.section
             className="py-16 px-4 sm:px-8 bg-gray-100"
@@ -162,41 +168,11 @@ const ContactUs = () => {
             </div>
           </motion.section>
 
-          {/* Map Section */}
-          <motion.section
-            className="py-16 px-4 sm:px-8"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={{
-              visible: {
-                transition: {
-                  staggerChildren: 0.3,
-                },
-              },
-            }}
-          >
-            <motion.div
-              className="max-w-7xl mx-auto"
-              variants={fadeIn}
-              custom={0}
-            >
-              <h2 className="text-3xl font-bold text-center mb-8">
-                Our Location
-              </h2>
-              <iframe
-                title="Google Map"
-                className="w-full h-72 md:h-96 rounded-lg shadow-lg"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.7695567902213!2d78.42348751540592!3d17.430376380563138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb97746c5f935b%3A0x12345678abcdef!2sH%20No-8-3-231%2FA%2F11%2F1%2C%20Sri%20Krishna%20Nagar%20Main%20Road%2C%20Jubilee%20Hills%2C%20Hyderabad%2C%20Telangana%20500033%2C%20India!5e0!3m2!1sen!2sin!4v1618353171285!5m2!1sen!2sin"
-                allowFullScreen=""
-                loading="lazy"
-              ></iframe>
-            </motion.div>
-          </motion.section>
+         
         </div>
       </Layout>
     </PageTransition>
   );
 };
 
-export default ContactUs;
+export default ContactUs

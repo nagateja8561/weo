@@ -29,7 +29,7 @@ const GetInvolved = () => {
             <img
               src="/weo/images/get-involved.jpg" // Replace with your actual image path
               alt="Get Involved Hero"
-              className="absolute w-full h-[600px] object-cover opacity-800"
+              className="absolute w-full h-[600px] object-cover opacity-80"
             />
             <motion.div
               className="relative z-10 flex flex-col justify-center items-center h-[600px]"
@@ -144,36 +144,57 @@ const GetInvolved = () => {
             </div>
           </motion.section>
 
-          {/* Call-to-Action Section with Animations */}
-          <motion.section
-            className="py-16 bg-green-600 text-white text-center"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
-          >
-            <motion.div
-              className="max-w-4xl mx-auto"
-              variants={{
-                visible: { transition: { staggerChildren: 0.3 } },
-              }}
+          {/* Wave Section Divider */}
+          <div className="wave-divider bg-gradient-to-r from-blue-500 to-green-400">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 1440 320"
+              className="w-full"
             >
-              <motion.h2
-                className="text-3xl font-bold mb-4"
-                variants={fadeIn}
-                custom={0}
+              <path
+                fill="white"
+                fillOpacity="1"
+                d="M0,224L30,229.3C60,235,120,245,180,240C240,235,300,213,360,186.7C420,160,480,128,540,117.3C600,107,660,117,720,133.3C780,149,840,171,900,160C960,149,1020,107,1080,112C1140,117,1200,171,1260,197.3C1320,224,1380,224,1410,224L1440,224L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"
+              ></path>
+            </svg>
+          </div>
+
+          {/* Final Call-to-Action Section */}
+          <div className="bg-blue-50 py-16 text-center">
+            <motion.h2
+              className="text-4xl font-bold text-gray-800"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              Together for a Better Tomorrow
+            </motion.h2>
+            <motion.p
+              className="text-lg mt-4 text-gray-600 max-w-3xl mx-auto"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2, duration: 0.8 }}
+            >
+              Your involvement is the driving force behind our mission. Join us
+              today and help build a sustainable future for generations to come.
+            </motion.p>
+            <motion.div
+              className="mt-6"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4, duration: 0.8 }}
+            >
+              <Link
+                to="/contact-us"
+                className="inline-block bg-green-600 text-white py-2 px-6 rounded-lg font-bold hover:bg-green-700 transition"
               >
-                Become a Part of the Change
-              </motion.h2>
-              <motion.p
-                className="text-lg leading-relaxed mb-8"
-                variants={fadeIn}
-                custom={0.5}
-              >
-                Whether it’s through volunteering, donations, or partnerships,
-                your support helps us create a sustainable future.
-              </motion.p>
+                Contact Us
+              </Link>
             </motion.div>
-          </motion.section>
+          </div>
         </div>
       </Layout>
     </PageTransition>
