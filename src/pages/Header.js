@@ -13,10 +13,14 @@ const Header = () => {
   };
 
   const toggleAboutUs = () => {
+    // Close Get Involved dropdown if it's open
+    if (isGetInvolvedOpen) setIsGetInvolvedOpen(false);
     setIsAboutUsOpen(!isAboutUsOpen);
   };
 
   const toggleGetInvolved = () => {
+    // Close About Us dropdown if it's open
+    if (isAboutUsOpen) setIsAboutUsOpen(false);
     setIsGetInvolvedOpen(!isGetInvolvedOpen);
   };
 
@@ -52,11 +56,13 @@ const Header = () => {
                 <span>About Us</span>
                 <FaChevronDown
                   size={16} // smaller size
-                  className={`transition-transform duration-300 ${isAboutUsOpen ? "rotate-180" : ""}`}
+                  className={`transition-transform duration-300 ${
+                    isAboutUsOpen ? "rotate-180" : ""
+                  }`}
                 />
               </button>
               {isAboutUsOpen && (
-                <div className="absolute left-0 mt-2 bg-white shadow-lg rounded-lg flex flex-col space-y-4 py-2">
+                <div className="absolute left-0 mt-2 bg-white shadow-lg rounded-lg flex flex-col space-y-4 py-2 z-20">
                   <Link
                     to="/about-us"
                     className="block text-lg text-gray-800 hover:text-primary hover:bg-accent hover:shadow-lg hover:rounded-full transition-all duration-300 px-6 py-2 whitespace-nowrap"
@@ -88,11 +94,13 @@ const Header = () => {
                 <span>Get Involved</span>
                 <FaChevronDown
                   size={16} // smaller size
-                  className={`transition-transform duration-300 ${isGetInvolvedOpen ? "rotate-180" : ""}`}
+                  className={`transition-transform duration-300 ${
+                    isGetInvolvedOpen ? "rotate-180" : ""
+                  }`}
                 />
               </button>
               {isGetInvolvedOpen && (
-                <div className="absolute left-0 mt-2 bg-white shadow-lg rounded-lg flex flex-col space-y-4 py-2">
+                <div className="absolute left-0 mt-2 bg-white shadow-lg rounded-lg flex flex-col space-y-4 py-2 z-20">
                   <Link
                     to="/get-involved"
                     className="block text-lg text-gray-800 hover:text-primary hover:bg-accent hover:shadow-lg hover:rounded-full transition-all duration-300 px-6 py-2 whitespace-nowrap"
@@ -167,7 +175,9 @@ const Header = () => {
             <span>About Us</span>
             <FaChevronDown
               size={16} // smaller size
-              className={`transition-transform duration-300 ${isAboutUsOpen ? "rotate-180" : ""}`}
+              className={`transition-transform duration-300 ${
+                isAboutUsOpen ? "rotate-180" : ""
+              }`}
             />
           </button>
           {isAboutUsOpen && (
@@ -206,7 +216,9 @@ const Header = () => {
             <span>Get Involved</span>
             <FaChevronDown
               size={16} // smaller size
-              className={`transition-transform duration-300 ${isGetInvolvedOpen ? "rotate-180" : ""}`}
+              className={`transition-transform duration-300 ${
+                isGetInvolvedOpen ? "rotate-180" : ""
+              }`}
             />
           </button>
           {isGetInvolvedOpen && (
