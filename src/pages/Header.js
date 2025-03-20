@@ -11,7 +11,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+    <header className="fixed top-0 left-0 w-full bg-white shadow-md z-50 font-sans">
       <div className="container mx-auto flex justify-between items-center p-1">
         <div className="flex items-center space-x-10">
           <Link to="/">
@@ -27,32 +27,32 @@ const Header = () => {
             {location.pathname !== "/" && (
               <Link
                 to="/"
-                className="font-bold text-lg hover:text-green-600 hover:bg-green-100 hover:shadow-lg hover:rounded-full transition-all duration-300 px-4 py-2"
+                className="font-medium text-lg hover:text-primary hover:bg-accent hover:shadow-lg hover:rounded-full transition-all duration-300 px-4 py-2"
               >
                 Home
               </Link>
             )}
             <Link
               to="/about-us"
-              className="font-bold text-lg hover:text-green-600 hover:bg-green-100 hover:shadow-lg hover:rounded-full transition-all duration-300 px-4 py-2"
+              className="font-medium text-lg hover:text-primary hover:bg-accent hover:shadow-lg hover:rounded-full transition-all duration-300 px-4 py-2"
             >
               About Us
             </Link>
             <Link
               to="/what-we-do"
-              className="font-bold text-lg hover:text-green-600 hover:bg-green-100 hover:shadow-lg hover:rounded-full transition-all duration-300 px-4 py-2"
+              className="font-medium text-lg hover:text-primary hover:bg-accent hover:shadow-lg hover:rounded-full transition-all duration-300 px-4 py-2"
             >
               What We Do
             </Link>
             <Link
               to="/get-involved"
-              className="font-bold text-lg hover:text-green-600 hover:bg-green-100 hover:shadow-lg hover:rounded-full transition-all duration-300 px-4 py-2"
+              className="font-medium text-lg hover:text-primary hover:bg-accent hover:shadow-lg hover:rounded-full transition-all duration-300 px-4 py-2"
             >
               Get Involved
             </Link>
             <Link
               to="/team"
-              className="font-bold text-lg hover:text-green-600 hover:bg-green-100 hover:shadow-lg hover:rounded-full transition-all duration-300 px-4 py-2"
+              className="font-medium text-lg hover:text-primary hover:bg-accent hover:shadow-lg hover:rounded-full transition-all duration-300 px-4 py-2"
             >
               Our Team
             </Link>
@@ -61,7 +61,7 @@ const Header = () => {
 
         <div className="hidden md:block">
           <Link to="/donate">
-            <button className="bg-green-600 text-white py-2 px-6 rounded-lg text-lg hover:bg-green-800">
+            <button className="bg-primary text-white py-2 px-6 rounded-lg text-lg font-medium hover:bg-secondary transition-all duration-300">
               Donate
             </button>
           </Link>
@@ -86,6 +86,7 @@ const Header = () => {
         </div>
       </div>
 
+      {/* Mobile Navigation */}
       <div
         className={`${
           isNavOpen ? "translate-x-0" : "-translate-x-full"
@@ -100,42 +101,42 @@ const Header = () => {
 
         <Link
           to="/"
-          className="font-bold text-2xl text-gray-800 hover:text-green-600 focus:text-green-600 active:text-green-600 hover:bg-green-100 focus:bg-green-100 active:bg-green-100 hover:shadow-lg focus:shadow-lg active:shadow-lg hover:rounded-full focus:rounded-full active:rounded-full transition-all duration-300 px-4 py-2"
+          className="font-medium text-2xl text-gray-800 hover:text-primary hover:bg-accent hover:shadow-lg hover:rounded-full transition-all duration-300 px-4 py-2"
           onClick={toggleNav}
         >
           Home
         </Link>
         <Link
           to="/about-us"
-          className="font-bold text-2xl text-gray-800 hover:text-green-600 focus:text-green-600 active:text-green-600 hover:bg-green-100 focus:bg-green-100 active:bg-green-100 hover:shadow-lg focus:shadow-lg active:shadow-lg hover:rounded-full focus:rounded-full active:rounded-full transition-all duration-300 px-4 py-2"
+          className="font-medium text-2xl text-gray-800 hover:text-primary hover:bg-accent hover:shadow-lg hover:rounded-full transition-all duration-300 px-4 py-2"
           onClick={toggleNav}
         >
           About Us
         </Link>
         <Link
           to="/what-we-do"
-          className="font-bold text-2xl text-gray-800 hover:text-green-600 focus:text-green-600 active:text-green-600 hover:bg-green-100 focus:bg-green-100 active:bg-green-100 hover:shadow-lg focus:shadow-lg active:shadow-lg hover:rounded-full focus:rounded-full active:rounded-full transition-all duration-300 px-4 py-2"
+          className="font-medium text-2xl text-gray-800 hover:text-primary hover:bg-accent hover:shadow-lg hover:rounded-full transition-all duration-300 px-4 py-2"
           onClick={toggleNav}
         >
           What We Do
         </Link>
         <Link
           to="/get-involved"
-          className="font-bold text-2xl text-gray-800 hover:text-green-600 focus:text-green-600 active:text-green-600 hover:bg-green-100 focus:bg-green-100 active:bg-green-100 hover:shadow-lg focus:shadow-lg active:shadow-lg hover:rounded-full focus:rounded-full active:rounded-full transition-all duration-300 px-4 py-2"
+          className="font-medium text-2xl text-gray-800 hover:text-primary hover:bg-accent hover:shadow-lg hover:rounded-full transition-all duration-300 px-4 py-2"
           onClick={toggleNav}
         >
           Get Involved
         </Link>
         <Link
           to="/team"
-          className="font-bold text-2xl text-gray-800 hover:text-green-600 focus:text-green-600 active:text-green-600 hover:bg-green-100 focus:bg-green-100 active:bg-green-100 hover:shadow-lg focus:shadow-lg active:shadow-lg hover:rounded-full focus:rounded-full active:rounded-full transition-all duration-300 px-4 py-2"
+          className="font-medium text-2xl text-gray-800 hover:text-primary hover:bg-accent hover:shadow-lg hover:rounded-full transition-all duration-300 px-4 py-2"
           onClick={toggleNav}
         >
           Our Team
         </Link>
 
         <Link to="/donate" onClick={toggleNav}>
-          <button className="bg-green-600 text-white py-3 px-8 rounded-lg text-lg hover:bg-green-800 transition-all duration-300">
+          <button className="bg-primary text-white py-3 px-8 rounded-lg text-lg font-medium hover:bg-secondary transition-all duration-300">
             Donate
           </button>
         </Link>
