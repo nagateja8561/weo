@@ -14,7 +14,7 @@ const AQISection = () => {
 
       if (data && data.length > 0) {
         const sortedCities = data
-          .filter(city => city.aqi !== "N/A")
+          .filter((city) => city.aqi !== "N/A")
           .sort((a, b) => b.aqi - a.aqi); // Sort descending by AQI
 
         setCities(sortedCities);
@@ -96,14 +96,27 @@ const AQISection = () => {
       {selectedCity && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
           <div className="bg-white p-6 rounded-lg shadow-lg w-96 relative">
-            <h2 className="text-xl font-bold mb-2">{selectedCity.name} - AQI {selectedCity.aqi}</h2>
-            <h3 className="text-md font-semibold text-gray-700 mb-2">Pollutants:</h3>
+            {/* Add WEO Logo */}
+            <img
+              src="/images/logo.png" // Replace with the correct logo path
+              alt="WEO Logo"
+              className="w-auto h-auto mx-auto mb-4" // Adjust size and spacing as needed
+            />
+
+            <h2 className="text-xl font-bold mb-2">
+              {selectedCity.name} - AQI {selectedCity.aqi}
+            </h2>
+            <h3 className="text-md font-semibold text-gray-700 mb-2">
+              Pollutants:
+            </h3>
             {selectedCity.pollutants.length > 0 ? (
               <ul className="list-disc pl-5 space-y-1 text-gray-700">
                 {selectedCity.pollutants.map((pollutant, idx) => (
                   <li key={idx} className="flex justify-between">
                     <span className="font-medium">{pollutant.name}</span>
-                    <span className="text-gray-600">{pollutant.concentration}</span>
+                    <span className="text-gray-600">
+                      {pollutant.concentration}
+                    </span>
                   </li>
                 ))}
               </ul>
