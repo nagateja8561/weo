@@ -9,13 +9,13 @@ const AQISection = () => {
 
   const fetchAQIData = async () => {
     try {
-      const response = await axios.get("/aqi_data.json"); // Fetch from local JSON
+      const response = await axios.get("/aqi_data.json");
       const data = response.data;
 
       if (data && data.length > 0) {
         const sortedCities = data
           .filter((city) => city.aqi !== "N/A")
-          .sort((a, b) => b.aqi - a.aqi); // Sort descending by AQI
+          .sort((a, b) => b.aqi - a.aqi);
 
         setCities(sortedCities);
       }
@@ -30,12 +30,11 @@ const AQISection = () => {
     fetchAQIData();
     const interval = setInterval(() => {
       fetchAQIData();
-    }, 300000); // Refresh every 5 minutes
+    }, 300000);
 
     return () => clearInterval(interval);
   }, []);
 
-  // Freeze/unfreeze scrolling when modal is open/closed
   useEffect(() => {
     if (selectedCity) {
       document.body.classList.add("overflow-hidden");
@@ -92,21 +91,30 @@ const AQISection = () => {
         </div>
       )}
 
-      {/* Pollutants Modal */}
       {selectedCity && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-          <div className="bg-white p-6 rounded-lg shadow-lg w-96 relative">
-            {/* Add WEO Logo */}
-            <img
-              src="/images/logo.png" // Replace with the correct logo path
-              alt="WEO Logo"
-              className="w-auto h-auto mx-auto mb-4" // Adjust size and spacing as needed
-            />
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-60 backdrop-blur-md z-50">
+          <div className="relative bg-white p-6 rounded-xl shadow-2xl w-96">
+            {/* Logo at the top */}
+            <div className="flex justify-center mb-3">
+              <img src="/images/logo.png" alt="Logo" className="w-auto h-auto" />
+            </div>
 
-            <h2 className="text-xl font-bold mb-2">
-              {selectedCity.name} - AQI {selectedCity.aqi}
-            </h2>
-            <h3 className="text-md font-semibold text-gray-700 mb-2">
+            {/* Close Button */}
+            <button
+              onClick={() => setSelectedCity(null)}
+              className="absolute top-3 right-3 bg-gray-200 hover:bg-gray-300 rounded-full p-2 transition"
+            >
+              ✖
+            </button>
+
+            {/* Header with Gradient */}
+            <div className="bg-gradient-to-r from-blue-500 to-green-500 text-white p-3 rounded-t-lg text-center shadow-md">
+              <h2 className="text-lg font-bold">
+                {selectedCity.name} - AQI {selectedCity.aqi}
+              </h2>
+            </div>
+
+            <h3 className="text-md font-semibold text-gray-700 mt-3">
               Pollutants:
             </h3>
             {selectedCity.pollutants.length > 0 ? (
@@ -114,17 +122,16 @@ const AQISection = () => {
                 {selectedCity.pollutants.map((pollutant, idx) => (
                   <li key={idx} className="flex justify-between">
                     <span className="font-medium">{pollutant.name}</span>
-                    <span className="text-gray-600">
-                      {pollutant.concentration}
-                    </span>
+                    <span className="text-gray-600">{pollutant.concentration}</span>
                   </li>
                 ))}
               </ul>
             ) : (
               <p className="text-gray-500">No pollutant data available.</p>
             )}
+
             <button
-              className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
+              className="mt-4 w-full px-4 py-2 bg-gradient-to-r from-blue-500 to-green-500 text-white font-medium rounded-md hover:opacity-80 transition"
               onClick={() => setSelectedCity(null)}
             >
               Close
