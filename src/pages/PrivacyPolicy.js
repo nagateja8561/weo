@@ -8,9 +8,9 @@ const PrivacyPolicy = () => {
       <Layout>
         <div className="bg-gray-50 text-gray-800">
           {/* Hero Section */}
-          <section className="bg-green-600 text-white py-20 text-center">
-            <h1 className="text-5xl font-bold mb-4">Privacy Policy</h1>
-            <p className="text-lg">
+          <section className="relative bg-gradient-to-r from-green-400 to-blue-500 text-white text-center py-24">
+            <h1 className="text-5xl font-bold">Privacy Policy</h1>
+            <p className="text-lg mt-4 max-w-2xl mx-auto">
               Your privacy is important to us. Learn how we collect, use, and
               protect your information.
             </p>
