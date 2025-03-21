@@ -24,6 +24,7 @@ const WhatWeDone = () => {
     { id: 6, image: "/images/wedone_6.jpg" },
     { id: 7, image: "/images/wedone_7.jpg" },
     { id: 8, image: "/images/wedone_8.jpg" },
+    { id: 9, image: "/images/wedone_9.jpg" },
   ];
 
   return (
