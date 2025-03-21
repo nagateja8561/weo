@@ -52,7 +52,7 @@ const Header = () => {
             {location.pathname !== "/" && (
               <Link
                 to="/"
-                className="font-bold text-[15px] hover:text-primary hover:bg-accent hover:shadow-md hover:rounded-lg transition-all duration-300 px-6 py-2"
+                className="font-bold text-[15px] hover:text-primary hover:bg-gradient-to-r from-[#00aaff] to-[#00ff77] hover:shadow-md hover:rounded-lg transition-all duration-300 px-6 py-2"
               >
                 Home
               </Link>
@@ -62,7 +62,7 @@ const Header = () => {
             <div className="relative">
               <button
                 onClick={toggleAboutUs}
-                className="flex items-center space-x-2 font-bold text-[15px] hover:text-primary hover:bg-accent hover:shadow-md hover:rounded-lg transition-all duration-300 px-6 py-2"
+                className="flex items-center space-x-2 font-bold text-[15px] hover:text-primary hover:bg-gradient-to-r from-[#00aaff] to-[#00ff77] hover:shadow-md hover:rounded-lg transition-all duration-300 px-6 py-2"
               >
                 <span>About Us</span>
                 <FaChevronDown
@@ -76,25 +76,25 @@ const Header = () => {
                 <div className="absolute left-0 mt-2 bg-white shadow-lg rounded-lg flex flex-col space-y-4 py-2 z-20 transition-all duration-300 ease-in-out transform translate-y-2">
                   <Link
                     to="/about-us"
-                    className="block font-bold text-[15px] text-gray-800 hover:text-primary hover:bg-accent hover:shadow-md hover:rounded-lg transition-all duration-300 px-6 py-2"
+                    className="block font-bold text-[15px] text-gray-800 hover:text-primary hover:bg-gradient-to-r from-[#00aaff] to-[#00ff77] hover:shadow-md hover:rounded-lg transition-all duration-300 px-6 py-2"
                   >
                     About Us
                   </Link>
                   <Link
                     to="/what-we-do"
-                    className="block font-bold text-[15px] text-gray-800 hover:text-primary hover:bg-accent hover:shadow-md hover:rounded-lg transition-all duration-300 px-6 py-2"
+                    className="block font-bold text-[15px] text-gray-800 hover:text-primary hover:bg-gradient-to-r from-[#00aaff] to-[#00ff77] hover:shadow-md hover:rounded-lg transition-all duration-300 px-6 py-2"
                   >
                     What We Do
                   </Link>
                   <Link
                     to="/what-we-have-done"
-                    className="block font-bold text-[15px] text-gray-800 hover:text-primary hover:bg-accent hover:shadow-md hover:rounded-lg transition-all duration-300 px-6 py-2"
+                    className="block font-bold text-[15px] text-gray-800 hover:text-primary hover:bg-gradient-to-r from-[#00aaff] to-[#00ff77] hover:shadow-md hover:rounded-lg transition-all duration-300 px-6 py-2"
                   >
                     What We Have Done
                   </Link>
                   <Link
                     to="/team"
-                    className="block font-bold text-[15px] text-gray-800 hover:text-primary hover:bg-accent hover:shadow-md hover:rounded-lg transition-all duration-300 px-6 py-2"
+                    className="block font-bold text-[15px] text-gray-800 hover:text-primary hover:bg-gradient-to-r from-[#00aaff] to-[#00ff77] hover:shadow-md hover:rounded-lg transition-all duration-300 px-6 py-2"
                   >
                     Our Team
                   </Link>
@@ -106,7 +106,7 @@ const Header = () => {
             <div className="relative">
               <button
                 onClick={toggleGetInvolved}
-                className="flex items-center space-x-2 font-bold text-[15px] hover:text-primary hover:bg-accent hover:shadow-md hover:rounded-lg transition-all duration-300 px-6 py-2"
+                className="flex items-center space-x-2 font-bold text-[15px] hover:text-primary hover:bg-gradient-to-r from-[#00aaff] to-[#00ff77] hover:shadow-md hover:rounded-lg transition-all duration-300 px-6 py-2"
               >
                 <span>Get Involved</span>
                 <FaChevronDown
@@ -120,13 +120,13 @@ const Header = () => {
                 <div className="absolute left-0 mt-2 bg-white shadow-lg rounded-lg flex flex-col space-y-4 py-2 z-20 transition-all duration-300 ease-in-out transform translate-y-2">
                   <Link
                     to="/get-involved"
-                    className="block font-bold text-[15px] text-gray-800 hover:text-primary hover:bg-accent hover:shadow-md hover:rounded-lg transition-all duration-300 px-6 py-2"
+                    className="block font-bold text-[15px] text-gray-800 hover:text-primary hover:bg-gradient-to-r from-[#00aaff] to-[#00ff77] hover:shadow-md hover:rounded-lg transition-all duration-300 px-6 py-2"
                   >
                     Get Involved
                   </Link>
                   <Link
                     to="/contact-us"
-                    className="block font-bold text-[15px] text-gray-800 hover:text-primary hover:bg-accent hover:shadow-md hover:rounded-lg transition-all duration-300 px-6 py-2"
+                    className="block font-bold text-[15px] text-gray-800 hover:text-primary hover:bg-gradient-to-r from-[#00aaff] to-[#00ff77] hover:shadow-md hover:rounded-lg transition-all duration-300 px-6 py-2"
                   >
                     Contact Us
                   </Link>
@@ -179,7 +179,7 @@ const Header = () => {
 
         <Link
           to="/"
-          className="font-bold text-[18px] text-gray-800 hover:text-primary hover:bg-accent hover:shadow-md hover:rounded-lg transition-all duration-300 px-6 py-3"
+          className="font-bold text-[18px] text-gray-800 hover:text-primary hover:bg-gradient-to-r from-[#00aaff] to-[#00ff77] hover:shadow-md hover:rounded-lg transition-all duration-300 px-6 py-3"
           onClick={toggleNav}
         >
           Home
@@ -188,7 +188,7 @@ const Header = () => {
         <div className="relative">
           <button
             onClick={toggleAboutUs}
-            className="flex items-center justify-center space-x-2 font-bold text-[18px] text-gray-800 hover:text-primary hover:bg-accent hover:shadow-md hover:rounded-lg transition-all duration-300 px-6 py-3"
+            className="flex items-center justify-center space-x-2 font-bold text-[18px] text-gray-800 hover:text-primary hover:bg-gradient-to-r from-[#00aaff] to-[#00ff77] hover:shadow-md hover:rounded-lg transition-all duration-300 px-6 py-3"
           >
             <span>About Us</span>
             <FaChevronDown
@@ -202,28 +202,28 @@ const Header = () => {
             <div className="absolute left-0 mt-2 bg-white shadow-lg rounded-lg w-full flex flex-col space-y-4 py-2 z-10 transition-all duration-300 ease-in-out transform translate-y-2">
               <Link
                 to="/about-us"
-                className="block font-bold px-6 py-3 text-[15px] text-gray-800 hover:text-primary hover:bg-accent hover:shadow-md hover:rounded-lg transition-all duration-300"
+                className="block font-bold px-6 py-3 text-[15px] text-gray-800 hover:text-primary hover:bg-gradient-to-r from-[#00aaff] to-[#00ff77] hover:shadow-md hover:rounded-lg transition-all duration-300"
                 onClick={toggleNav}
               >
                 About Us
               </Link>
               <Link
                 to="/what-we-do"
-                className="block font-bold px-6 py-3 text-[15px] text-gray-800 hover:text-primary hover:bg-accent hover:shadow-md hover:rounded-lg transition-all duration-300"
+                className="block font-bold px-6 py-3 text-[15px] text-gray-800 hover:text-primary hover:bg-gradient-to-r from-[#00aaff] to-[#00ff77] hover:shadow-md hover:rounded-lg transition-all duration-300"
                 onClick={toggleNav}
               >
                 What We Do
               </Link>
               <Link
                 to="/what-we-have-done"
-                className="block font-bold px-6 py-3 text-[15px] text-gray-800 hover:text-primary hover:bg-accent hover:shadow-md hover:rounded-lg transition-all duration-300"
+                className="block font-bold px-6 py-3 text-[15px] text-gray-800 hover:text-primary hover:bg-gradient-to-r from-[#00aaff] to-[#00ff77] hover:shadow-md hover:rounded-lg transition-all duration-300"
                 onClick={toggleNav}
               >
                 What We Have Done
               </Link>
               <Link
                 to="/team"
-                className="block font-bold px-6 py-3 text-[15px] text-gray-800 hover:text-primary hover:bg-accent hover:shadow-md hover:rounded-lg transition-all duration-300"
+                className="block font-bold px-6 py-3 text-[15px] text-gray-800 hover:text-primary hover:bg-gradient-to-r from-[#00aaff] to-[#00ff77] hover:shadow-md hover:rounded-lg transition-all duration-300"
                 onClick={toggleNav}
               >
                 Our Team
@@ -235,7 +235,7 @@ const Header = () => {
         <div className="relative">
           <button
             onClick={toggleGetInvolved}
-            className="flex items-center justify-center space-x-2 font-bold text-[18px] text-gray-800 hover:text-primary hover:bg-accent hover:shadow-md hover:rounded-lg transition-all duration-300 px-6 py-3"
+            className="flex items-center justify-center space-x-2 font-bold text-[18px] text-gray-800 hover:text-primary hover:bg-gradient-to-r from-[#00aaff] to-[#00ff77] hover:shadow-md hover:rounded-lg transition-all duration-300 px-6 py-3"
           >
             <span>Get Involved</span>
             <FaChevronDown
@@ -253,14 +253,14 @@ const Header = () => {
             >
               <Link
                 to="/get-involved"
-                className="block font-bold px-6 py-3 text-[15px] text-gray-800 hover:text-primary hover:bg-accent hover:shadow-md hover:rounded-lg transition-all duration-300"
+                className="block font-bold px-6 py-3 text-[15px] text-gray-800 hover:text-primary hover:bg-gradient-to-r from-[#00aaff] to-[#00ff77] hover:shadow-md hover:rounded-lg transition-all duration-300"
                 onClick={toggleNav}
               >
                 Get Involved
               </Link>
               <Link
                 to="/contact-us"
-                className="block font-bold px-6 py-3 text-[15px] text-gray-800 hover:text-primary hover:bg-accent hover:shadow-md hover:rounded-lg transition-all duration-300"
+                className="block font-bold px-6 py-3 text-[15px] text-gray-800 hover:text-primary hover:bg-gradient-to-r from-[#00aaff] to-[#00ff77] hover:shadow-md hover:rounded-lg transition-all duration-300"
                 onClick={toggleNav}
               >
                 Contact Us
