@@ -22,7 +22,7 @@ for CITY_ID in $(echo "$CITY_DATA" | jq -r '.[].id'); do
   AQI=$(echo "$CITY_RESPONSE" | jq '.current.aqi' 2>/dev/null || echo "N/A")
 
   # Extract pollutants dynamically
-  POLLUTANTS=$(echo "$CITY_RESPONSE" | jq -c '[.current.pollutants[] | {name: .pollutantName, concentration: .concentration}]' 2>/dev/null)
+  POLLUTANTS=$(echo "$CITY_RESPONSE" | jq -c '[.current.pollutants[] | {name: .pollutantName, concentration: (.concentration|tostring + " µg/m³")}]' 2>/dev/null)
   if [ -z "$POLLUTANTS" ] || [ "$POLLUTANTS" == "null" ]; then
     POLLUTANTS="[]"
   fi
