@@ -1,172 +1,103 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { motion } from "framer-motion"; // Import Framer Motion
 
 const AQISection = () => {
-  const [hyderabadAQI, setHyderabadAQI] = useState(null);
-  const [indiaAQI, setIndiaAQI] = useState(null);
-  const [hyderabadData, setHyderabadData] = useState(null);
-  const [indiaData, setIndiaData] = useState(null);
+  const [cities, setCities] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // Fetch AQI Data Function
-  const fetchAQI = async (city, setAQI, setData) => {
+  const fetchCitiesAndAQI = async () => {
+    const STATE_API_URL = "/v1/cities/by/stateID/XT8cdvjdp7ytofBAB";
     try {
-      const response = await axios.get(
-        `https://api.waqi.info/feed/${city}/?token=ec40e7ffaa83d7bb949f27038a04637bb6cb14fc`
-      );
+      const response = await axios.get(STATE_API_URL);
+      const result = response.data;
 
-      if (response?.data?.data) {
-        const data = response.data.data;
-        setAQI(data.aqi);
-        setData({
-          pm10: data.iaqi.pm10?.v ? data.iaqi.pm10.v.toFixed(1) : "N/A",
-          pm2_5: data.iaqi.pm25?.v ? data.iaqi.pm25.v.toFixed(1) : "N/A",
-          o3: data.iaqi.o3?.v ? data.iaqi.o3.v.toFixed(1) : "N/A",
-          no2: data.iaqi.no2?.v ? data.iaqi.no2.v.toFixed(1) : "N/A",
-          so2: data.iaqi.so2?.v ? data.iaqi.so2.v.toFixed(1) : "N/A",
-          co: data.iaqi.co?.v ? data.iaqi.co.v.toFixed(1) : "N/A",
-          // temperature: data.iaqi.t?.v ? data.iaqi.t.v.toFixed(1) : "N/A",
-          temperature: data.iaqi.t?.v ? Math.abs(data.iaqi.t.v).toFixed(1) : "N/A", // Convert temperature to positive
-          humidity: data.iaqi.h?.v ? data.iaqi.h.v.toFixed(1) : "N/A",
-        });
-      } else {
-        setError("Invalid data received from API");
+      if (result && result.length > 0) {
+        const citiesWithAQI = await Promise.all(
+          result.map(async (city) => {
+            try {
+              const CITY_API_URL = `/v1/cities/${city.id}`;
+              const cityResponse = await axios.get(CITY_API_URL);
+              const cityData = cityResponse.data;
+
+              return {
+                id: city.id,
+                name: city.name,
+                aqi: cityData.current.aqi,
+              };
+            } catch {
+              return { id: city.id, name: city.name, aqi: "N/A" };
+            }
+          })
+        );
+
+        // Sort cities in descending order by AQI
+        const sortedCities = citiesWithAQI
+          .filter(city => city.aqi !== "N/A")
+          .sort((a, b) => b.aqi - a.aqi);
+
+        setCities(sortedCities);
       }
     } catch (err) {
-      setError("Failed to fetch AQI data.");
+      setError("Failed to fetch city data.");
     }
   };
 
-  // Fetch Data on Mount
   useEffect(() => {
-    const fetchData = async () => {
-      setLoading(true);
-      setError(null); // Reset error state before fetching data
-
-      await Promise.all([
-        fetchAQI("hyderabad", setHyderabadAQI, setHyderabadData),
-        fetchAQI("india", setIndiaAQI, setIndiaData),
-      ]);
-
-      setLoading(false);
-    };
-
-    fetchData();
+    setLoading(true);
+    fetchCitiesAndAQI().then(() => setLoading(false));
 
     const interval = setInterval(() => {
-      fetchData();
+      fetchCitiesAndAQI();
     }, 300000); // Fetch every 5 minutes
 
     return () => clearInterval(interval);
   }, []);
 
-  // Get AQI Category
-  const getAQICategory = (aqi) => {
-    if (!aqi)
-      return {
-        category: "Unknown",
-        color: "bg-gray-400",
-        textColor: "text-gray-800",
-      };
-    switch (true) {
-      case aqi <= 50:
-        return {
-          category: "Good",
-          color: "bg-green-500",
-          textColor: "text-green-900",
-        };
-      case aqi <= 100:
-        return {
-          category: "Moderate",
-          color: "bg-yellow-400",
-          textColor: "text-yellow-800",
-        };
-      case aqi <= 150:
-        return {
-          category: "Unhealthy for Sensitive Groups",
-          color: "bg-orange-500",
-          textColor: "text-orange-900",
-        };
-      case aqi <= 200:
-        return {
-          category: "Unhealthy",
-          color: "bg-red-600",
-          textColor: "text-red-900",
-        };
-      case aqi <= 300:
-        return {
-          category: "Very Unhealthy",
-          color: "bg-purple-700",
-          textColor: "text-purple-100",
-        };
-      default:
-        return {
-          category: "Hazardous",
-          color: "bg-black",
-          textColor: "text-white",
-        };
-    }
-  };
-
   return (
-    <div className="bg-gray-50 pt-20 px-2 sm:px-4 md:px-8 min-h-screen">
+    <div className="max-w-7xl mx-auto p-4 bg-white shadow-md rounded-lg">
+      <h1 className="text-lg font-semibold mb-4 text-gray-700 text-left">
+        Which is the most polluted city in Telangana? (AQI)
+      </h1>
+
       {loading ? (
-        <div className="text-center py-10">
-          <p className="text-xl text-gray-600">Loading AQI data...</p>
+        <div className="text-center">
+          <svg
+            className="animate-spin h-6 w-6 text-blue-500 mx-auto mb-2"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <circle
+              className="opacity-25"
+              cx="12"
+              cy="12"
+              r="10"
+              stroke="currentColor"
+              strokeWidth="4"
+            ></circle>
+            <path
+              className="opacity-75"
+              fill="currentColor"
+              d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+            ></path>
+          </svg>
+          <p className="text-gray-500">Loading AQI data...</p>
         </div>
       ) : error ? (
-        <div className="text-center py-10">
-          <p className="text-xl text-red-600">{error}</p>
-        </div>
+        <p className="text-red-500 text-left">{error}</p>
       ) : (
-        <div className="max-w-7xl mx-auto grid grid-cols-1 gap-4 sm:grid-cols-2">
-          {[
-            { city: "Hyderabad", aqi: hyderabadAQI, data: hyderabadData },
-            { city: "India", aqi: indiaAQI, data: indiaData },
-          ].map(({ city, aqi, data }, index) => {
-            const { category, color, textColor } = getAQICategory(aqi);
-
-            return (
-              <motion.div
-                key={index}
-                className={`shadow-lg rounded-lg overflow-hidden p-4 flex flex-col ${color} ${textColor} hover:scale-105 hover:shadow-xl transition-transform duration-300`}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5 }}
-              >
-                <div className="flex-grow">
-                  <div
-                    className={`p-6 text-center ${
-                      category === "Hazardous" ? "animate-scaleUp" : ""
-                    }`}
-                  >
-                    {/* Dynamically include AQI in city name */}
-                    <h2 className="text-xl sm:text-2xl md:text-3xl font-bold">{`${city} (AQI)`}</h2>
-                    <div className="text-4xl font-semibold my-2">{aqi}</div>
-                    <p className="text-lg font-medium">{category}</p>
-                  </div>
-                  <div className="grid grid-cols-2 gap-3 p-4 sm:gap-4">
-                    {data &&
-                      Object.entries(data).map(([key, value]) => (
-                        <div
-                          key={key}
-                          className="p-2 sm:p-4 bg-gray-100 rounded-lg text-center shadow"
-                        >
-                          <h4 className="text-sm sm:text-base font-semibold capitalize">
-                            {key.replace(/_/g, " ")}
-                          </h4>
-                          <p className="text-sm sm:text-lg font-medium">
-                            {value}
-                          </p>
-                        </div>
-                      ))}
-                  </div>
-                </div>
-              </motion.div>
-            );
-          })}
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-x-2 gap-y-3">
+          {cities.map((city, index) => (
+            <div
+              key={index}
+              className="flex items-center space-x-1 bg-gray-100 text-gray-800 px-3 py-1 rounded-md shadow-sm text-sm"
+            >
+              <span className="font-medium">{city.name}</span>
+              <span className="text-yellow-500">●</span>
+              <span className="font-semibold">{city.aqi}</span>
+            </div>
+          ))}
         </div>
       )}
     </div>
