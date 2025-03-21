@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FaBars, FaTimes, FaChevronDown } from "react-icons/fa";
 
@@ -21,6 +21,17 @@ const Header = () => {
     if (isAboutUsOpen) setIsAboutUsOpen(false);
     setIsGetInvolvedOpen(!isGetInvolvedOpen);
   };
+
+  // Close dropdowns on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsAboutUsOpen(false);
+      setIsGetInvolvedOpen(false);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <header className="fixed top-0 left-0 w-full bg-white shadow-md z-50 font-sans">
@@ -102,9 +113,7 @@ const Header = () => {
                 />
               </button>
               {isGetInvolvedOpen && (
-                <div
-                  className={`absolute left-0 mt-2 bg-white shadow-lg rounded-lg flex flex-col space-y-4 py-2 z-20 transition-all duration-300 ease-in-out transform translate-y-${isAboutUsOpen ? "20" : "0"}`}
-                >
+                <div className="absolute left-0 mt-2 bg-white shadow-lg rounded-lg flex flex-col space-y-4 py-2 z-20 transition-all duration-300 ease-in-out transform translate-y-2">
                   <Link
                     to="/get-involved"
                     className="block text-[15px] text-gray-800 hover:text-primary hover:bg-accent hover:shadow-md hover:rounded-lg transition-all duration-300 px-6 py-2"
@@ -126,7 +135,7 @@ const Header = () => {
         {/* Donate Button (Desktop) */}
         <div className="hidden md:block">
           <Link to="/donate">
-            <button className="bg-green-500 text-white py-3 px-8 rounded-full text-[15px] font-medium hover:bg-green-600 transition-all duration-300">
+            <button className="bg-green-500 text-white py-3 px-8 rounded-full text-[14px] font-medium hover:bg-green-600 transition-all duration-300">
               Donate
             </button>
           </Link>
@@ -151,7 +160,6 @@ const Header = () => {
           />
         </div>
       </div>
-
       {/* Mobile Navigation */}
       <div
         className={`${
