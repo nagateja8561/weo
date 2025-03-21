@@ -163,7 +163,7 @@ const ContactUs = () => {
               </motion.div>
               <motion.div variants={fadeIn} custom={0.6}>
                 <h3 className="text-xl font-bold mb-2">Email Us</h3>
-                <p>info@weo.com</p>
+                <p>info@weoindia.in</p>
               </motion.div>
             </div>
           </motion.section>

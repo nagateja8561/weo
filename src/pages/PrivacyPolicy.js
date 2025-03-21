@@ -70,8 +70,8 @@ const PrivacyPolicy = () => {
                   You have the right to access, update, or delete your personal
                   information. If you have any concerns about your data, please
                   contact us at{" "}
-                  <a href="mailto:privacy@weo.com" className="text-green-600">
-                    privacy@weo.com
+                  <a href="mailto:privacy@weoindia.in" className="text-green-600">
+                    privacy@weoindia.in
                   </a>
                   .
                 </p>
@@ -86,8 +86,8 @@ const PrivacyPolicy = () => {
                 </p>
                 <p className="text-lg text-gray-600">
                   <strong>Email:</strong>{" "}
-                  <a href="mailto:privacy@weo.com" className="text-green-600">
-                    privacy@weo.com
+                  <a href="mailto:privacy@weoindia.in" className="text-green-600">
+                    privacy@weoindia.in
                   </a>
                 </p>
                 <p className="text-lg text-gray-600">
