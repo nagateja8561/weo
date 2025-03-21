@@ -42,7 +42,7 @@ const WhatWeDone = () => {
               variants={fadeIn}
               custom={0.5}
             >
-              What We Done
+              What We Have Done
             </motion.h1>
           </motion.section>
 

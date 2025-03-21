@@ -100,7 +100,7 @@ const AnimatedRoutes = () => {
             }
           />
           <Route
-            path="/what-we-done"
+            path="/what-we-have-done"
             element={
               <PageWrapper>
                 <WhatWeDone />
