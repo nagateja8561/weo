@@ -125,7 +125,7 @@ const PageWrapper = ({ children }) => (
 );
 
 const App = () => (
-  <Router basename="/weo">
+  <Router basename="/">
     <AnimatedRoutes />
   </Router>
 );

@@ -5,7 +5,7 @@ import PageTransition from "./PageTransition";
 import Layout from "./Layout";
 import AQISection from "./AQISection";
 
-const images = ["/weo/images/hero1.jpg", "/weo/images/hero2.jpg"];
+const images = ["/images/hero1.jpg", "/images/hero2.jpg"];
 
 const fadeIn = {
   hidden: { opacity: 0, y: 50 },
@@ -110,7 +110,7 @@ const Homepage = () => {
           >
             {/* Image Animation */}
             <motion.img
-              src="/weo/images/vision.webp"
+              src="/images/vision.webp"
               alt="Our Vision"
               className="w-full rounded-lg shadow-lg"
               variants={fadeIn}
@@ -173,7 +173,7 @@ const Homepage = () => {
               </motion.p>
             </motion.div>
             <motion.img
-              src="/weo/images/csr.jpg"
+              src="/images/csr.jpg"
               alt="CSR"
               className="w-full rounded-lg shadow-lg"
               variants={fadeIn}
@@ -191,7 +191,7 @@ const Homepage = () => {
         >
           <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-16 max-w-7xl mx-auto">
             <motion.img
-              src="/weo/images/ourteam.jpeg"
+              src="/images/ourteam.jpeg"
               alt="Our Team"
               className="w-full rounded-lg shadow-lg"
               variants={fadeIn}

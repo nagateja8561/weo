@@ -16,14 +16,14 @@ const WhatWeDone = () => {
   const [selectedImage, setSelectedImage] = useState(null); // Manage clicked image
 
   const achievements = [
-    { id: 1, image: "/weo/images/wedone_1.jpg" },
-    { id: 2, image: "/weo/images/wedone_2.jpg" },
-    { id: 3, image: "/weo/images/wedone_3.jpg" },
-    { id: 4, image: "/weo/images/wedone_4.jpg" },
-    { id: 5, image: "/weo/images/wedone_5.jpg" },
-    { id: 6, image: "/weo/images/wedone_6.jpg" },
-    { id: 7, image: "/weo/images/wedone_7.jpg" },
-    { id: 8, image: "/weo/images/wedone_8.jpg" },
+    { id: 1, image: "/images/wedone_1.jpg" },
+    { id: 2, image: "/images/wedone_2.jpg" },
+    { id: 3, image: "/images/wedone_3.jpg" },
+    { id: 4, image: "/images/wedone_4.jpg" },
+    { id: 5, image: "/images/wedone_5.jpg" },
+    { id: 6, image: "/images/wedone_6.jpg" },
+    { id: 7, image: "/images/wedone_7.jpg" },
+    { id: 8, image: "/images/wedone_8.jpg" },
   ];
 
   return (

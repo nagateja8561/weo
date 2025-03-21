@@ -27,7 +27,7 @@ const GetInvolved = () => {
           >
             {/* Hero Image */}
             <img
-              src="/weo/images/get-involved.jpg" // Replace with your actual image path
+              src="/images/get-involved.jpg" // Replace with your actual image path
               alt="Get Involved Hero"
               className="absolute w-full h-[300px] sm:h-[600px] object-cover opacity-80"
             />

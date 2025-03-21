@@ -30,7 +30,7 @@ const Header = () => {
         <div className="flex items-center space-x-10">
           <Link to="/">
             <img
-              src="/weo/images/logo.png"
+              src="/images/logo.png"
               alt="WEO Logo"
               className="h-14 w-auto"
               style={{ maxWidth: "500px" }}

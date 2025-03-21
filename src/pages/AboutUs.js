@@ -25,7 +25,7 @@ const AboutUs = () => {
             animate="visible"
           >
             <img
-              src="/weo/images/about-us.png" // Add your actual image path here
+              src="/images/about-us.png" // Add your actual image path here
               alt="About Us Hero"
               className="absolute w-full h-[300px] sm:h-[600px] object-cover opacity-800"
             />

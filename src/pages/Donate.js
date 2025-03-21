@@ -50,7 +50,7 @@ const Donate = () => {
                 donation conveniently.
               </p>
               <motion.img
-                src="/weo/images/qr-code.png"
+                src="/images/qr-code.png"
                 alt="Scan to Donate QR Code"
                 className="w-56 h-56 mx-auto rounded-lg shadow-md"
                 whileHover={{ scale: 1.1, rotate: 2 }}
