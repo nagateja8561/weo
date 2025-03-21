@@ -27,7 +27,8 @@ const AQISection = () => {
           no2: data.iaqi.no2?.v ? data.iaqi.no2.v.toFixed(1) : "N/A",
           so2: data.iaqi.so2?.v ? data.iaqi.so2.v.toFixed(1) : "N/A",
           co: data.iaqi.co?.v ? data.iaqi.co.v.toFixed(1) : "N/A",
-          temperature: data.iaqi.t?.v ? data.iaqi.t.v.toFixed(1) : "N/A",
+          // temperature: data.iaqi.t?.v ? data.iaqi.t.v.toFixed(1) : "N/A",
+          temperature: data.iaqi.t?.v ? Math.abs(data.iaqi.t.v).toFixed(1) : "N/A", // Convert temperature to positive
           humidity: data.iaqi.h?.v ? data.iaqi.h.v.toFixed(1) : "N/A",
         });
       } else {
