@@ -7,17 +7,17 @@ const teamMembers = [
   {
     name: "CHIPPA VEERABHADRAM",
     designation: "Founder & CEO",
-    image: "/images/bhadra.jpg",
+    image: "/images/team/bhadra.jpg",
   },
   {
     name: "NIKHIL SAI KONETI",
     designation: "General Secretary",
-    image: "/images/nikhil.jpg",
+    image: "/images/team/nikhil.jpg",
   },
   {
     name: "MOHAMMED RIZWAN",
     designation: "Treasurer",
-    image: "/images/rizwan.jpg",
+    image: "/images/team/rizwan.jpg",
   },
   // Add more team members as needed
 ];
