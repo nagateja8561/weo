@@ -99,14 +99,6 @@ const AQISection = () => {
               <img src="/images/logo.png" alt="Logo" className="w-auto h-auto" />
             </div>
 
-            {/* Close Button */}
-            <button
-              onClick={() => setSelectedCity(null)}
-              className="absolute top-3 right-3 bg-gray-200 hover:bg-gray-300 rounded-full p-2 transition"
-            >
-              ✖
-            </button>
-
             {/* Header with Gradient */}
             <div className="bg-gradient-to-r from-blue-500 to-green-500 text-white p-3 rounded-t-lg text-center shadow-md">
               <h2 className="text-lg font-bold">
@@ -130,6 +122,7 @@ const AQISection = () => {
               <p className="text-gray-500">No pollutant data available.</p>
             )}
 
+            {/* Close Button (No X Button) */}
             <button
               className="mt-4 w-full px-4 py-2 bg-gradient-to-r from-blue-500 to-green-500 text-white font-medium rounded-md hover:opacity-80 transition"
               onClick={() => setSelectedCity(null)}
