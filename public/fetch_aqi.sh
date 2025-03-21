@@ -21,7 +21,13 @@ for CITY_ID in $(echo "$CITY_DATA" | jq -r '.[].id'); do
   CITY_NAME=$(echo "$CITY_DATA" | jq -r ".[] | select(.id == \"$CITY_ID\") | .name")
   AQI=$(echo "$CITY_RESPONSE" | jq '.current.aqi' 2>/dev/null || echo "N/A")
 
-  CITY_AQI_DATA+="{\"id\": \"$CITY_ID\", \"name\": \"$CITY_NAME\", \"aqi\": \"$AQI\"},"
+  # Extract pollutants dynamically
+  POLLUTANTS=$(echo "$CITY_RESPONSE" | jq -c '[.current.pollutants[] | {name: .pollutantName, concentration: .concentration}]' 2>/dev/null)
+  if [ -z "$POLLUTANTS" ] || [ "$POLLUTANTS" == "null" ]; then
+    POLLUTANTS="[]"
+  fi
+
+  CITY_AQI_DATA+="{\"id\": \"$CITY_ID\", \"name\": \"$CITY_NAME\", \"aqi\": \"$AQI\", \"pollutants\": $POLLUTANTS},"
 done
 
 # Remove trailing comma and close JSON array
