@@ -76,7 +76,7 @@ const GetInvolved = () => {
                   </p>
                   <Link
                     to="/contact-us"
-                    className="mt-4 inline-block bg-green-600 text-white py-2 px-6 rounded-lg font-bold hover:bg-green-700 transition"
+                    className="mt-4 inline-block bg-gradient-to-r from-[#00aaff] to-[#00ff77] text-white py-2 px-6 rounded-lg font-bold hover:bg-green-700 transition"
                   >
                     Contact Us
                   </Link>
@@ -95,7 +95,7 @@ const GetInvolved = () => {
                   </p>
                   <Link
                     to="/donate"
-                    className="mt-4 inline-block bg-green-600 text-white py-2 px-6 rounded-lg font-bold hover:bg-green-700 transition"
+                    className="mt-4 inline-block bg-gradient-to-r from-[#00aaff] to-[#00ff77] text-white py-2 px-6 rounded-lg font-bold hover:bg-green-700 transition"
                   >
                     Donate Now
                   </Link>
@@ -114,7 +114,7 @@ const GetInvolved = () => {
                   </p>
                   <Link
                     to="/contact-us"
-                    className="mt-4 inline-block bg-green-600 text-white py-2 px-6 rounded-lg font-bold hover:bg-green-700 transition"
+                    className="mt-4 inline-block bg-gradient-to-r from-[#00aaff] to-[#00ff77] text-white py-2 px-6 rounded-lg font-bold hover:bg-green-700 transition"
                   >
                     Contact Us
                   </Link>
@@ -153,7 +153,7 @@ const GetInvolved = () => {
             >
               <Link
                 to="/contact-us"
-                className="inline-block bg-green-600 text-white py-2 px-6 rounded-lg font-bold hover:bg-green-700 transition"
+                className="inline-block bg-gradient-to-r from-[#00aaff] to-[#00ff77] text-white py-2 px-6 rounded-lg font-bold hover:bg-green-700 transition"
               >
                 Contact Us
               </Link>

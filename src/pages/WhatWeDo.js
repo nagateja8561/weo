@@ -192,7 +192,7 @@ const WhatWeDo = () => {
             >
               <Link
                 to="/get-involved"
-                className="inline-block bg-green-600 text-white py-2 px-6 rounded-lg font-bold hover:bg-green-700 transition"
+                className="inline-block bg-gradient-to-r from-[#00aaff] to-[#00ff77] text-white py-2 px-6 rounded-lg font-bold hover:bg-green-700 transition"
               >
                 Get Involved
               </Link>

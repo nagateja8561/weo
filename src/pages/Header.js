@@ -139,7 +139,7 @@ const Header = () => {
         {/* Donate Button (Desktop) */}
         <div className="hidden md:block">
           <Link to="/donate">
-            <button className="bg-green-500 text-white py-3 px-8 rounded-full text-[14px] font-bold hover:bg-green-600 transition-all duration-300">
+            <button className="bg-gradient-to-r from-[#00aaff] to-[#00ff77] text-white py-3 px-8 rounded-full text-[14px] font-bold hover:from-[#0099cc] hover:to-[#00cc66] transition-all duration-300 shadow-lg hover:shadow-xl">
               Donate
             </button>
           </Link>
@@ -271,7 +271,7 @@ const Header = () => {
 
         {/* Donate Button (Mobile) */}
         <Link to="/donate">
-          <button className="bg-green-500 text-white py-3 px-8 rounded-full text-[14px] font-bold hover:bg-green-600 transition-all duration-300">
+          <button className="bg-gradient-to-r from-[#00aaff] to-[#00ff77] text-white py-3 px-8 rounded-full text-[14px] font-bold hover:bg-green-600 transition-all duration-300">
             Donate
           </button>
         </Link>

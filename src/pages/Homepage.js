@@ -219,7 +219,7 @@ const Homepage = () => {
               </motion.p>
               <Link to="/team">
                 <motion.button
-                  className="bg-green-600 text-white py-3 px-8 rounded-lg text-lg hover:bg-green-800"
+                  className="bg-gradient-to-r from-[#00aaff] to-[#00ff77] text-white py-3 px-8 rounded-lg text-lg hover:bg-green-800"
                   variants={fadeIn}
                   custom={2}
                 >

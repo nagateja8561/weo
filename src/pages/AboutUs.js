@@ -117,7 +117,7 @@ const AboutUs = () => {
             >
               {/* Mission */}
               <motion.div
-                className="bg-green-600 p-8 rounded-lg shadow-lg text-white hover:scale-105 transition-transform"
+                className="bg-gradient-to-r from-[#00aaff] to-[#00ff77] p-8 rounded-lg shadow-lg text-white hover:scale-105 transition-transform"
                 variants={fadeIn}
                 custom={0.5}
               >
@@ -134,7 +134,7 @@ const AboutUs = () => {
 
               {/* Vision */}
               <motion.div
-                className="bg-green-600 p-8 rounded-lg shadow-lg text-white hover:scale-105 transition-transform"
+                className="bg-gradient-to-r from-[#00aaff] to-[#00ff77] p-8 rounded-lg shadow-lg text-white hover:scale-105 transition-transform"
                 variants={fadeIn}
                 custom={1}
               >

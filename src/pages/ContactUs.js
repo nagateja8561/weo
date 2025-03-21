@@ -110,7 +110,7 @@ const ContactUs = () => {
                 </motion.div>
                 <motion.button
                   type="submit"
-                  className="w-full bg-green-600 text-white py-3 rounded-lg font-bold text-lg hover:bg-green-700 transition"
+                  className="w-full bg-gradient-to-r from-[#00aaff] to-[#00ff77] text-white py-3 rounded-lg font-bold text-lg hover:bg-green-700 transition"
                   variants={fadeIn}
                   custom={1.5}
                 >
