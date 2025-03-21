@@ -6,50 +6,31 @@ const AQISection = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const fetchCitiesAndAQI = async () => {
-    const STATE_API_URL = "/v1/cities/by/stateID/XT8cdvjdp7ytofBAB";
+  const fetchAQIData = async () => {
     try {
-      const response = await axios.get(STATE_API_URL);
-      const result = response.data;
+      const response = await axios.get("/aqi_data.json"); // Fetch from gh-pages
+      const data = response.data;
 
-      if (result && result.length > 0) {
-        const citiesWithAQI = await Promise.all(
-          result.map(async (city) => {
-            try {
-              const CITY_API_URL = `/v1/cities/${city.id}`;
-              const cityResponse = await axios.get(CITY_API_URL);
-              const cityData = cityResponse.data;
-
-              return {
-                id: city.id,
-                name: city.name,
-                aqi: cityData.current.aqi,
-              };
-            } catch {
-              return { id: city.id, name: city.name, aqi: "N/A" };
-            }
-          })
-        );
-
-        // Sort cities in descending order by AQI
-        const sortedCities = citiesWithAQI
+      if (data && data.length > 0) {
+        const sortedCities = data
           .filter(city => city.aqi !== "N/A")
-          .sort((a, b) => b.aqi - a.aqi);
+          .sort((a, b) => b.aqi - a.aqi); // Sort descending by AQI
 
         setCities(sortedCities);
       }
+      setLoading(false);
     } catch (err) {
-      setError("Failed to fetch city data.");
+      setError("Failed to fetch AQI data.");
+      setLoading(false);
     }
   };
 
   useEffect(() => {
-    setLoading(true);
-    fetchCitiesAndAQI().then(() => setLoading(false));
+    fetchAQIData();
 
     const interval = setInterval(() => {
-      fetchCitiesAndAQI();
-    }, 300000); // Fetch every 5 minutes
+      fetchAQIData();
+    }, 300000); // Refresh every 5 minutes
 
     return () => clearInterval(interval);
   }, []);
