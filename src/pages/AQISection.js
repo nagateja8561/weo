@@ -55,7 +55,7 @@ const AQISection = () => {
 
   return (
     <div className="max-w-7xl mx-auto p-4 bg-white shadow-lg rounded-lg border-t-4 border-gradient-to-r from-green-400 to-blue-500">
-      <h1 className="text-2xl font-semibold mb-6 text-gray-800 text-center">
+      <h1 className="text-3xl font-extrabold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-700 text-center shadow-md">
         Which is the most polluted city in Telangana? (AQI)
       </h1>
 
@@ -90,7 +90,9 @@ const AQISection = () => {
           {cities.map((city, index) => (
             <div
               key={index}
-              className={`flex flex-col items-center justify-center ${getAQIColor(city.aqi)} text-white p-4 rounded-lg shadow-lg cursor-pointer hover:scale-105 transform transition duration-300`}
+              className={`flex flex-col items-center justify-center ${getAQIColor(
+                city.aqi
+              )} text-white p-4 rounded-lg shadow-lg cursor-pointer hover:scale-105 transform transition duration-300`}
               onClick={() => setSelectedCity(city)}
             >
               <span className="font-semibold text-xl">{city.name}</span>
@@ -110,16 +112,22 @@ const AQISection = () => {
 
             {/* Header with Gradient */}
             <div className="bg-gradient-to-r from-green-400 to-blue-500 text-white p-3 rounded-t-lg text-center shadow-md">
-              <h2 className="text-xl font-bold">{selectedCity.name} - AQI {selectedCity.aqi}</h2>
+              <h2 className="text-xl font-bold">
+                {selectedCity.name} - AQI {selectedCity.aqi}
+              </h2>
             </div>
 
-            <h3 className="text-lg font-semibold text-gray-700 mt-4">Pollutants:</h3>
+            <h3 className="text-lg font-semibold text-gray-700 mt-4">
+              Pollutants:
+            </h3>
             {selectedCity.pollutants.length > 0 ? (
               <ul className="list-disc pl-5 space-y-2 text-gray-700">
                 {selectedCity.pollutants.map((pollutant, idx) => (
                   <li key={idx} className="flex justify-between">
                     <span className="font-medium">{pollutant.name}</span>
-                    <span className="text-gray-600">{pollutant.concentration}</span>
+                    <span className="text-gray-600">
+                      {pollutant.concentration}
+                    </span>
                   </li>
                 ))}
               </ul>
