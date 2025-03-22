@@ -43,9 +43,19 @@ const AQISection = () => {
     }
   }, [selectedCity]);
 
+  // Function to determine background color based on AQI value
+  const getAQIColor = (aqi) => {
+    if (aqi <= 50) return "bg-green-400"; // Good
+    if (aqi <= 100) return "bg-yellow-400"; // Moderate
+    if (aqi <= 150) return "bg-orange-400"; // Unhealthy for sensitive people
+    if (aqi <= 200) return "bg-red-400"; // Unhealthy
+    if (aqi <= 300) return "bg-purple-400"; // Very Unhealthy
+    return "bg-pink-400"; // Hazardous
+  };
+
   return (
-    <div className="max-w-7xl mx-auto p-4 bg-white shadow-md rounded-lg">
-      <h1 className="text-lg font-semibold mb-4 text-gray-700 text-left">
+    <div className="max-w-7xl mx-auto p-4 bg-white shadow-lg rounded-lg border-t-4 border-gradient-to-r from-green-400 to-blue-500">
+      <h1 className="text-2xl font-semibold mb-6 text-gray-800 text-center">
         Which is the most polluted city in Telangana? (AQI)
       </h1>
 
@@ -74,18 +84,17 @@ const AQISection = () => {
           <p className="text-gray-500">Loading AQI data...</p>
         </div>
       ) : error ? (
-        <p className="text-red-500 text-left">{error}</p>
+        <p className="text-red-500 text-center">{error}</p>
       ) : (
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-x-2 gap-y-3">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
           {cities.map((city, index) => (
             <div
               key={index}
-              className="flex items-center space-x-1 bg-gray-100 text-gray-800 px-3 py-1 rounded-md shadow-sm text-sm cursor-pointer hover:bg-gray-200 transition"
+              className={`flex flex-col items-center justify-center ${getAQIColor(city.aqi)} text-white p-4 rounded-lg shadow-lg cursor-pointer hover:scale-105 transform transition duration-300`}
               onClick={() => setSelectedCity(city)}
             >
-              <span className="font-medium">{city.name}</span>
-              <span className="text-yellow-500">●</span>
-              <span className="font-semibold">{city.aqi}</span>
+              <span className="font-semibold text-xl">{city.name}</span>
+              <span className="font-bold text-xl">{city.aqi}</span>
             </div>
           ))}
         </div>
@@ -95,22 +104,18 @@ const AQISection = () => {
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-60 backdrop-blur-md z-50">
           <div className="relative bg-white p-6 rounded-xl shadow-2xl w-96">
             {/* Logo at the top */}
-            <div className="flex justify-center mb-3">
-              <img src="/images/logo.png" alt="Logo" className="w-auto h-auto" />
+            <div className="flex justify-center mb-4">
+              <img src="/images/logo.png" alt="Logo" className="w-20 h-auto" />
             </div>
 
             {/* Header with Gradient */}
-            <div className="bg-gradient-to-r from-blue-500 to-green-500 text-white p-3 rounded-t-lg text-center shadow-md">
-              <h2 className="text-lg font-bold">
-                {selectedCity.name} - AQI {selectedCity.aqi}
-              </h2>
+            <div className="bg-gradient-to-r from-green-400 to-blue-500 text-white p-3 rounded-t-lg text-center shadow-md">
+              <h2 className="text-xl font-bold">{selectedCity.name} - AQI {selectedCity.aqi}</h2>
             </div>
 
-            <h3 className="text-md font-semibold text-gray-700 mt-3">
-              Pollutants:
-            </h3>
+            <h3 className="text-lg font-semibold text-gray-700 mt-4">Pollutants:</h3>
             {selectedCity.pollutants.length > 0 ? (
-              <ul className="list-disc pl-5 space-y-1 text-gray-700">
+              <ul className="list-disc pl-5 space-y-2 text-gray-700">
                 {selectedCity.pollutants.map((pollutant, idx) => (
                   <li key={idx} className="flex justify-between">
                     <span className="font-medium">{pollutant.name}</span>
@@ -122,9 +127,9 @@ const AQISection = () => {
               <p className="text-gray-500">No pollutant data available.</p>
             )}
 
-            {/* Close Button (No X Button) */}
+            {/* Close Button */}
             <button
-              className="mt-4 w-full px-4 py-2 bg-gradient-to-r from-blue-500 to-green-500 text-white font-medium rounded-md hover:opacity-80 transition"
+              className="mt-6 w-full px-4 py-2 bg-gradient-to-r from-green-400 to-blue-500 text-white font-medium rounded-md hover:opacity-80 transition"
               onClick={() => setSelectedCity(null)}
             >
               Close
