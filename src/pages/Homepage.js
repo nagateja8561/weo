@@ -1,112 +1,78 @@
-import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowLeft, ArrowRight } from "lucide-react";
-import { useSwipeable } from "react-swipeable"; // Import swipe hook
 import PageTransition from "./PageTransition";
 import Layout from "./Layout";
 import AQISection from "./AQISection";
 
-const images = ["/images/hero1.jpg", "/images/hero2.jpg", "/images/hero3.jpg"];
-
-const fadeIn = {
-  hidden: { opacity: 0, y: 50 },
-  visible: (delay = 0) => ({
-    opacity: 1,
-    y: 0,
-    transition: { duration: 1, delay },
-  }),
-};
-
 const Homepage = () => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+  const videoDuration = 5000; // Duration for each video (in milliseconds)
 
-  const handleNextImage = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
+  const videos = [
+    "/videos/first-video.mp4", // Replace with your actual video paths
+    "/videos/second-video.mp4",
+  ];
 
-  const handlePrevImage = () => {
-    setCurrentImageIndex(
-      (prevIndex) => (prevIndex - 1 + images.length) % images.length
-    );
+  const handleVideoSwitch = () => {
+    setCurrentVideoIndex((prevIndex) => (prevIndex + 1) % videos.length);
   };
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, []);
+    const timer = setTimeout(() => {
+      handleVideoSwitch();
+    }, videoDuration);
+    return () => clearTimeout(timer);
+  }, [currentVideoIndex]);
 
-  // Swipe Handlers
-  const swipeHandlers = useSwipeable({
-    onSwipedLeft: handleNextImage,
-    onSwipedRight: handlePrevImage,
-    trackMouse: true,
-  });
+  const videoAnimation = {
+    initial: { opacity: 0, scale: 0.9 }, // Start slightly smaller and transparent
+    animate: { opacity: 1, scale: 1 }, // Smoothly fade in and scale up
+    exit: { opacity: 0, scale: 1.1 }, // Slight zoom-out and fade out
+    transition: { duration: 1 }, // Adjust duration for a smooth, professional feel
+  };
 
   return (
     <PageTransition>
       <Layout>
-        {/* Hero Section */}
+        {/* Hero Section with Video */}
         <motion.section
           className="relative w-full flex flex-col md:flex-row items-center justify-center text-white"
           initial="hidden"
           animate="visible"
         >
-          {/* Image Section with Swiping */}
-          <div
-            {...swipeHandlers} // Add swipe handlers
-            className="relative w-full h-[60vh] md:h-screen overflow-hidden"
-          >
-            <img
-              src={images[currentImageIndex]}
-              alt="Background"
-              className="w-full h-full object-cover"
-            />
-
-            {/* Arrows - Hidden on Mobile */}
-            <motion.div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20 flex space-x-4 hidden sm:flex">
-              <button
-                onClick={handlePrevImage}
-                className="bg-black/30 text-white p-3 rounded-full shadow-md hover:bg-white hover:text-black transition-all duration-300 ease-in-out transform hover:scale-110"
-                style={{ width: "50px", height: "50px" }}
-                aria-label="Previous Image"
-              >
-                <ArrowLeft size={24} />
-              </button>
-              <button
-                onClick={handleNextImage}
-                className="bg-black/30 text-white p-3 rounded-full shadow-md hover:bg-white hover:text-black transition-all duration-300 ease-in-out transform hover:scale-110"
-                style={{ width: "50px", height: "50px" }}
-                aria-label="Next Image"
-              >
-                <ArrowRight size={24} />
-              </button>
-            </motion.div>
+          {/* Video Section with Crossfade & Scale Animation */}
+          <div className="relative w-full h-[60vh] md:h-screen overflow-hidden">
+            <AnimatePresence>
+              <motion.video
+                key={currentVideoIndex}
+                src={videos[currentVideoIndex]}
+                autoPlay
+                muted
+                loop
+                className="absolute w-full h-full object-cover"
+                {...videoAnimation}
+                aria-label={`Hero Video ${currentVideoIndex + 1}`}
+              />
+            </AnimatePresence>
           </div>
 
           {/* Text Section (Overlay Text) */}
           <motion.div
             className="absolute inset-0 flex flex-col items-center justify-center text-center p-6 sm:p-8 bg-black bg-opacity-40 md:bg-opacity-50 z-10 w-full mt-[1vh] md:mt-0"
-            variants={fadeIn}
-            custom={0.5}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
           >
             <motion.div className="text-left md:text-left">
-            <motion.h1
-              className="text-3xl sm:text-4xl md:text-7xl font-extrabold mb-6"
-              variants={fadeIn}
-              custom={1}
-            >
-              Let Us Unite to Protect Our Environment
-            </motion.h1>
-            <motion.p
-              className="text-lg sm:text-m md:text-3xl"
-              variants={fadeIn}
-              custom={1.5}
-            >
-              Save Nature, Save Future
-            </motion.p>
+              <motion.h1
+                className="text-3xl sm:text-4xl md:text-7xl font-extrabold mb-6"
+              >
+                Let Us Unite to Protect Our Environment
+              </motion.h1>
+              <motion.p className="text-lg sm:text-m md:text-3xl">
+                Save Nature, Save Future
+              </motion.p>
             </motion.div>
           </motion.div>
         </motion.section>
