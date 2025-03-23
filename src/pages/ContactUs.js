@@ -24,14 +24,14 @@ const ContactUs = () => {
             animate="visible"
           >
             <motion.h1
-              className="text-6xl font-bold"
+              className="text-3xl sm:text-4xl md:text-7xl font-extrabold mb-6"
               variants={fadeIn}
               custom={0.5}
             >
               Contact Us
             </motion.h1>
             <motion.p
-              className="text-lg mt-4 max-w-2xl mx-auto"
+              className="text-lg sm:text-m md:text-3xl"
               variants={fadeIn}
               custom={1}
             >

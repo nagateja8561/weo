@@ -9,8 +9,8 @@ const PrivacyPolicy = () => {
         <div className="bg-gray-50 text-gray-800">
           {/* Hero Section */}
           <section className="relative bg-gradient-to-r from-green-400 to-blue-500 text-white text-center py-24">
-            <h1 className="text-5xl font-bold">Privacy Policy</h1>
-            <p className="text-lg mt-4 max-w-2xl mx-auto">
+            <h1 className="text-3xl sm:text-4xl md:text-7xl font-extrabold mb-6">Privacy Policy</h1>
+            <p className="text-lg sm:text-m md:text-3xl">
               Your privacy is important to us. Learn how we collect, use, and
               protect your information.
             </p>
