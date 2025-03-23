@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 import axios from "axios";
 
-const AQISection = () => {
+const AQISection = ({ view }) => {
   const [cities, setCities] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [selectedCity, setSelectedCity] = useState(null);
+
+  const navigate = useNavigate(); // Initialize navigation
 
   const fetchAQIData = async () => {
     try {
@@ -53,12 +56,19 @@ const AQISection = () => {
     return "bg-pink-400"; // Hazardous
   };
 
+  const displayCities =
+    view === "home" ? cities.slice(0, 4) : cities; // Top 4 for home, all for full page
+
   return (
     <div className="max-w-7xl mx-auto p-4 bg-white shadow-lg rounded-lg border-t-4 border-gradient-to-r from-green-400 to-blue-500">
+      {/* Full Page Heading */}
       <h1 className="text-3xl font-extrabold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-700 text-center shadow-md">
-        Which is the most polluted city in Telangana? (AQI)
+        {view === "home"
+          ? "Top 4 Polluted Cities in Telangana"
+          : ""}
       </h1>
 
+      {/* Display Loading or Error State */}
       {loading ? (
         <div className="text-center">
           <svg
@@ -86,28 +96,44 @@ const AQISection = () => {
       ) : error ? (
         <p className="text-red-500 text-center">{error}</p>
       ) : (
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-          {cities.map((city, index) => (
-            <div
-              key={index}
-              className={`flex flex-col items-center justify-center ${getAQIColor(
-                city.aqi
-              )} text-white p-4 rounded-lg shadow-lg cursor-pointer hover:scale-105 transform transition duration-300`}
-              onClick={() => setSelectedCity(city)}
-            >
-              <span className="font-semibold text-xl">{city.name}</span>
-              <span className="font-bold text-xl">{city.aqi}</span>
+        <>
+          {/* Display Cities */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            {displayCities.map((city, index) => (
+              <div
+                key={index}
+                className={`flex flex-col items-center justify-center ${getAQIColor(
+                  city.aqi
+                )} text-white rounded-xl shadow-xl transition-transform transform hover:scale-105 hover:shadow-2xl p-6 border-4 border-white cursor-pointer`}
+                onClick={() => setSelectedCity(city)}
+              >
+                <span className="font-semibold text-xl">{city.name}</span>
+                <span className="font-bold text-xl">{city.aqi}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* Button to Navigate to Full AQI Data */}
+          {view === "home" && (
+            <div className="flex justify-center mt-6">
+              <button
+                className="px-6 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-white font-medium rounded-md hover:opacity-80 transition"
+                onClick={() => navigate("/telangana-aqi-data")} // Use navigate
+              >
+                View Telangana AQI Data
+              </button>
             </div>
-          ))}
-        </div>
+          )}
+        </>
       )}
 
+      {/* Modal with Selected City Information */}
       {selectedCity && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-60 backdrop-blur-md z-50">
           <div className="relative bg-white p-6 rounded-xl shadow-2xl w-96">
             {/* Logo at the top */}
             <div className="flex justify-center mb-4">
-              <img src="/images/logo.png" alt="Logo" className="w-20 h-auto" />
+              <img src="/images/logo.png" alt="Logo" className="w-auto h-auto" />
             </div>
 
             {/* Header with Gradient */}

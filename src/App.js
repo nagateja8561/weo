@@ -15,6 +15,7 @@ import Donate from "./pages/Donate";
 import ContactUs from "./pages/ContactUs";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import WhatWeDone from "./pages/WhatWeDone";
+import TelanganaAQIDataPage from "./pages/TelanganaAQIDataPage";
 
 // ScrollToTop Component to reset scroll position on route change
 const ScrollToTop = () => {
@@ -104,6 +105,14 @@ const AnimatedRoutes = () => {
             element={
               <PageWrapper>
                 <WhatWeDone />
+              </PageWrapper>
+            }
+          />
+          <Route
+            path="/telangana-aqi-data"
+            element={
+              <PageWrapper>
+                <TelanganaAQIDataPage />
               </PageWrapper>
             }
           />

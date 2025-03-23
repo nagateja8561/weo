@@ -86,7 +86,7 @@ const Homepage = () => {
           </motion.div>
         </motion.section>
         {/* AQI Section - Placed on top of the page */}
-        <AQISection /> {/* Insert AQISection here */}
+        <AQISection view="home" /> {/* Insert AQISection here */}
         {/* Our Vision Section */}
         <motion.section
           id="vision-section"
