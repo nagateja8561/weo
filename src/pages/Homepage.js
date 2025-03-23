@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback  } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import PageTransition from "./PageTransition";
@@ -9,21 +9,31 @@ const Homepage = () => {
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
   const videoDuration = 5000; // Duration for each video (in milliseconds)
 
+  const fadeIn = {
+    hidden: { opacity: 0, y: 50 },
+    visible: (delay = 0) => ({
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1, delay },
+    }),
+  };
   const videos = [
     "/videos/first-video.mp4", // Replace with your actual video paths
     "/videos/second-video.mp4",
   ];
 
-  const handleVideoSwitch = () => {
-    setCurrentVideoIndex((prevIndex) => (prevIndex + 1) % videos.length);
-  };
+ // Memoize `handleVideoSwitch`
+ const handleVideoSwitch = useCallback(() => {
+  setCurrentVideoIndex((prevIndex) => (prevIndex + 1) % videos.length);
+}, [videos.length]); // Include 'videos.length' as a dependency
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      handleVideoSwitch();
-    }, videoDuration);
-    return () => clearTimeout(timer);
-  }, [currentVideoIndex]);
+
+useEffect(() => {
+  const timer = setTimeout(() => {
+    handleVideoSwitch();
+  }, videoDuration);
+  return () => clearTimeout(timer);
+}, [currentVideoIndex, handleVideoSwitch]); // Include memoized `handleVideoSwitch`
 
   const videoAnimation = {
     initial: { opacity: 0, scale: 0.9 }, // Start slightly smaller and transparent
@@ -226,5 +236,5 @@ const Homepage = () => {
      </PageTransition>
    );
  };
- 
+
  export default Homepage;
