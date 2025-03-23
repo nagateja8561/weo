@@ -19,7 +19,6 @@ const Homepage = () => {
   };
   const videos = [
     "/videos/first-video.mp4", // Replace with your actual video paths
-    "/videos/second-video.mp4",
   ];
 
  // Memoize `handleVideoSwitch`

@@ -18,20 +18,24 @@ const AboutUs = () => {
     <PageTransition>
       <Layout>
         <div className="bg-gray-50 text-gray-800">
-          {/* Hero Section with Image */}
+          {/* Hero Section with Video */}
           <motion.section
             className="relative bg-white-60 text-white text-center"
             initial="hidden"
             animate="visible"
           >
-            <img
-              src="/images/about-us.png" // Add your actual image path here
-              alt="About Us Hero"
-              className="absolute w-full h-[300px] sm:h-[600px] object-cover opacity-800"
-            />
+            <video
+              src="/videos/about-us.mp4" // Replace with your actual video path
+              autoPlay
+              muted
+              loop
+              className="absolute w-full h-[300px] sm:h-[600px] object-cover"
+            >
+              Your browser does not support the video tag.
+            </video>
             {/* Content Overlay */}
             <motion.div
-              className="relative z-10 flex flex-col justify-center items-center bg-black bg-opacity-40 md:bg-opacity-50 sm:h-[600px] h-[300px] py-16 mt-[10vh] md:mt-0" // Removed background styling here
+              className="relative z-10 flex flex-col justify-center items-center bg-black bg-opacity-40 md:bg-opacity-50 sm:h-[600px] h-[300px] py-16 mt-[10vh] md:mt-0"
               variants={fadeIn}
               custom={0.5}
             >
@@ -42,7 +46,11 @@ const AboutUs = () => {
               >
                 About Us
               </motion.h1>
-              <motion.p className="text-lg sm:text-m md:text-3xl" variants={fadeIn} custom={1.5}>
+              <motion.p
+                className="text-lg sm:text-m md:text-3xl"
+                variants={fadeIn}
+                custom={1.5}
+              >
                 Discover our journey, mission, and the values driving us to
                 create a sustainable future.
               </motion.p>
@@ -74,11 +82,11 @@ const AboutUs = () => {
                 variants={fadeIn}
                 custom={0.8}
               >
-                At the core of our mission is a belief in empowering
-                communities, fostering innovation, and working tirelessly
-                towards building a greener planet. By tackling challenges such
-                as sustainability, equality, and development, we strive to leave
-                a lasting, positive impact on the world.
+                At the core of our mission is a belief in empowering communities,
+                fostering innovation, and working tirelessly towards building a
+                greener planet. By tackling challenges such as sustainability,
+                equality, and development, we strive to leave a lasting, positive
+                impact on the world.
               </motion.p>
             </div>
           </motion.section>
@@ -110,7 +118,7 @@ const AboutUs = () => {
               variants={{
                 visible: {
                   transition: {
-                    staggerChildren: 0.3, // Stagger animations for child elements
+                    staggerChildren: 0.3,
                   },
                 },
               }}

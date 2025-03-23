@@ -19,17 +19,21 @@ const GetInvolved = () => {
     <PageTransition>
       <Layout>
         <div className="bg-gray-50 text-gray-800">
-          {/* Hero Section with Image and Animation */}
+          {/* Hero Section with Video */}
           <motion.section
             className="relative text-white text-center"
             initial="hidden"
             animate="visible"
           >
-            <img
-              src="/images/get-involved.jpg"
-              alt="Get Involved Hero"
-              className="absolute w-full h-[300px] sm:h-[600px] object-cover opacity-80"
-            />
+            <video
+              src="/videos/get-involved.mp4" // Replace with your actual video path
+              autoPlay
+              muted
+              loop
+              className="absolute w-full h-[300px] sm:h-[600px] object-cover"
+            >
+              Your browser does not support the video tag.
+            </video>
             <motion.div
               className="relative z-10 flex flex-col justify-center bg-black bg-opacity-40 md:bg-opacity-50 items-center sm:h-[600px] h-[300px] py-16"
               variants={fadeIn}
@@ -53,7 +57,7 @@ const GetInvolved = () => {
             variants={{
               visible: {
                 transition: {
-                  staggerChildren: 0.3, // Stagger child animations
+                  staggerChildren: 0.3,
                 },
               },
             }}
