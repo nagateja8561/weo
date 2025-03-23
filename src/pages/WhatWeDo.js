@@ -33,19 +33,19 @@ const WhatWeDo = () => {
             />
             {/* Content Layer */}
             <motion.div
-              className="relative z-10 flex flex-col justify-center items-center h-[300px] sm:h-[600px]"
+              className="relative z-10 flex flex-col justify-center bg-black bg-opacity-40 md:bg-opacity-50 items-center h-[300px] sm:h-[600px] mt-[10vh] md:mt-0"
               variants={fadeIn}
               custom={0.5}
             >
               <motion.h1
-                className="text-3xl sm:text-5xl font-bold mb-4"
+                className="text-3xl sm:text-4xl md:text-7xl font-extrabold mb-6"
                 variants={fadeIn}
                 custom={1}
               >
                 What We Do
               </motion.h1>
               <motion.p
-                className="text-base sm:text-lg"
+                className="text-lg sm:text-m md:text-3xl"
                 variants={fadeIn}
                 custom={1.5}
               >

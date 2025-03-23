@@ -31,7 +31,7 @@ const GetInvolved = () => {
               className="absolute w-full h-[300px] sm:h-[600px] object-cover opacity-80"
             />
             <motion.div
-              className="relative z-10 flex flex-col justify-center items-center sm:h-[600px] h-[300px] py-16"
+              className="relative z-10 flex flex-col justify-center bg-black bg-opacity-40 md:bg-opacity-50 items-center sm:h-[600px] h-[300px] py-16"
               variants={fadeIn}
               custom={0.5}
             >

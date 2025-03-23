@@ -29,7 +29,7 @@ const OurTeam = () => {
         {/* Background Section */}
         <div className="bg-gradient-to-r from-green-400 to-blue-500 text-white py-24 text-center">
           <motion.h1
-            className="text-6xl font-bold"
+            className="text-3xl sm:text-4xl md:text-7xl font-extrabold mb-6"
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -37,7 +37,7 @@ const OurTeam = () => {
             Our Team
           </motion.h1>
           <motion.p
-            className="text-lg mt-4 max-w-3xl mx-auto"
+            className="text-lg sm:text-m md:text-3xl"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}

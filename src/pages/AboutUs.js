@@ -31,18 +31,18 @@ const AboutUs = () => {
             />
             {/* Content Overlay */}
             <motion.div
-              className="relative z-10 flex flex-col justify-center items-center sm:h-[600px] h-[300px] py-16" // Removed background styling here
+              className="relative z-10 flex flex-col justify-center items-center bg-black bg-opacity-40 md:bg-opacity-50 sm:h-[600px] h-[300px] py-16 mt-[10vh] md:mt-0" // Removed background styling here
               variants={fadeIn}
               custom={0.5}
             >
               <motion.h1
-                className="text-5xl font-bold mb-4"
+                className="text-3xl sm:text-4xl md:text-7xl font-extrabold mb-6"
                 variants={fadeIn}
                 custom={1}
               >
                 About Us
               </motion.h1>
-              <motion.p className="text-lg" variants={fadeIn} custom={1.5}>
+              <motion.p className="text-lg sm:text-m md:text-3xl" variants={fadeIn} custom={1.5}>
                 Discover our journey, mission, and the values driving us to
                 create a sustainable future.
               </motion.p>

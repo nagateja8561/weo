@@ -88,11 +88,11 @@ const Homepage = () => {
 
           {/* Text Section (Overlay Text) */}
           <motion.div
-            className="flex flex-col items-center justify-center text-center p-6 sm:p-12 bg-black bg-opacity-40 md:bg-opacity-50 z-10 w-full md:absolute md:inset-0 md:bottom-0 md:text-left md:flex-row md:justify-start md:p-8 mt-[-20vh] md:mt-0" // Adjusted margin-top for mobile
+            className="absolute inset-0 flex flex-col items-center justify-center text-center p-6 sm:p-8 bg-black bg-opacity-40 md:bg-opacity-50 z-10 w-full mt-[1vh] md:mt-0"
             variants={fadeIn}
             custom={0.5}
           >
-            <motion.div className="text-center md:text-left">
+            <motion.div className="text-left md:text-left">
             <motion.h1
               className="text-3xl sm:text-4xl md:text-7xl font-extrabold mb-6"
               variants={fadeIn}
@@ -101,7 +101,7 @@ const Homepage = () => {
               Let Us Unite to Protect Our Environment
             </motion.h1>
             <motion.p
-              className="text-lg sm:text-xl md:text-3xl"
+              className="text-lg sm:text-m md:text-3xl"
               variants={fadeIn}
               custom={1.5}
             >

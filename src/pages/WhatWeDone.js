@@ -33,12 +33,12 @@ const WhatWeDone = () => {
         <div className="bg-gray-50 text-gray-800">
           {/* Hero Section */}
           <motion.section
-            className="relative bg-gradient-to-r from-blue-600 to-green-500 text-white text-center py-28"
+            className="relative bg-gradient-to-r from-blue-600 to-green-500 text-white text-center py-28 mt-[10vh] md:mt-0"
             initial="hidden"
             animate="visible"
           >
             <motion.h1
-              className="text-5xl font-bold"
+              className="text-3xl sm:text-4xl md:text-7xl font-extrabold mb-6"
               variants={fadeIn}
               custom={0.5}
             >
