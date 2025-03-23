@@ -116,73 +116,149 @@ const Homepage = () => {
 
         {/* Our Vision Section */}
         <motion.section
-          className="py-16 md:py-32 bg-white flex justify-center items-center text-left px-8 sm:px-16"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-        >
-          <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-7xl mx-auto">
-            <motion.img
-              src="/images/vision.webp"
-              alt="Our Vision"
-              className="w-full rounded-lg shadow-lg"
-              variants={fadeIn}
-              custom={0}
-            />
-            <motion.div className="flex flex-col justify-center">
-              <motion.h2
-                className="text-4xl md:text-6xl font-bold mb-4 text-gray-800"
-                variants={fadeIn}
-                custom={0.5}
-              >
-                Our Vision
-              </motion.h2>
-              <motion.p
-                className="text-lg text-gray-600 mb-8"
-                variants={fadeIn}
-                custom={1}
-              >
-                Our vision is a future where innovation and sustainability
-                converge to create lasting positive change, empowering
-                individuals and organizations to reach their full potential. We
-                are committed to building a brighter, greener world where nature
-                and humanity coexist in harmony, ensuring clean air, pure water,
-                and a thriving planet for generations to come.
-              </motion.p>
-            </motion.div>
-          </motion.div>
-        </motion.section>
-
-        {/* CSR Section */}
-        <motion.section
-          className="py-16 md:py-32 bg-white flex justify-center items-center text-left px-8 sm:px-16"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-7xl mx-auto">
-            <motion.div className="flex flex-col justify-center">
-              <motion.h2 className="text-4xl md:text-6xl font-bold mb-4 text-gray-800">
-                Corporate Social Responsibility (CSR)
-              </motion.h2>
-              <motion.p className="text-lg text-gray-600 mb-8">
-                Collaborating with companies to implement green initiatives,
-                reduce carbon footprints, and create a lasting environmental
-                impact.
-              </motion.p>
-            </motion.div>
-            <motion.img
-              src="/images/csr.jpg"
-              alt="CSR"
-              className="w-full rounded-lg shadow-lg"
-              variants={fadeIn}
-              custom={0}
-            />
-          </div>
-        </motion.section>
-      </Layout>
-    </PageTransition>
-  );
-};
-
-export default Homepage;
+           id="vision-section"
+           className="py-16 md:py-32 bg-white flex justify-center items-center text-left px-8 sm:px-16"
+           initial="hidden"
+           whileInView="visible"
+           viewport={{ once: true, amount: 0.5 }} // Ensures animation triggers when 50% of the section is visible
+         >
+           <motion.div
+             className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-7xl mx-auto"
+             initial="hidden"
+             whileInView="visible"
+             viewport={{ once: true }}
+             variants={{
+               visible: {
+                 transition: {
+                   staggerChildren: 0.3, // stagger animations for children
+                 },
+               },
+             }}
+           >
+             {/* Image Animation */}
+             <motion.img
+               src="/images/vision.webp"
+               alt="Our Vision"
+               className="w-full rounded-lg shadow-lg"
+               variants={fadeIn}
+               custom={0}
+             />
+ 
+             {/* Text Animation */}
+             <motion.div className="flex flex-col justify-center">
+               <motion.h2
+                 className="text-4xl md:text-6xl font-bold mb-4 text-gray-800"
+                 variants={fadeIn}
+                 custom={0.5}
+               >
+                 Our Vision
+               </motion.h2>
+               <motion.p
+                 className="text-lg text-gray-600 mb-8"
+                 variants={fadeIn}
+                 custom={1}
+               >
+                 Our vision is a future where innovation and sustainability
+                 converge to create lasting positive change, empowering
+                 individuals and organizations to reach their full potential. We
+                 are committed to building a brighter, greener world where nature
+                 and humanity coexist in harmony, ensuring clean air, pure water,
+                 and a thriving planet for generations to come.
+               </motion.p>
+             </motion.div>
+           </motion.div>
+         </motion.section>
+         {/* CSR Section */}
+         <motion.section
+           id="csr-section"
+           className="py-16 md:py-32 bg-white flex justify-center items-center text-left px-8 sm:px-16"
+           initial="hidden"
+           whileInView="visible"
+           viewport={{ once: true }}
+         >
+           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-7xl mx-auto">
+             <motion.div
+               className="flex flex-col justify-center"
+               variants={fadeIn}
+               custom={0.5}
+             >
+               <motion.h2
+                 className="text-4xl md:text-6xl font-bold mb-4 text-gray-800"
+                 variants={fadeIn}
+                 custom={1}
+               >
+                 Corporate Social Responsibility (CSR)
+               </motion.h2>
+               <motion.p
+                 className="text-lg text-gray-600 mb-8"
+                 variants={fadeIn}
+                 custom={1.5}
+               >
+                 Collaborating with companies to implement green initiatives,
+                 reduce carbon footprints, and create a lasting environmental
+                 impact.
+               </motion.p>
+             </motion.div>
+             <motion.img
+               src="/images/csr.jpg"
+               alt="CSR"
+               className="w-full rounded-lg shadow-lg"
+               variants={fadeIn}
+               custom={0}
+             />
+           </div>
+         </motion.section>
+         {/* Our Team Section */}
+         <motion.section
+           id="team-section"
+           className="py-16 md:py-32 bg-white flex justify-center items-center text-left px-8 sm:px-16"
+           initial="hidden"
+           whileInView="visible"
+           viewport={{ once: true }}
+         >
+           <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-16 max-w-7xl mx-auto">
+             <motion.img
+               src="/images/ourteam.jpeg"
+               alt="Our Team"
+               className="w-full rounded-lg shadow-lg"
+               variants={fadeIn}
+               custom={0}
+             />
+             <motion.div
+               className="flex flex-col justify-center"
+               variants={fadeIn}
+               custom={0.5}
+             >
+               <motion.h2
+                 className="text-4xl md:text-6xl font-bold mb-4 text-gray-800"
+                 variants={fadeIn}
+                 custom={1}
+               >
+                 Meet Our Team
+               </motion.h2>
+               <motion.p
+                 className="text-lg text-gray-600 mb-8"
+                 variants={fadeIn}
+                 custom={1.5}
+               >
+                 We come from diverse backgrounds and have varied skills and
+                 expertise, but are united by our common love for nature.
+               </motion.p>
+               <Link to="/team">
+                 <motion.button
+                   className="bg-gradient-to-r from-[#00aaff] to-[#00ff77] text-white py-3 px-8 rounded-lg text-lg hover:bg-green-800"
+                   variants={fadeIn}
+                   custom={2}
+                 >
+                   Our People
+                 </motion.button>
+               </Link>
+             </motion.div>
+           </div>
+         </motion.section>
+       </Layout>
+     </PageTransition>
+   );
+ };
+ 
+ export default Homepage;
