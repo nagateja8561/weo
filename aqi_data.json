@@ -255,31 +255,31 @@
   {
     "id": "hxL7oShLseB9sgjpZ",
     "name": "Hyderabad",
-    "aqi": "105",
+    "aqi": "99",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "37 µg/m³"
+        "concentration": "35.1 µg/m³"
       },
       {
         "name": "pm10",
-        "concentration": "77 µg/m³"
+        "concentration": "82.4 µg/m³"
       },
       {
         "name": "o3",
-        "concentration": "28 µg/m³"
+        "concentration": "33.1 µg/m³"
       },
       {
         "name": "no2",
-        "concentration": "12.4 µg/m³"
+        "concentration": "14.4 µg/m³"
       },
       {
         "name": "so2",
-        "concentration": "8.3 µg/m³"
+        "concentration": "7.6 µg/m³"
       },
       {
         "name": "co",
-        "concentration": "590 µg/m³"
+        "concentration": "685 µg/m³"
       }
     ]
   },
