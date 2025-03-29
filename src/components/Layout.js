@@ -1,7 +1,9 @@
+// Layout.js
 import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import ScrollToTopButton from "./ScrollToTopButton";
+// import SocialIcons from './SocialIcons';
 
 const Layout = ({ children }) => {
   return (
@@ -10,8 +12,9 @@ const Layout = ({ children }) => {
       {children}
       <Footer />
       <ScrollToTopButton />
+      {/* <SocialIcons /> */}
     </div>
   );
 };
 
-export default Layout; 
+export default Layout;

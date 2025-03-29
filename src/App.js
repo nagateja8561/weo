@@ -14,7 +14,7 @@ import GetInvolved from "./pages/GetInvolved";
 import Donate from "./pages/Donate";
 import ContactUs from "./pages/ContactUs";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
-import WhatWeDone from "./pages/WhatWeDone";
+import Gallery from "./pages/Gallery";
 import TelanganaAQIDataPage from "./pages/TelanganaAQIDataPage";
 
 // ScrollToTop Component to reset scroll position on route change
@@ -101,10 +101,10 @@ const AnimatedRoutes = () => {
             }
           />
           <Route
-            path="/what-we-have-done"
+            path="/gallery"
             element={
               <PageWrapper>
-                <WhatWeDone />
+                <Gallery />
               </PageWrapper>
             }
           />

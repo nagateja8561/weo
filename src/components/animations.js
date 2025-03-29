@@ -78,4 +78,92 @@ export const formStaggerAnimation = {
   visible: {
     transition: { staggerChildren: 0.2 },
   },
+};
+
+// Stats card animation
+export const statsCardAnimation = {
+  hidden: { opacity: 0, y: 20 },
+  visible: (delay = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      delay,
+      ease: [0.4, 0, 0.2, 1]
+    }
+  }),
+  hover: {
+    y: -5,
+    transition: {
+      duration: 0.3,
+      ease: [0.4, 0, 0.2, 1]
+    }
+  }
+};
+
+// Market trends card animation
+export const trendsCardAnimation = {
+  hidden: { opacity: 0, x: -20 },
+  visible: (delay = 0) => ({
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.5,
+      delay,
+      ease: [0.4, 0, 0.2, 1]
+    }
+  }),
+  hover: {
+    scale: 1.02,
+    transition: {
+      duration: 0.3,
+      ease: [0.4, 0, 0.2, 1]
+    }
+  }
+};
+
+// Team card animation
+export const teamCardAnimation = {
+  hidden: { opacity: 0, scale: 0.9 },
+  visible: (delay = 0) => ({
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.5,
+      delay,
+      ease: [0.4, 0, 0.2, 1]
+    }
+  }),
+  hover: {
+    y: -10,
+    transition: {
+      duration: 0.3,
+      ease: [0.4, 0, 0.2, 1]
+    }
+  }
+};
+
+export const iconRotationAnimation = {
+  hover: {
+    scale: 1.1,
+    rotate: 360,
+    transition: {
+      duration: 0.5,
+      ease: "easeInOut"
+    }
+  }
+};
+
+// Section fade in animation
+export const sectionFadeIn = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: [0.4, 0, 0.2, 1],
+      staggerChildren: 0.2
+    }
+  }
 }; 

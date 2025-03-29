@@ -1,168 +1,232 @@
 import React from "react";
-import { motion } from "framer-motion"; // Import framer-motion for animations
+import { motion } from "framer-motion";
 import PageTransition from "../components/PageTransition";
 import Layout from "../components/Layout";
+import GradientOverlay from "../components/GradientOverlay";
+import Button from "../components/Button";
+import { fadeIn, sectionFadeIn } from "../components/animations";
 import { Link } from "react-router-dom";
-
-// Animation Configuration
-const fadeIn = {
-  hidden: { opacity: 0, y: 50 },
-  visible: (delay = 0) => ({
-    opacity: 1,
-    y: 0,
-    transition: { duration: 1, delay },
-  }),
-};
+import { FaHandHoldingHeart, FaHandshake, FaUsers, FaTree, FaGlobe, FaLightbulb } from "react-icons/fa";
 
 const GetInvolved = () => {
   return (
     <PageTransition>
       <Layout>
         <div className="bg-gray-50 text-gray-800">
-          {/* Hero Section with Video */}
-          <motion.section
-            className="relative text-white text-center"
-            initial="hidden"
-            animate="visible"
-          >
-            <video
-              src="/videos/get-involved.mp4" // Replace with your actual video path
-              autoPlay
-              muted
-              loop
-              className="absolute w-full h-[300px] sm:h-[600px] object-cover"
-            >
-              Your browser does not support the video tag.
-            </video>
-            <motion.div
-              className="relative z-10 flex flex-col justify-center bg-black bg-opacity-40 md:bg-opacity-50 items-center sm:h-[600px] h-[300px] py-16"
-              variants={fadeIn}
-              custom={0.5}
-            >
-              <motion.h1 className="text-5xl font-bold mb-4" variants={fadeIn} custom={1}>
-                Get Involved
-              </motion.h1>
-              <motion.p className="text-lg" variants={fadeIn} custom={1.5}>
-                Join hands with us to create a lasting impact. Together, we can
-                make a difference.
-              </motion.p>
-            </motion.div>
-          </motion.section>
+          {/* Hero Section */}
+          <GradientOverlay 
+            className="text-white py-24"
+            title="Get Involved"
+            subtitle="Join our global community of environmental champions. Together, we can create a sustainable future for generations to come."
+          />
 
-          {/* Ways to Support Section with Animations */}
+          {/* Ways to Support Section */}
           <motion.section
             className="py-16 px-4 sm:px-8"
             initial="hidden"
-            animate="visible"
-            variants={{
-              visible: {
-                transition: {
-                  staggerChildren: 0.3,
-                },
-              },
-            }}
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            variants={sectionFadeIn}
           >
             <div className="max-w-7xl mx-auto">
-              <motion.h2 className="text-3xl font-bold text-center mb-12" variants={fadeIn} custom={0}>
+              <motion.h2 
+                className="text-3xl font-bold text-center mb-12" 
+                variants={fadeIn} 
+                custom={0}
+              >
                 Ways to Support Us
               </motion.h2>
-              <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              <motion.div 
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+                variants={{
+                  visible: {
+                    transition: {
+                      staggerChildren: 0.3,
+                    },
+                  },
+                }}
+              >
                 {/* Support Option 1 */}
                 <motion.div
-                  className="bg-white rounded-lg shadow-lg p-6 text-center"
+                  className="bg-white rounded-lg shadow-lg p-6 text-center transform hover:-translate-y-2 transition-all duration-300"
                   variants={fadeIn}
                   custom={0.5}
+                  whileHover="hover"
                 >
+                  <div className="flex justify-center mb-4">
+                    <FaHandHoldingHeart className="text-4xl text-green-600" />
+                  </div>
                   <h3 className="text-xl font-bold mb-4 text-green-600">Volunteer With Us</h3>
                   <p className="text-gray-600">
-                    Contribute your time and skills to our initiatives. Help us
-                    in creating sustainable solutions.
+                    Make a direct impact by volunteering your time and skills. From tree planting to community education, your hands-on involvement helps create lasting environmental change.
                   </p>
-                  <Link
-                    to="/contact-us"
-                    className="mt-4 inline-block bg-gradient-to-r from-[#00aaff] to-[#00ff77] text-white py-2 px-6 rounded-lg font-bold hover:bg-green-700 transition"
-                  >
-                    Contact Us
-                  </Link>
+                  <div className="mt-4 flex justify-center">
+                    <Link to="/contact-us">
+                      <Button 
+                        variant="primary" 
+                        size="large"
+                        className="bg-gradient-to-r from-[#00aaff] to-[#00ff77] text-white py-2 px-6 rounded-lg font-bold hover:from-[#0099cc] hover:to-[#00cc66] transition-all duration-300"
+                      >
+                        Join as Volunteer
+                      </Button>
+                    </Link>
+                  </div>
                 </motion.div>
 
                 {/* Support Option 2 */}
                 <motion.div
-                  className="bg-white rounded-lg shadow-lg p-6 text-center"
+                  className="bg-white rounded-lg shadow-lg p-6 text-center transform hover:-translate-y-2 transition-all duration-300"
                   variants={fadeIn}
                   custom={0.8}
+                  whileHover="hover"
                 >
+                  <div className="flex justify-center mb-4">
+                    <FaHandshake className="text-4xl text-green-600" />
+                  </div>
                   <h3 className="text-xl font-bold mb-4 text-green-600">Donate</h3>
                   <p className="text-gray-600">
-                    Your generous donations help us sustain and expand our
-                    initiatives to make a greater impact.
+                    Your financial support enables us to expand our environmental initiatives, fund research projects, and implement sustainable solutions across communities.
                   </p>
-                  <Link
-                    to="/donate"
-                    className="mt-4 inline-block bg-gradient-to-r from-[#00aaff] to-[#00ff77] text-white py-2 px-6 rounded-lg font-bold hover:bg-green-700 transition"
-                  >
-                    Donate Now
-                  </Link>
+                  <div className="mt-4 flex justify-center">
+                    <Link to="/donate">
+                      <Button 
+                        variant="primary" 
+                        size="large"
+                        className="bg-gradient-to-r from-[#00aaff] to-[#00ff77] text-white py-2 px-6 rounded-lg font-bold hover:from-[#0099cc] hover:to-[#00cc66] transition-all duration-300"
+                      >
+                        Make a Donation
+                      </Button>
+                    </Link>
+                  </div>
                 </motion.div>
 
                 {/* Support Option 3 */}
                 <motion.div
-                  className="bg-white rounded-lg shadow-lg p-6 text-center"
+                  className="bg-white rounded-lg shadow-lg p-6 text-center transform hover:-translate-y-2 transition-all duration-300"
                   variants={fadeIn}
                   custom={1.1}
+                  whileHover="hover"
                 >
+                  <div className="flex justify-center mb-4">
+                    <FaUsers className="text-4xl text-green-600" />
+                  </div>
                   <h3 className="text-xl font-bold mb-4 text-green-600">Corporate Partnerships</h3>
                   <p className="text-gray-600">
-                    Collaborate with us as a corporate partner and support
-                    impactful projects that align with your goals.
+                    Partner with us to drive environmental innovation. Together, we can develop sustainable business practices and create a positive impact on our planet.
                   </p>
-                  <Link
-                    to="/contact-us"
-                    className="mt-4 inline-block bg-gradient-to-r from-[#00aaff] to-[#00ff77] text-white py-2 px-6 rounded-lg font-bold hover:bg-green-700 transition"
-                  >
-                    Contact Us
-                  </Link>
+                  <div className="mt-4 flex justify-center">
+                    <Link to="/contact-us">
+                      <Button 
+                        variant="primary" 
+                        size="large"
+                        className="bg-gradient-to-r from-[#00aaff] to-[#00ff77] text-white py-2 px-6 rounded-lg font-bold hover:from-[#0099cc] hover:to-[#00cc66] transition-all duration-300"
+                      >
+                        Partner With Us
+                      </Button>
+                    </Link>
+                  </div>
                 </motion.div>
               </motion.div>
             </div>
           </motion.section>
 
-          {/* Final Call-to-Action Section */}
-          <div className="bg-blue-50 py-16 text-center">
-            <motion.h2
-              className="text-4xl font-bold text-gray-800"
-              initial="hidden"
-              animate="visible"
-              variants={fadeIn}
-              custom={0}
-            >
-              Together for a Better Tomorrow
-            </motion.h2>
-            <motion.p
-              className="text-lg mt-4 text-gray-600 max-w-3xl mx-auto"
-              initial="hidden"
-              animate="visible"
-              variants={fadeIn}
-              custom={0.2}
-            >
-              Your involvement is the driving force behind our mission. Join us
-              today and help build a sustainable future for generations to come.
-            </motion.p>
-            <motion.div
-              className="mt-6"
-              initial="hidden"
-              animate="visible"
-              variants={fadeIn}
-              custom={0.4}
-            >
-              <Link
-                to="/contact-us"
-                className="inline-block bg-gradient-to-r from-[#00aaff] to-[#00ff77] text-white py-2 px-6 rounded-lg font-bold hover:bg-green-700 transition"
+          {/* Impact Stats Section */}
+          <motion.section
+            className="py-16 px-4 sm:px-8 bg-white"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            variants={sectionFadeIn}
+          >
+            <div className="max-w-7xl mx-auto">
+              <motion.h2 
+                className="text-3xl font-bold text-center mb-12" 
+                variants={fadeIn} 
+                custom={0}
               >
-                Contact Us
-              </Link>
-            </motion.div>
-          </div>
+                Our Impact Together
+              </motion.h2>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <motion.div
+                  className="text-center"
+                  variants={fadeIn}
+                  custom={0.2}
+                >
+                  <FaTree className="text-4xl text-green-600 mx-auto mb-4" />
+                  <h3 className="text-2xl font-bold text-gray-800">2.5M+</h3>
+                  <p className="text-gray-600">Trees Planted</p>
+                </motion.div>
+                <motion.div
+                  className="text-center"
+                  variants={fadeIn}
+                  custom={0.4}
+                >
+                  <FaGlobe className="text-4xl text-blue-600 mx-auto mb-4" />
+                  <h3 className="text-2xl font-bold text-gray-800">50+</h3>
+                  <p className="text-gray-600">Countries Reached</p>
+                </motion.div>
+                <motion.div
+                  className="text-center"
+                  variants={fadeIn}
+                  custom={0.6}
+                >
+                  <FaUsers className="text-4xl text-purple-600 mx-auto mb-4" />
+                  <h3 className="text-2xl font-bold text-gray-800">10K+</h3>
+                  <p className="text-gray-600">Active Volunteers</p>
+                </motion.div>
+                <motion.div
+                  className="text-center"
+                  variants={fadeIn}
+                  custom={0.8}
+                >
+                  <FaLightbulb className="text-4xl text-yellow-600 mx-auto mb-4" />
+                  <h3 className="text-2xl font-bold text-gray-800">100+</h3>
+                  <p className="text-gray-600">Projects Completed</p>
+                </motion.div>
+              </div>
+            </div>
+          </motion.section>
+
+          {/* Final Call-to-Action Section */}
+          <motion.section
+            className="py-16 px-4 sm:px-8 bg-white"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            variants={sectionFadeIn}
+          >
+            <div className="max-w-4xl mx-auto text-center">
+              <motion.h2
+                className="text-3xl font-bold mb-6"
+                variants={fadeIn}
+                custom={0}
+              >
+                Together for a Better Tomorrow
+              </motion.h2>
+              <motion.p
+                className="text-lg text-gray-600 mb-8"
+                variants={fadeIn}
+                custom={0.2}
+              >
+                Every action counts in our mission to protect and preserve our planet. Join our community of environmental champions and be part of the solution.
+              </motion.p>
+              <motion.div 
+                variants={fadeIn} 
+                custom={0.4}
+                className="flex justify-center"
+              >
+                <Link to="/contact-us">
+                  <Button 
+                    variant="primary" 
+                    size="large"
+                    className="bg-gradient-to-r from-[#00aaff] to-[#00ff77] text-white py-3 px-8 rounded-full text-[14px] font-bold hover:from-[#0099cc] hover:to-[#00cc66] transition-all duration-300 shadow-lg hover:shadow-xl"
+                  >
+                    Get Started Today
+                  </Button>
+                </Link>
+              </motion.div>
+            </div>
+          </motion.section>
         </div>
       </Layout>
     </PageTransition>

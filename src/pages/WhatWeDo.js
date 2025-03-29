@@ -2,101 +2,75 @@ import React from "react";
 import { motion } from "framer-motion"; // Import framer-motion for animations
 import PageTransition from "../components/PageTransition";
 import Layout from "../components/Layout";
+import GradientOverlay from "../components/GradientOverlay";
+import { 
+  fadeIn, 
+  pageVariants, 
+  staggerContainer, 
+  sectionFadeIn,
+  iconRotationAnimation
+} from "../components/animations";
+import { FaLeaf, FaTree, FaSeedling, FaChartLine, FaGlobe, FaWater, FaWind } from "react-icons/fa";
 import { Link } from "react-router-dom";
-
-// Animation Configuration
-const fadeIn = {
-  hidden: { opacity: 0, y: 50 },
-  visible: (delay = 0) => ({
-    opacity: 1,
-    y: 0,
-    transition: { duration: 1, delay },
-  }),
-};
 
 const WhatWeDo = () => {
   return (
     <PageTransition>
       <Layout>
-        <div className="bg-gray-50 text-gray-800">
-          {/* Hero Section with Image and Animation */}
-          <motion.section
-            className="relative bg-gray-600 text-white text-center"
-            initial="hidden"
-            animate="visible"
-          >
-            {/* Hero Video */}
-            <video
-              className="absolute w-full h-[300px] sm:h-[600px] object-cover"
-              autoPlay
-              loop
-              muted
-            >
-              <source
-                src="/videos/whatwe-do.mp4" // Replace with your actual video URL
-                type="video/mp4"
-              />
-              Your browser does not support the video tag.
-            </video>
-            {/* Content Layer */}
-            <motion.div
-              className="relative z-10 flex flex-col justify-center bg-black bg-opacity-40 md:bg-opacity-50 items-center h-[300px] sm:h-[600px] mt-[10vh] md:mt-0"
-              variants={fadeIn}
-              custom={0.5}
-            >
-              <motion.h1
-                className="text-3xl sm:text-4xl md:text-7xl font-extrabold mb-6"
-                variants={fadeIn}
-                custom={1}
-              >
-                What We Do
-              </motion.h1>
-              <motion.p
-                className="text-lg sm:text-m md:text-3xl"
-                variants={fadeIn}
-                custom={1.5}
-              >
-                We are committed to creating a sustainable future through
-                innovative solutions and impactful initiatives.
-              </motion.p>
-            </motion.div>
-          </motion.section>
+        <motion.div 
+          className="bg-gray-50 text-gray-800 relative"
+          variants={pageVariants}
+          initial="initial"
+          animate="animate"
+          exit="exit"
+        >
+          {/* Hero Section */}
+          <GradientOverlay 
+            className="text-white"
+            title="What We Do"
+            subtitle="Our comprehensive approach to environmental conservation and community development."
+          />
 
           {/* Priority Areas Section */}
-          {/* Priority Areas Section */}
           <motion.section
-            className="py-16 px-4 sm:px-8"
-            initial="hidden" // Initially hidden before animation starts
-            animate="visible" // Immediately animate when the section is rendered
-            variants={{
-              hidden: { opacity: 0, y: 50 }, // Hidden state (before animation starts)
-              visible: {
-                opacity: 1,
-                y: 0,
-                transition: { staggerChildren: 0.3 }, // Stagger animation for children
-              },
-            }}
+            className="py-12 md:py-20 px-4 sm:px-8 bg-white"
+            initial="hidden"
+            animate="visible"
+            variants={sectionFadeIn}
           >
             <div className="max-w-7xl mx-auto">
               <motion.h2
-                className="text-3xl font-bold text-center mb-12"
+                className="text-3xl sm:text-4xl md:text-5xl font-black mb-6 md:mb-8 tracking-tight text-center"
                 variants={fadeIn}
-                custom={0}
+                custom={0.5}
               >
                 Our Priorities
               </motion.h2>
+              <motion.p
+                className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-12 md:mb-16 max-w-3xl mx-auto text-center leading-relaxed font-light"
+                variants={fadeIn}
+                custom={0.8}
+              >
+                We focus on key areas that have the greatest potential for positive environmental impact and community development.
+              </motion.p>
               <motion.div
                 className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
-                variants={{
-                  visible: { transition: { staggerChildren: 0.2 } },
-                }}
+                variants={staggerContainer}
               >
                 {/* Priority 1 */}
                 <motion.div
                   className="bg-white rounded-lg shadow-lg p-6 text-center"
                   variants={fadeIn}
-                  custom={0.5}
+                  custom={0.8}
+                  whileHover="hover"
                 >
+                  <motion.div
+                    className="mb-4"
+                    whileHover="hover"
+                    variants={iconRotationAnimation}
+                  >
+                    <FaLeaf className="text-3xl text-green-500 mx-auto" />
+                  </motion.div>
                   <h3 className="text-xl font-bold mb-4 text-green-600">
                     Provide Food & Water Sustainably
                   </h3>
@@ -110,8 +84,16 @@ const WhatWeDo = () => {
                 <motion.div
                   className="bg-white rounded-lg shadow-lg p-6 text-center"
                   variants={fadeIn}
-                  custom={0.8}
+                  custom={1}
+                  whileHover="hover"
                 >
+                  <motion.div
+                    className="mb-4"
+                    whileHover="hover"
+                    variants={iconRotationAnimation}
+                  >
+                    <FaTree className="text-3xl text-green-500 mx-auto" />
+                  </motion.div>
                   <h3 className="text-xl font-bold mb-4 text-green-600">
                     Protect & Restore Wild Habitats
                   </h3>
@@ -125,8 +107,16 @@ const WhatWeDo = () => {
                 <motion.div
                   className="bg-white rounded-lg shadow-lg p-6 text-center"
                   variants={fadeIn}
-                  custom={1.1}
+                  custom={1.2}
+                  whileHover="hover"
                 >
+                  <motion.div
+                    className="mb-4"
+                    whileHover="hover"
+                    variants={iconRotationAnimation}
+                  >
+                    <FaSeedling className="text-3xl text-green-500 mx-auto" />
+                  </motion.div>
                   <h3 className="text-xl font-bold mb-4 text-green-600">
                     Build Healthy Cities
                   </h3>
@@ -141,7 +131,15 @@ const WhatWeDo = () => {
                   className="bg-white rounded-lg shadow-lg p-6 text-center"
                   variants={fadeIn}
                   custom={1.4}
+                  whileHover="hover"
                 >
+                  <motion.div
+                    className="mb-4"
+                    whileHover="hover"
+                    variants={iconRotationAnimation}
+                  >
+                    <FaChartLine className="text-3xl text-green-500 mx-auto" />
+                  </motion.div>
                   <h3 className="text-xl font-bold mb-4 text-green-600">
                     Support Renewable Energy
                   </h3>
@@ -154,58 +152,156 @@ const WhatWeDo = () => {
             </div>
           </motion.section>
 
-          {/* Wave Section Divider */}
-          <div className="wave-divider bg-gradient-to-r from-blue-500 to-green-400">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 1440 320"
-              className="w-full"
-            >
-              <path
-                fill="white"
-                fillOpacity="1"
-                d="M0,224L30,229.3C60,235,120,245,180,240C240,235,300,213,360,186.7C420,160,480,128,540,117.3C600,107,660,117,720,133.3C780,149,840,171,900,160C960,149,1020,107,1080,112C1140,117,1200,171,1260,197.3C1320,224,1380,224,1410,224L1440,224L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"
-              ></path>
-            </svg>
-          </div>
+          {/* Impact Statistics Section */}
+          <motion.section
+            className="py-12 md:py-20 px-4 sm:px-8 bg-gradient-to-b from-white to-green-50"
+            initial="hidden"
+            animate="visible"
+            variants={sectionFadeIn}
+          >
+            <div className="max-w-7xl mx-auto">
+              <motion.h2
+                className="text-3xl sm:text-4xl md:text-5xl font-black mb-6 md:mb-8 tracking-tight text-center"
+                variants={fadeIn}
+                custom={0.5}
+              >
+                Our Impact
+              </motion.h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-12">
+                <motion.div
+                  className="bg-white rounded-lg shadow-lg p-6 text-center"
+                  variants={fadeIn}
+                  custom={0.8}
+                  whileHover="hover"
+                >
+                  <motion.div
+                    className="mb-4"
+                    whileHover="hover"
+                    variants={iconRotationAnimation}
+                  >
+                    <FaGlobe className="text-3xl text-green-500 mx-auto" />
+                  </motion.div>
+                  <div className="text-4xl md:text-5xl font-black text-[#00aaff] mb-2">50+</div>
+                  <div className="text-lg md:text-xl text-gray-700 font-medium">Countries Reached</div>
+                </motion.div>
+
+                <motion.div
+                  className="bg-white rounded-lg shadow-lg p-6 text-center"
+                  variants={fadeIn}
+                  custom={1}
+                  whileHover="hover"
+                >
+                  <motion.div
+                    className="mb-4"
+                    whileHover="hover"
+                    variants={iconRotationAnimation}
+                  >
+                    <FaWater className="text-3xl text-green-500 mx-auto" />
+                  </motion.div>
+                  <div className="text-4xl md:text-5xl font-black text-[#00aaff] mb-2">1M+</div>
+                  <div className="text-lg md:text-xl text-gray-700 font-medium">Liters of Water Saved</div>
+                </motion.div>
+
+                <motion.div
+                  className="bg-white rounded-lg shadow-lg p-6 text-center"
+                  variants={fadeIn}
+                  custom={1.2}
+                  whileHover="hover"
+                >
+                  <motion.div
+                    className="mb-4"
+                    whileHover="hover"
+                    variants={iconRotationAnimation}
+                  >
+                    <FaWind className="text-3xl text-green-500 mx-auto" />
+                  </motion.div>
+                  <div className="text-4xl md:text-5xl font-black text-[#00aaff] mb-2">500K+</div>
+                  <div className="text-lg md:text-xl text-gray-700 font-medium">CO2 Emissions Reduced</div>
+                </motion.div>
+              </div>
+            </div>
+          </motion.section>
+
+          {/* Approach Section */}
+          <motion.section
+            className="py-12 md:py-20 px-4 sm:px-8 bg-white"
+            initial="hidden"
+            animate="visible"
+            variants={sectionFadeIn}
+          >
+            <div className="max-w-7xl mx-auto">
+              <motion.h2
+                className="text-3xl sm:text-4xl md:text-5xl font-black mb-6 md:mb-8 tracking-tight text-center"
+                variants={fadeIn}
+                custom={0.5}
+              >
+                Our Approach
+              </motion.h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+                <motion.div
+                  className="bg-gradient-to-br from-green-50 to-blue-50 p-6 md:p-8 rounded-lg shadow-sm"
+                  variants={fadeIn}
+                  custom={0.8}
+                  whileHover="hover"
+                >
+                  <h3 className="text-xl md:text-2xl font-bold mb-4 text-green-600">Research & Innovation</h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    We invest in cutting-edge research and innovative solutions to address environmental challenges. Our team of experts continuously develops and implements new technologies and methodologies.
+                  </p>
+                </motion.div>
+
+                <motion.div
+                  className="bg-gradient-to-br from-green-50 to-blue-50 p-6 md:p-8 rounded-lg shadow-sm"
+                  variants={fadeIn}
+                  custom={1}
+                  whileHover="hover"
+                >
+                  <h3 className="text-xl md:text-2xl font-bold mb-4 text-green-600">Community Engagement</h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    We believe in the power of community. Through education, workshops, and collaborative projects, we empower local communities to take action and make a difference in their environment.
+                  </p>
+                </motion.div>
+              </div>
+            </div>
+          </motion.section>
 
           {/* Final Call-to-Action Section */}
-          <div className="bg-blue-50 py-16 text-center">
-            <motion.h2
-              className="text-4xl font-bold text-gray-800"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-            >
-              Join Us in Making a Difference
-            </motion.h2>
-            <motion.p
-              className="text-lg mt-4 text-gray-600 max-w-3xl mx-auto"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2, duration: 0.8 }}
-            >
-              Together, we can create a sustainable future for generations to
-              come. Be a part of the change today.
-            </motion.p>
-            <motion.div
-              className="mt-6"
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.4, duration: 0.8 }}
-            >
-              <Link
-                to="/get-involved"
-                className="inline-block bg-gradient-to-r from-[#00aaff] to-[#00ff77] text-white py-2 px-6 rounded-lg font-bold hover:bg-green-700 transition"
+          <motion.section
+            className="py-12 md:py-20 px-4 sm:px-8 bg-gradient-to-b from-white to-green-50"
+            initial="hidden"
+            animate="visible"
+            variants={sectionFadeIn}
+          >
+            <div className="max-w-7xl mx-auto text-center">
+              <motion.h2
+                className="text-3xl sm:text-4xl md:text-5xl font-black mb-6 md:mb-8 tracking-tight"
+                variants={fadeIn}
+                custom={0.5}
               >
-                Get Involved
-              </Link>
-            </motion.div>
-          </div>
-        </div>
+                Join Us in Making a Difference
+              </motion.h2>
+              <motion.p
+                className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 md:mb-12 max-w-3xl mx-auto leading-relaxed font-light"
+                variants={fadeIn}
+                custom={0.8}
+              >
+                Together, we can create a sustainable future for generations to
+                come. Be a part of the change today.
+              </motion.p>
+              <motion.div
+                variants={fadeIn}
+                custom={1}
+              >
+                <Link
+                  to="/get-involved"
+                  className="inline-block bg-gradient-to-r from-[#00aaff] to-[#00ff77] text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-lg transition-shadow duration-300"
+                >
+                  Get Involved
+                </Link>
+              </motion.div>
+            </div>
+          </motion.section>
+        </motion.div>
       </Layout>
     </PageTransition>
   );

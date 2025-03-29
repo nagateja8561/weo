@@ -4,51 +4,41 @@ import PageTransition from "../components/PageTransition";
 import Layout from "../components/Layout";
 import GradientOverlay from "../components/GradientOverlay";
 import Button from "../components/Button";
-import { fadeIn, staggerContainer, imageHoverAnimation } from "../components/animations";
+import { fadeIn, sectionFadeIn, cardHoverAnimation } from "../components/animations";
 import { Link } from "react-router-dom";
 
-const Team = () => {
-  const teamMembers = [
-    {
-      name: "CHIPPA VEERABHADRAM",
-      designation: "Founder & CEO",
-      image: "/images/team/bhadra.jpg",
-    },
-    {
-      name: "NIKHIL SAI KONETI",
-      designation: "General Secretary",
-      image: "/images/team/nikhil.jpg",
-    },
-    {
-      name: "MOHAMMED RIZWAN",
-      designation: "Treasurer",
-      image: "/images/team/rizwan.jpg",
-    },
-  ];
+export const teamMembers = [
+  {
+    name: "CHIPPA VEERABHADRAM",
+    designation: "Founder & CEO",
+    image: "/images/team/bhadra.jpg",
+    bio: "Leading the charge for environmental sustainability with over 10 years of experience in environmental conservation."
+  },
+  {
+    name: "NIKHIL SAI KONETI",
+    designation: "General Secretary",
+    image: "/images/team/nikhil.jpg",
+    bio: "Driving organizational excellence and strategic initiatives for environmental impact."
+  },
+  {
+    name: "MOHAMMED RIZWAN",
+    designation: "Treasurer",
+    image: "/images/team/rizwan.jpg",
+    bio: "Managing financial resources to maximize our environmental initiatives and community impact."
+  },
+];
 
+const Team = () => {
   return (
     <PageTransition>
       <Layout>
         <div className="bg-gray-50 text-gray-800">
           {/* Hero Section */}
-          <GradientOverlay className="text-white text-center py-24">
-            <motion.h1
-              className="text-5xl font-bold mb-4"
-              variants={fadeIn}
-              custom={0.5}
-            >
-              Our Team
-            </motion.h1>
-            <motion.p
-              className="text-lg"
-              variants={fadeIn}
-              custom={1}
-            >
-              At <strong>World Environment Organization</strong>, we are united by
-              a shared vision of a sustainable planet. Meet the change-makers
-              leading our efforts to protect and nurture our environment.
-            </motion.p>
-          </GradientOverlay>
+          <GradientOverlay 
+            className="text-white py-24"
+            title="Our Team"
+            subtitle="At World Environment Organization, we are united by a shared vision of a sustainable planet. Meet the change-makers leading our efforts to protect and nurture our environment."
+          />
 
           {/* Team Section */}
           <motion.section
@@ -56,7 +46,7 @@ const Team = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
-            variants={staggerContainer}
+            variants={sectionFadeIn}
           >
             <div className="max-w-7xl mx-auto">
               <motion.div
@@ -75,11 +65,11 @@ const Team = () => {
                     className="bg-white shadow-xl rounded-lg p-6 text-center transform hover:-translate-y-2 transition-all duration-300"
                     variants={fadeIn}
                     custom={index * 0.2}
+                    whileHover="hover"
                   >
                     <motion.div
-                      className="relative h-64 overflow-hidden"
-                      whileHover="hover"
-                      variants={imageHoverAnimation}
+                      className="relative h-64 overflow-hidden rounded-lg"
+                      variants={cardHoverAnimation}
                     >
                       <img
                         src={member.image}
@@ -91,6 +81,7 @@ const Team = () => {
                       {member.name}
                     </h3>
                     <p className="text-gray-600">{member.designation}</p>
+                    <p className="text-gray-600 mt-2 text-sm">{member.bio}</p>
                   </motion.div>
                 ))}
               </motion.div>
@@ -103,6 +94,7 @@ const Team = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
+            variants={sectionFadeIn}
           >
             <div className="max-w-4xl mx-auto text-center">
               <motion.h2
@@ -123,7 +115,11 @@ const Team = () => {
               </motion.p>
               <motion.div variants={fadeIn} custom={0.4}>
                 <Link to="/contact-us">
-                  <Button variant="primary" size="large">
+                  <Button 
+                    variant="primary" 
+                    size="large"
+                    className="bg-gradient-to-r from-[#00aaff] to-[#00ff77] text-white py-3 px-8 rounded-full text-[14px] font-bold hover:from-[#0099cc] hover:to-[#00cc66] transition-all duration-300 shadow-lg hover:shadow-xl"
+                  >
                     Contact Us
                   </Button>
                 </Link>
