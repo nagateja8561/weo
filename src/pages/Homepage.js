@@ -22,7 +22,8 @@ import {
   FaGlobeAmericas,
   FaRecycle,
   FaWind,
-  FaWater
+  FaWater,
+  FaVolumeUp
 } from "react-icons/fa";
 import { teamMembers } from "./Team";
 
@@ -87,8 +88,160 @@ const Homepage = () => {
             </div>
           </motion.section>
 
-          {/* AQI Section */}
-          {/* <AQISection view="home" /> */}
+          {/* Pollution Trends Section */}
+          <motion.section
+            className="py-12 md:py-16 bg-gray-50"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+          >
+            <div className="max-w-7xl mx-auto px-4 sm:px-8">
+              <motion.h2
+                className="text-3xl sm:text-4xl md:text-5xl font-black text-center mb-8 md:mb-12 tracking-tight font-sans"
+                variants={fadeIn}
+              >
+                Pollution Trends Analysis
+              </motion.h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {/* Air Quality Card */}
+                <motion.div
+                  className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                  variants={fadeIn}
+                  custom={0.2}
+                  whileHover="hover"
+                >
+                  <div className="flex items-center gap-4 mb-4">
+                    <FaChartLine className="text-3xl text-red-500" />
+                    <h3 className="text-xl font-bold text-gray-800">Air Quality Trends</h3>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-600">2019</span>
+                      <span className="text-red-500 font-semibold">21/30 Most Polluted Cities</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-600">2020</span>
+                      <span className="text-red-500 font-semibold">140M+ People Affected</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-600">2021</span>
+                      <span className="text-red-500 font-semibold">2M+ Premature Deaths</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-600">2023</span>
+                      <span className="text-red-500 font-semibold">$28.8B Economic Loss</span>
+                    </div>
+                  </div>
+                  <p className="mt-4 text-gray-600">
+                    India faces significant air quality challenges, with major cities consistently ranking among the world's most polluted.
+                  </p>
+                </motion.div>
+
+                {/* Water Pollution Card */}
+                <motion.div
+                  className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                  variants={fadeIn}
+                  custom={0.4}
+                  whileHover="hover"
+                >
+                  <div className="flex items-center gap-4 mb-4">
+                    <FaWater className="text-3xl text-blue-500" />
+                    <h3 className="text-xl font-bold text-gray-800">Water Pollution Status</h3>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-600">Sewage Treatment</span>
+                      <span className="text-red-500 font-semibold">11,786 MLD</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-600">Sewage Generated</span>
+                      <span className="text-orange-500 font-semibold">38,354 MLD</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-600">Water Available</span>
+                      <span className="text-yellow-500 font-semibold">1,122 BCM</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-600">Annual Rainfall</span>
+                      <span className="text-green-500 font-semibold">4,000 BCM</span>
+                    </div>
+                  </div>
+                  <p className="mt-4 text-gray-600">
+                    India faces significant water quality challenges, with only 31% of sewage being treated despite abundant water resources.
+                  </p>
+                </motion.div>
+
+                {/* Soil Contamination Card */}
+                <motion.div
+                  className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                  variants={fadeIn}
+                  custom={0.6}
+                  whileHover="hover"
+                >
+                  <div className="flex items-center gap-4 mb-4">
+                    <FaLeaf className="text-3xl text-emerald-500" />
+                    <h3 className="text-xl font-bold text-gray-800">Soil Contamination</h3>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-600">Industrial Waste</span>
+                      <span className="text-red-500 font-semibold">7.17M Tonnes</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-600">Heavy Metals</span>
+                      <span className="text-orange-500 font-semibold">Lead, Cadmium</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-600">Affected Areas</span>
+                      <span className="text-yellow-500 font-semibold">30% Urban</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-600">Contamination</span>
+                      <span className="text-green-500 font-semibold">Severe</span>
+                    </div>
+                  </div>
+                  <p className="mt-4 text-gray-600">
+                    Industrial activities and urbanization have led to significant soil contamination with heavy metals and hazardous waste.
+                  </p>
+                </motion.div>
+
+                {/* Noise Pollution Card */}
+                <motion.div
+                  className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                  variants={fadeIn}
+                  custom={0.8}
+                  whileHover="hover"
+                >
+                  <div className="flex items-center gap-4 mb-4">
+                    <FaVolumeUp className="text-3xl text-purple-500" />
+                    <h3 className="text-xl font-bold text-gray-800">Noise Pollution</h3>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-600">Urban Areas</span>
+                      <span className="text-red-500 font-semibold">85+ dB</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-600">Traffic Noise</span>
+                      <span className="text-orange-500 font-semibold">70-90 dB</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-600">Construction</span>
+                      <span className="text-yellow-500 font-semibold">90+ dB</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-600">Safe Limit</span>
+                      <span className="text-green-500 font-semibold">55 dB</span>
+                    </div>
+                  </div>
+                  <p className="mt-4 text-gray-600">
+                    Urban areas face significant noise pollution from traffic, construction, and industrial activities, exceeding safe limits.
+                  </p>
+                </motion.div>
+              </div>
+            </div>
+          </motion.section>
 
           {/* Market Trends Section */}
           <motion.section
@@ -141,6 +294,70 @@ const Homepage = () => {
             </div>
           </motion.section>
 
+          {/* Environmental Initiatives Section */}
+          <motion.section
+            className="py-12 md:py-16 bg-white"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+          >
+            <div className="max-w-7xl mx-auto px-4 sm:px-8">
+              <motion.h2
+                className="text-3xl sm:text-4xl md:text-5xl font-black text-center mb-8 md:mb-12 tracking-tight font-sans"
+                variants={fadeIn}
+              >
+                Our Environmental Initiatives
+              </motion.h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <motion.div
+                  className="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                  variants={fadeIn}
+                  custom={0.2}
+                  whileHover="hover"
+                >
+                  <div className="flex items-center gap-4 mb-4">
+                    <FaLeaf className="text-3xl text-green-500" />
+                    <h3 className="text-xl font-bold text-gray-800">Tree Plantation Drive</h3>
+                  </div>
+                  <p className="text-gray-600">
+                    Our annual tree plantation initiative has successfully planted over 2.5 million trees across various regions, creating green corridors and restoring biodiversity.
+                  </p>
+                </motion.div>
+
+                <motion.div
+                  className="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                  variants={fadeIn}
+                  custom={0.4}
+                  whileHover="hover"
+                >
+                  <div className="flex items-center gap-4 mb-4">
+                    <FaWater className="text-3xl text-blue-500" />
+                    <h3 className="text-xl font-bold text-gray-800">Water Conservation</h3>
+                  </div>
+                  <p className="text-gray-600">
+                    Through our water conservation projects, we've saved over 1 million liters of water by implementing rainwater harvesting and water recycling systems.
+                  </p>
+                </motion.div>
+
+                <motion.div
+                  className="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                  variants={fadeIn}
+                  custom={0.6}
+                  whileHover="hover"
+                >
+                  <div className="flex items-center gap-4 mb-4">
+                    <FaWind className="text-3xl text-cyan-500" />
+                    <h3 className="text-xl font-bold text-gray-800">Clean Energy Projects</h3>
+                  </div>
+                  <p className="text-gray-600">
+                    We've installed solar panels and wind turbines in remote areas, reducing CO2 emissions by over 500,000 tons and providing clean energy to communities.
+                  </p>
+                </motion.div>
+              </div>
+            </div>
+          </motion.section>
+
           {/* Team Preview Section */}
           <motion.section
             id="team-section"
@@ -174,7 +391,6 @@ const Homepage = () => {
                     variants={teamCardAnimation}
                     custom={index * 0.1}
                     whileHover="hover"
-
                   >
                     <motion.div
                       className="relative h-64 overflow-hidden"
@@ -195,9 +411,13 @@ const Homepage = () => {
                   </motion.div>
                 ))}
               </motion.div>
-              <div className="text-center mt-12">
+              <div className="flex justify-center mt-12">
                 <Link to="/team">
-                  <Button variant="primary" size="large">
+                <Button 
+                    variant="primary" 
+                    size="large"
+                    className="bg-gradient-to-r from-[#00aaff] to-[#00ff77] text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-lg transition-shadow duration-300 flex items-center"
+                  >
                     <FaUsers className="text-2xl mr-2" />
                     View Full Team
                   </Button>
