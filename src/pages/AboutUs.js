@@ -26,9 +26,9 @@ const AboutUs = () => {
         >
           {/* Hero Section */}
           <GradientOverlay 
-            className="text-white"
+            className="text-white py-24"
             title="About Us"
-            subtitle="Discover our journey, mission, and the values driving us to create a sustainable future."
+            subtitle="Learn about our mission, vision, and the team behind our environmental initiatives."
           />
 
           {/* About Us Content Section */}

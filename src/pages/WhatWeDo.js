@@ -26,9 +26,9 @@ const WhatWeDo = () => {
         >
           {/* Hero Section */}
           <GradientOverlay 
-            className="text-white"
+            className="text-white py-24"
             title="What We Do"
-            subtitle="Our comprehensive approach to environmental conservation and community development."
+            subtitle="Explore our initiatives and programs dedicated to environmental conservation and sustainability."
           />
 
           {/* Priority Areas Section */}
