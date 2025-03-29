@@ -153,7 +153,7 @@ const GetInvolved = () => {
                   custom={0.2}
                 >
                   <FaTree className="text-4xl text-green-600 mx-auto mb-4" />
-                  <h3 className="text-2xl font-bold text-gray-800">2.5M+</h3>
+                  <h3 className="text-2xl font-bold text-gray-800">10k+</h3>
                   <p className="text-gray-600">Trees Planted</p>
                 </motion.div>
                 <motion.div
@@ -162,7 +162,7 @@ const GetInvolved = () => {
                   custom={0.4}
                 >
                   <FaGlobe className="text-4xl text-blue-600 mx-auto mb-4" />
-                  <h3 className="text-2xl font-bold text-gray-800">50+</h3>
+                  <h3 className="text-2xl font-bold text-gray-800">5+</h3>
                   <p className="text-gray-600">Countries Reached</p>
                 </motion.div>
                 <motion.div
@@ -171,7 +171,7 @@ const GetInvolved = () => {
                   custom={0.6}
                 >
                   <FaUsers className="text-4xl text-purple-600 mx-auto mb-4" />
-                  <h3 className="text-2xl font-bold text-gray-800">10K+</h3>
+                  <h3 className="text-2xl font-bold text-gray-800">1K+</h3>
                   <p className="text-gray-600">Active Volunteers</p>
                 </motion.div>
                 <motion.div
@@ -180,7 +180,7 @@ const GetInvolved = () => {
                   custom={0.8}
                 >
                   <FaLightbulb className="text-4xl text-yellow-600 mx-auto mb-4" />
-                  <h3 className="text-2xl font-bold text-gray-800">100+</h3>
+                  <h3 className="text-2xl font-bold text-gray-800">10+</h3>
                   <p className="text-gray-600">Projects Completed</p>
                 </motion.div>
               </div>

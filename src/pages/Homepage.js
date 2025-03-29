@@ -65,10 +65,10 @@ const Homepage = () => {
               </motion.h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
                 {[
-                  { icon: <FaRecycle className="text-3xl md:text-4xl text-green-500" />, number: "2.5M+", text: "Trees Planted" },
-                  { icon: <FaWind className="text-3xl md:text-4xl text-blue-500" />, number: "500K+", text: "CO2 Reduced" },
-                  { icon: <FaWater className="text-3xl md:text-4xl text-cyan-500" />, number: "1M+", text: "Water Saved" },
-                  { icon: <FaGlobeAmericas className="text-3xl md:text-4xl text-emerald-500" />, number: "50+", text: "Countries Reached" }
+                  { icon: <FaRecycle className="text-3xl md:text-4xl text-green-500" />, number: "10k+", text: "Trees Planted" },
+                  { icon: <FaWind className="text-3xl md:text-4xl text-blue-500" />, number: "50K+", text: "CO2 Reduced" },
+                  { icon: <FaWater className="text-3xl md:text-4xl text-cyan-500" />, number: "100k+", text: "Water Saved" },
+                  { icon: <FaGlobeAmericas className="text-3xl md:text-4xl text-emerald-500" />, number: "5+", text: "Countries Reached" }
                 ].map((stat, index) => (
                   <motion.div
                     key={index}
