@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion"; // Import framer-motion for animations
-import PageTransition from "./PageTransition";
-import Layout from "./Layout";
+import PageTransition from "../components/PageTransition";
+import Layout from "../components/Layout";
 
 // Animation Configuration
 const fadeIn = {

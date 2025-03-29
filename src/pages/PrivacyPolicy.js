@@ -1,6 +1,6 @@
 import React from "react";
-import PageTransition from "./PageTransition";
-import Layout from "./Layout";
+import PageTransition from "../components/PageTransition";
+import Layout from "../components/Layout";
 
 const PrivacyPolicy = () => {
   return (

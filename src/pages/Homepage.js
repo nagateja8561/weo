@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useCallback  } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
-import PageTransition from "./PageTransition";
-import Layout from "./Layout";
+import PageTransition from "../components/PageTransition";
+import Layout from "../components/Layout";
 import AQISection from "./AQISection";
 
 const Homepage = () => {
