@@ -42,7 +42,7 @@ const Team = () => {
 
           {/* Team Section */}
           <motion.section
-            className="py-16 px-4 sm:px-8"
+            className="py-12 sm:py-16 px-4 sm:px-8"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
@@ -50,7 +50,7 @@ const Team = () => {
           >
             <div className="max-w-7xl mx-auto">
               <motion.div
-                className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10"
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10"
                 variants={{
                   visible: {
                     transition: {
@@ -62,26 +62,26 @@ const Team = () => {
                 {teamMembers.map((member, index) => (
                   <motion.div
                     key={member.name}
-                    className="bg-white shadow-xl rounded-lg p-6 text-center transform hover:-translate-y-2 transition-all duration-300"
+                    className="bg-white shadow-xl rounded-lg p-4 sm:p-6 text-center transform hover:-translate-y-2 transition-all duration-300"
                     variants={fadeIn}
                     custom={index * 0.2}
                     whileHover="hover"
                   >
                     <motion.div
-                      className="relative h-64 overflow-hidden rounded-lg"
+                      className="relative h-48 sm:h-64 overflow-hidden rounded-lg mb-4"
                       variants={cardHoverAnimation}
                     >
                       <img
                         src={member.image}
                         alt={member.name}
-                        className="w-40 h-40 object-cover rounded-full mx-auto shadow-md"
+                        className="w-32 h-32 sm:w-40 sm:h-40 object-cover rounded-full mx-auto shadow-md"
                       />
                     </motion.div>
-                    <h3 className="text-xl font-bold mt-4 text-gray-800">
+                    <h3 className="text-lg sm:text-xl font-bold mt-4 text-gray-800">
                       {member.name}
                     </h3>
-                    <p className="text-gray-600">{member.designation}</p>
-                    <p className="text-gray-600 mt-2 text-sm">{member.bio}</p>
+                    <p className="text-sm sm:text-base text-gray-600">{member.designation}</p>
+                    <p className="text-sm sm:text-base text-gray-600 mt-2">{member.bio}</p>
                   </motion.div>
                 ))}
               </motion.div>
@@ -90,7 +90,7 @@ const Team = () => {
 
           {/* Join Us Section */}
           <motion.section
-            className="py-16 px-4 sm:px-8 bg-white"
+            className="py-12 sm:py-16 px-4 sm:px-8 bg-white"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
@@ -98,14 +98,14 @@ const Team = () => {
           >
             <div className="max-w-4xl mx-auto text-center">
               <motion.h2
-                className="text-3xl font-bold mb-6"
+                className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6"
                 variants={fadeIn}
                 custom={0}
               >
                 Together for a Greener Tomorrow
               </motion.h2>
               <motion.p
-                className="text-lg text-gray-600 mb-8"
+                className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8"
                 variants={fadeIn}
                 custom={0.2}
               >
@@ -113,12 +113,16 @@ const Team = () => {
                 communities and drive lasting change. Join us in making an impact
                 and creating a sustainable future for generations to come.
               </motion.p>
-              <motion.div variants={fadeIn} custom={0.4}>
+              <motion.div 
+                variants={fadeIn} 
+                custom={0.4}
+                className="flex justify-center"
+              >
                 <Link to="/contact-us">
                   <Button 
                     variant="primary" 
                     size="large"
-                    className="bg-gradient-to-r from-[#00aaff] to-[#00ff77] text-white py-3 px-8 rounded-full text-[14px] font-bold hover:from-[#0099cc] hover:to-[#00cc66] transition-all duration-300 shadow-lg hover:shadow-xl"
+                    className="bg-gradient-to-r from-[#00aaff] to-[#00ff77] text-white py-2 sm:py-3 px-6 sm:px-8 rounded-full text-sm sm:text-base font-bold hover:from-[#0099cc] hover:to-[#00cc66] transition-all duration-300 shadow-lg hover:shadow-xl"
                   >
                     Contact Us
                   </Button>

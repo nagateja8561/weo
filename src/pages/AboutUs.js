@@ -76,7 +76,7 @@ const AboutUs = () => {
                   custom={1.2}
                   whileHover="hover"
                 >
-                  <div className="text-4xl md:text-5xl font-black text-[#00aaff] mb-2 md:mb-3">500+</div>
+                  <div className="text-4xl md:text-5xl font-black text-[#00aaff] mb-2 md:mb-3">10+</div>
                   <div className="text-lg md:text-xl text-gray-700 font-medium">Projects Completed</div>
                 </motion.div>
                 

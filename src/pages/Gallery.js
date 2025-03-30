@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import PageTransition from "../components/PageTransition";
 import Layout from "../components/Layout";
+import GradientOverlay from "../components/GradientOverlay";
 import { 
   fadeIn, 
   pageVariants, 
@@ -35,27 +36,11 @@ const Gallery = () => {
           exit="exit"
         >
           {/* Hero Section */}
-          <motion.section
-            className="relative bg-gradient-to-r from-[#00aaff] to-[#00ff77] text-white text-center py-28 mt-[10vh] md:mt-0"
-            initial="hidden"
-            animate="visible"
-            variants={sectionFadeIn}
-          >
-            <motion.h1
-              className="text-3xl sm:text-4xl md:text-7xl font-extrabold mb-6"
-              variants={fadeIn}
-              custom={0.5}
-            >
-              Gallery
-            </motion.h1>
-            <motion.p
-              className="text-lg sm:text-xl md:text-2xl font-light max-w-3xl mx-auto px-4"
-              variants={fadeIn}
-              custom={0.8}
-            >
-              Explore our journey through impactful environmental initiatives and community projects
-            </motion.p>
-          </motion.section>
+          <GradientOverlay 
+            className="text-white py-24"
+            title="Our Gallery"
+            subtitle="Explore our journey through impactful environmental initiatives and community projects. Witness the transformation we're creating together."
+          />
 
           {/* Gallery Grid Section */}
           <motion.section
