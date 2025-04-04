@@ -23,6 +23,13 @@ const Gallery = () => {
     { id: 7, image: "/images/gallery/7.jpg" },
     { id: 8, image: "/images/gallery/8.jpg" },
     { id: 9, image: "/images/gallery/9.jpg" },
+    { id: 10, image: "/images/gallery/10.jpg" },
+    { id: 11, image: "/images/gallery/11.jpg" },
+    { id: 12, image: "/images/gallery/12.jpg" },
+    { id: 13, image: "/images/gallery/13.jpg" },
+    { id: 14, image: "/images/gallery/14.jpg" },
+    { id: 15, image: "/images/gallery/15.jpg" },
+    { id: 16, image: "/images/gallery/16.jpg" }
   ];
 
   return (
