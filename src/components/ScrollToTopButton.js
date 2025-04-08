@@ -1,49 +1,39 @@
 import React, { useState, useEffect } from "react";
+import { Leaf, ChevronUp } from "lucide-react";
 
 const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
 
-  // Show or hide the button based on scroll position
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.scrollY > 300) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
+      setIsVisible(window.scrollY > 300);
     };
 
     window.addEventListener("scroll", toggleVisibility);
     return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
 
-  // Scroll to the top of the page
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
     isVisible && (
-      <button
-        onClick={scrollToTop}
-        className="fixed bottom-6 right-6 bg-gradient-to-r from-[#00aaff] to-[#00ff77] text-white p-4 rounded-full shadow-lg hover:bg-green-700 transition duration-300"
-        aria-label="Scroll to Top"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={2}
-          stroke="currentColor"
-          className="w-6 h-6"
+      <div className="fixed bottom-6 right-6 group">
+        <button
+          onClick={scrollToTop}
+          className="bg-gradient-to-r from-[#00aaff] to-[#00ff77] text-white p-4 rounded-full shadow-lg hover:scale-110 transition-transform duration-300"
+          aria-label="Scroll to Top"
         >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M5 15l7-7 7 7"
-          />
-        </svg>
-      </button>
+          {/* Animated Leaf */}
+          <Leaf className="w-6 h-6 transition-transform duration-300 group-hover:rotate-180" />
+        </button>
+
+        {/* Alternative Icon Tooltip */}
+        <div className="absolute bottom-16 right-1/2 translate-x-1/2 bg-white p-2 rounded-lg shadow-md border border-gray-300 opacity-0 group-hover:opacity-100 transition duration-300">
+          <ChevronUp className="w-5 h-5 text-gray-700" />
+        </div>
+      </div>
     )
   );
 };
