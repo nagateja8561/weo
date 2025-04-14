@@ -262,6 +262,10 @@
         "concentration": "29 µg/m³"
       },
       {
+        "name": "so2",
+        "concentration": "7.6 µg/m³"
+      },
+      {
         "name": "co",
         "concentration": "680 µg/m³"
       }
