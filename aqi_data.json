@@ -260,10 +260,6 @@
       {
         "name": "pm25",
         "concentration": "41 µg/m³"
-      },
-      {
-        "name": "so2",
-        "concentration": "7.6 µg/m³"
       }
     ]
   },
