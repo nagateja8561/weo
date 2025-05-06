@@ -35,11 +35,11 @@
   {
     "id": "5bc8217d41fdcdf1939da6d1",
     "name": "Asifabad",
-    "aqi": "96",
+    "aqi": "97",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "33.5 µg/m³"
+        "concentration": "33.9 µg/m³"
       }
     ]
   },
@@ -149,7 +149,7 @@
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "34.8 µg/m³"
+        "concentration": "35.1 µg/m³"
       }
     ]
   },
@@ -167,22 +167,22 @@
   {
     "id": "5bc8217a41fdcdf1939da517",
     "name": "Devarkonda",
-    "aqi": "99",
+    "aqi": "98",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "34.6 µg/m³"
+        "concentration": "34.2 µg/m³"
       }
     ]
   },
   {
     "id": "5bc8217a41fdcdf1939da4d9",
     "name": "Dornakal",
-    "aqi": "99",
+    "aqi": "100",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "35 µg/m³"
+        "concentration": "35.3 µg/m³"
       }
     ]
   },
@@ -193,7 +193,7 @@
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "34.9 µg/m³"
+        "concentration": "35 µg/m³"
       }
     ]
   },
@@ -244,22 +244,22 @@
   {
     "id": "5bc8217941fdcdf1939da44c",
     "name": "Gudur",
-    "aqi": "99",
+    "aqi": "101",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "35.1 µg/m³"
+        "concentration": "35.7 µg/m³"
       }
     ]
   },
   {
     "id": "hxL7oShLseB9sgjpZ",
     "name": "Hyderabad",
-    "aqi": "75",
+    "aqi": "73",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "22 µg/m³"
+        "concentration": "21 µg/m³"
       },
       {
         "name": "pm10",
@@ -378,7 +378,7 @@
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "33.4 µg/m³"
+        "concentration": "33.5 µg/m³"
       }
     ]
   },
@@ -455,7 +455,7 @@
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "35 µg/m³"
+        "concentration": "35.1 µg/m³"
       }
     ]
   },
