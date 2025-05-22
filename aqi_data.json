@@ -24,11 +24,11 @@
   {
     "id": "5bc8217d41fdcdf1939da6f7",
     "name": "Andol",
-    "aqi": "62",
+    "aqi": "56",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "15.1 µg/m³"
+        "concentration": "12.1 µg/m³"
       }
     ]
   },
@@ -90,11 +90,11 @@
   {
     "id": "5bc8217c41fdcdf1939da613",
     "name": "Bhaisa",
-    "aqi": "68",
+    "aqi": "58",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "18.1 µg/m³"
+        "concentration": "12.9 µg/m³"
       }
     ]
   },
@@ -156,11 +156,11 @@
   {
     "id": "5bc8217e41fdcdf1939da79f",
     "name": "Dasnapur",
-    "aqi": "71",
+    "aqi": "64",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "20 µg/m³"
+        "concentration": "15.9 µg/m³"
       }
     ]
   },
@@ -255,31 +255,31 @@
   {
     "id": "hxL7oShLseB9sgjpZ",
     "name": "Hyderabad",
-    "aqi": "80",
+    "aqi": "79",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "24.7 µg/m³"
+        "concentration": "24.2 µg/m³"
       },
       {
         "name": "pm10",
-        "concentration": "64 µg/m³"
+        "concentration": "63.7 µg/m³"
       },
       {
         "name": "o3",
-        "concentration": "29.5 µg/m³"
+        "concentration": "26.5 µg/m³"
       },
       {
         "name": "no2",
-        "concentration": "11.7 µg/m³"
+        "concentration": "11.2 µg/m³"
       },
       {
         "name": "so2",
-        "concentration": "8.1 µg/m³"
+        "concentration": "8.4 µg/m³"
       },
       {
         "name": "co",
-        "concentration": "625 µg/m³"
+        "concentration": "595 µg/m³"
       }
     ]
   },
@@ -517,11 +517,11 @@
   {
     "id": "5bc8217e41fdcdf1939da7a2",
     "name": "Manuguru",
-    "aqi": "68",
+    "aqi": "69",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "18.3 µg/m³"
+        "concentration": "18.7 µg/m³"
       }
     ]
   },
