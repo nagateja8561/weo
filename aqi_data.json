@@ -24,11 +24,11 @@
   {
     "id": "5bc8217d41fdcdf1939da6f7",
     "name": "Andol",
-    "aqi": "97",
+    "aqi": "103",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "33.9 µg/m³"
+        "concentration": "36.3 µg/m³"
       }
     ]
   },
@@ -90,11 +90,11 @@
   {
     "id": "5bc8217c41fdcdf1939da613",
     "name": "Bhaisa",
-    "aqi": "98",
+    "aqi": "103",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "34.3 µg/m³"
+        "concentration": "36.3 µg/m³"
       }
     ]
   },
@@ -156,11 +156,11 @@
   {
     "id": "5bc8217e41fdcdf1939da79f",
     "name": "Dasnapur",
-    "aqi": "102",
+    "aqi": "108",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "36.1 µg/m³"
+        "concentration": "38.6 µg/m³"
       }
     ]
   },
@@ -233,22 +233,22 @@
   {
     "id": "5bc8217a41fdcdf1939da45e",
     "name": "Gopalur",
-    "aqi": "75",
+    "aqi": "86",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "21.9 µg/m³"
+        "concentration": "28.2 µg/m³"
       }
     ]
   },
   {
     "id": "5bc8217941fdcdf1939da44c",
     "name": "Gudur",
-    "aqi": "97",
+    "aqi": "102",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "33.6 µg/m³"
+        "concentration": "35.8 µg/m³"
       }
     ]
   },
@@ -259,27 +259,27 @@
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "26.5 µg/m³"
+        "concentration": "26.3 µg/m³"
       },
       {
         "name": "pm10",
-        "concentration": "73 µg/m³"
+        "concentration": "70 µg/m³"
       },
       {
         "name": "o3",
-        "concentration": "23 µg/m³"
+        "concentration": "23.9 µg/m³"
       },
       {
         "name": "no2",
-        "concentration": "19.3 µg/m³"
+        "concentration": "18.2 µg/m³"
       },
       {
         "name": "so2",
-        "concentration": "7.7 µg/m³"
+        "concentration": "6.8 µg/m³"
       },
       {
         "name": "co",
-        "concentration": "775 µg/m³"
+        "concentration": "740 µg/m³"
       }
     ]
   },
@@ -297,11 +297,11 @@
   {
     "id": "5bc8217941fdcdf1939da3ba",
     "name": "Jangaon",
-    "aqi": "98",
+    "aqi": "102",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "34.5 µg/m³"
+        "concentration": "36.2 µg/m³"
       }
     ]
   },
@@ -451,11 +451,11 @@
   {
     "id": "5bc8217641fdcdf1939da20f",
     "name": "Mahbubabad",
-    "aqi": "98",
+    "aqi": "100",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "34.1 µg/m³"
+        "concentration": "35.5 µg/m³"
       }
     ]
   },
