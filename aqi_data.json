@@ -244,42 +244,42 @@
   {
     "id": "5bc8217941fdcdf1939da44c",
     "name": "Gudur",
-    "aqi": "91",
+    "aqi": "92",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "30.7 µg/m³"
+        "concentration": "31.4 µg/m³"
       }
     ]
   },
   {
     "id": "hxL7oShLseB9sgjpZ",
     "name": "Hyderabad",
-    "aqi": "79",
+    "aqi": "81",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "24.2 µg/m³"
+        "concentration": "25.2 µg/m³"
       },
       {
         "name": "pm10",
-        "concentration": "75 µg/m³"
+        "concentration": "75.6 µg/m³"
       },
       {
         "name": "o3",
-        "concentration": "27.3 µg/m³"
+        "concentration": "30.1 µg/m³"
       },
       {
         "name": "no2",
-        "concentration": "11.9 µg/m³"
+        "concentration": "11.4 µg/m³"
       },
       {
         "name": "so2",
-        "concentration": "6.8 µg/m³"
+        "concentration": "7.4 µg/m³"
       },
       {
         "name": "co",
-        "concentration": "595 µg/m³"
+        "concentration": "555 µg/m³"
       }
     ]
   },
@@ -451,11 +451,11 @@
   {
     "id": "5bc8217641fdcdf1939da20f",
     "name": "Mahbubabad",
-    "aqi": "98",
+    "aqi": "93",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "34.3 µg/m³"
+        "concentration": "32 µg/m³"
       }
     ]
   },
@@ -792,11 +792,11 @@
   {
     "id": "5bc8217241fdcdf1939d9edd",
     "name": "Sirpur",
-    "aqi": "98",
+    "aqi": "94",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "34.2 µg/m³"
+        "concentration": "32 µg/m³"
       }
     ]
   },
