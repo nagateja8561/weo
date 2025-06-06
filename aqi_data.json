@@ -13,11 +13,11 @@
   {
     "id": "5bc8217e41fdcdf1939da72e",
     "name": "Alampur",
-    "aqi": "90",
+    "aqi": "92",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "30.1 µg/m³"
+        "concentration": "30.9 µg/m³"
       }
     ]
   },
@@ -35,11 +35,11 @@
   {
     "id": "5bc8217d41fdcdf1939da6d1",
     "name": "Asifabad",
-    "aqi": "99",
+    "aqi": "111",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "34.9 µg/m³"
+        "concentration": "39.5 µg/m³"
       }
     ]
   },
@@ -145,11 +145,11 @@
   {
     "id": "5bc8217b41fdcdf1939da592",
     "name": "Chatakonda",
-    "aqi": "100",
+    "aqi": "102",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "35.3 µg/m³"
+        "concentration": "36 µg/m³"
       }
     ]
   },
@@ -171,7 +171,7 @@
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "31.8 µg/m³"
+        "concentration": "31.4 µg/m³"
       }
     ]
   },
@@ -193,7 +193,7 @@
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "31.8 µg/m³"
+        "concentration": "31.6 µg/m³"
       }
     ]
   },
@@ -237,7 +237,7 @@
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "31.4 µg/m³"
+        "concentration": "31.1 µg/m³"
       }
     ]
   },
@@ -255,23 +255,23 @@
   {
     "id": "hxL7oShLseB9sgjpZ",
     "name": "Hyderabad",
-    "aqi": "85",
+    "aqi": "84",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "27.3 µg/m³"
+        "concentration": "26.9 µg/m³"
       },
       {
         "name": "pm10",
-        "concentration": "74.7 µg/m³"
+        "concentration": "80.1 µg/m³"
       },
       {
         "name": "o3",
-        "concentration": "34 µg/m³"
+        "concentration": "30.2 µg/m³"
       },
       {
         "name": "no2",
-        "concentration": "13.6 µg/m³"
+        "concentration": "13.5 µg/m³"
       },
       {
         "name": "so2",
@@ -279,7 +279,7 @@
       },
       {
         "name": "co",
-        "concentration": "440 µg/m³"
+        "concentration": "610 µg/m³"
       }
     ]
   },
@@ -429,11 +429,11 @@
   {
     "id": "5bc8217741fdcdf1939da248",
     "name": "Lakshettipet",
-    "aqi": "98",
+    "aqi": "105",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "34.2 µg/m³"
+        "concentration": "37.4 µg/m³"
       }
     ]
   },
