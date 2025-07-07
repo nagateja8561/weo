@@ -259,7 +259,7 @@
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "17.3 µg/m³"
+        "concentration": "17.4 µg/m³"
       },
       {
         "name": "pm10",
@@ -407,11 +407,11 @@
   {
     "id": "5bac876f24b967f0b5307d0a",
     "name": "Kukatpalli",
-    "aqi": "16",
+    "aqi": "19",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "3 µg/m³"
+        "concentration": "3.5 µg/m³"
       }
     ]
   },
