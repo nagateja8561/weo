@@ -13,22 +13,22 @@
   {
     "id": "5bc8217e41fdcdf1939da72e",
     "name": "Alampur",
-    "aqi": "66",
+    "aqi": "67",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "17.3 µg/m³"
+        "concentration": "17.7 µg/m³"
       }
     ]
   },
   {
     "id": "5bc8217d41fdcdf1939da6f7",
     "name": "Andol",
-    "aqi": "71",
+    "aqi": "85",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "19.7 µg/m³"
+        "concentration": "27.4 µg/m³"
       }
     ]
   },
@@ -46,22 +46,22 @@
   {
     "id": "5bc8217e41fdcdf1939da777",
     "name": "Balapur",
-    "aqi": "70",
+    "aqi": "78",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "19.5 µg/m³"
+        "concentration": "23.8 µg/m³"
       }
     ]
   },
   {
     "id": "5bc8217c41fdcdf1939da668",
     "name": "Banswada",
-    "aqi": "71",
+    "aqi": "89",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "20.2 µg/m³"
+        "concentration": "29.6 µg/m³"
       }
     ]
   },
@@ -79,22 +79,22 @@
   {
     "id": "5bc8217c41fdcdf1939da616",
     "name": "Bhadrachalam",
-    "aqi": "94",
+    "aqi": "99",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "32.1 µg/m³"
+        "concentration": "35.2 µg/m³"
       }
     ]
   },
   {
     "id": "5bc8217c41fdcdf1939da613",
     "name": "Bhaisa",
-    "aqi": "81",
+    "aqi": "90",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "25.1 µg/m³"
+        "concentration": "30.3 µg/m³"
       }
     ]
   },
@@ -112,11 +112,11 @@
   {
     "id": "5bc8217f41fdcdf1939da7e5",
     "name": "Bhupalpally",
-    "aqi": "92",
+    "aqi": "91",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "31.1 µg/m³"
+        "concentration": "30.4 µg/m³"
       }
     ]
   },
@@ -134,11 +134,11 @@
   {
     "id": "5bc8217e41fdcdf1939da779",
     "name": "Chandur",
-    "aqi": "71",
+    "aqi": "88",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "19.7 µg/m³"
+        "concentration": "28.7 µg/m³"
       }
     ]
   },
@@ -156,11 +156,11 @@
   {
     "id": "5bc8217e41fdcdf1939da79f",
     "name": "Dasnapur",
-    "aqi": "90",
+    "aqi": "91",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "30.3 µg/m³"
+        "concentration": "30.8 µg/m³"
       }
     ]
   },
@@ -255,31 +255,31 @@
   {
     "id": "hxL7oShLseB9sgjpZ",
     "name": "Hyderabad",
-    "aqi": "78",
+    "aqi": "81",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "23.8 µg/m³"
-      },
-      {
-        "name": "pm10",
-        "concentration": "71 µg/m³"
-      },
-      {
-        "name": "o3",
         "concentration": "25.4 µg/m³"
       },
       {
+        "name": "pm10",
+        "concentration": "89.3 µg/m³"
+      },
+      {
+        "name": "o3",
+        "concentration": "25.2 µg/m³"
+      },
+      {
         "name": "no2",
-        "concentration": "13.2 µg/m³"
+        "concentration": "14.9 µg/m³"
       },
       {
         "name": "so2",
-        "concentration": "11.1 µg/m³"
+        "concentration": "10.9 µg/m³"
       },
       {
         "name": "co",
-        "concentration": "550 µg/m³"
+        "concentration": "560 µg/m³"
       }
     ]
   },
@@ -418,11 +418,11 @@
   {
     "id": "5bc8217e41fdcdf1939da7a1",
     "name": "Kyathampalle",
-    "aqi": "90",
+    "aqi": "91",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "30.3 µg/m³"
+        "concentration": "30.8 µg/m³"
       }
     ]
   },
@@ -455,7 +455,7 @@
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "30.7 µg/m³"
+        "concentration": "30.5 µg/m³"
       }
     ]
   },
@@ -781,11 +781,11 @@
   {
     "id": "5bc8217e41fdcdf1939da776",
     "name": "Singapur",
-    "aqi": "70",
+    "aqi": "79",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "19.4 µg/m³"
+        "concentration": "24 µg/m³"
       }
     ]
   },
