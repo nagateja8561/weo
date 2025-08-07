@@ -29,7 +29,7 @@ import { teamMembers } from "./Team";
 
 const Homepage = () => {
   // Get first 3 team members for preview
-  const previewTeam = teamMembers.slice(0, 3);
+  const previewTeam = teamMembers.slice(0, 4);
 
   return (
     <PageTransition>
