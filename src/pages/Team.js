@@ -26,6 +26,12 @@ export const teamMembers = [
     image: "/images/team/rizwan.jpg",
     bio: "Managing financial resources to maximize our environmental initiatives and community impact."
   },
+  {
+    name: "SAGAR",
+    designation: "National Secretary",
+    image: "/images/team/sagar.jpg",
+    bio: "Driving organizational excellence and strategic initiatives for environmental impact."
+  },
 ];
 
 const Team = () => {
