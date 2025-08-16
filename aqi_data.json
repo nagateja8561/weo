@@ -2,22 +2,22 @@
   {
     "id": "5bac877424b967f0b5307d15",
     "name": "Adilabad",
-    "aqi": "86",
+    "aqi": "87",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "27.9 µg/m³"
+        "concentration": "28.4 µg/m³"
       }
     ]
   },
   {
     "id": "5bc8217e41fdcdf1939da72e",
     "name": "Alampur",
-    "aqi": "67",
+    "aqi": "69",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "17.9 µg/m³"
+        "concentration": "18.6 µg/m³"
       }
     ]
   },
@@ -255,31 +255,31 @@
   {
     "id": "hxL7oShLseB9sgjpZ",
     "name": "Hyderabad",
-    "aqi": "77",
+    "aqi": "75",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "23.3 µg/m³"
+        "concentration": "22 µg/m³"
       },
       {
         "name": "pm10",
-        "concentration": "64.8 µg/m³"
+        "concentration": "63.5 µg/m³"
       },
       {
         "name": "o3",
-        "concentration": "24.5 µg/m³"
+        "concentration": "24.9 µg/m³"
       },
       {
         "name": "no2",
-        "concentration": "12.5 µg/m³"
+        "concentration": "15.2 µg/m³"
       },
       {
         "name": "so2",
-        "concentration": "10 µg/m³"
+        "concentration": "5.5 µg/m³"
       },
       {
         "name": "co",
-        "concentration": "510 µg/m³"
+        "concentration": "380 µg/m³"
       }
     ]
   },
