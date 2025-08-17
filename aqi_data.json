@@ -255,11 +255,11 @@
   {
     "id": "hxL7oShLseB9sgjpZ",
     "name": "Hyderabad",
-    "aqi": "11",
+    "aqi": "17",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "2 µg/m³"
+        "concentration": "3 µg/m³"
       }
     ]
   },
