@@ -259,7 +259,7 @@
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "13 µg/m³"
+        "concentration": "10 µg/m³"
       },
       {
         "name": "pm10",
