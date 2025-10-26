@@ -275,11 +275,11 @@
       },
       {
         "name": "so2",
-        "concentration": "4.4 µg/m³"
+        "concentration": "4.6 µg/m³"
       },
       {
         "name": "co",
-        "concentration": "235 µg/m³"
+        "concentration": "300 µg/m³"
       }
     ]
   },
