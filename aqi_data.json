@@ -255,15 +255,15 @@
   {
     "id": "hxL7oShLseB9sgjpZ",
     "name": "Hyderabad",
-    "aqi": "53",
+    "aqi": "71",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "10.4 µg/m³"
+        "concentration": "19.8 µg/m³"
       },
       {
         "name": "co",
-        "concentration": "305 µg/m³"
+        "concentration": "370 µg/m³"
       }
     ]
   },
