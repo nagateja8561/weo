@@ -13,22 +13,22 @@
   {
     "id": "5bc8217e41fdcdf1939da72e",
     "name": "Alampur",
-    "aqi": "97",
+    "aqi": "104",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "33.9 µg/m³"
+        "concentration": "36.8 µg/m³"
       }
     ]
   },
   {
     "id": "5bc8217d41fdcdf1939da6f7",
     "name": "Andol",
-    "aqi": "119",
+    "aqi": "128",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "42.7 µg/m³"
+        "concentration": "46.5 µg/m³"
       }
     ]
   },
@@ -46,22 +46,22 @@
   {
     "id": "5bc8217e41fdcdf1939da777",
     "name": "Balapur",
-    "aqi": "117",
+    "aqi": "127",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "42.2 µg/m³"
+        "concentration": "46 µg/m³"
       }
     ]
   },
   {
     "id": "5bc8217c41fdcdf1939da668",
     "name": "Banswada",
-    "aqi": "119",
+    "aqi": "128",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "43.1 µg/m³"
+        "concentration": "46.6 µg/m³"
       }
     ]
   },
@@ -90,11 +90,11 @@
   {
     "id": "5bc8217c41fdcdf1939da613",
     "name": "Bhaisa",
-    "aqi": "119",
+    "aqi": "130",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "42.8 µg/m³"
+        "concentration": "47.3 µg/m³"
       }
     ]
   },
@@ -112,11 +112,11 @@
   {
     "id": "5bc8217f41fdcdf1939da7e5",
     "name": "Bhupalpally",
-    "aqi": "140",
+    "aqi": "125",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "51.5 µg/m³"
+        "concentration": "45.2 µg/m³"
       }
     ]
   },
@@ -134,11 +134,11 @@
   {
     "id": "5bc8217e41fdcdf1939da779",
     "name": "Chandur",
-    "aqi": "119",
+    "aqi": "128",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "42.9 µg/m³"
+        "concentration": "46.5 µg/m³"
       }
     ]
   },
@@ -255,31 +255,31 @@
   {
     "id": "hxL7oShLseB9sgjpZ",
     "name": "Hyderabad",
-    "aqi": "157",
+    "aqi": "85",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "64.8 µg/m³"
+        "concentration": "27.2 µg/m³"
       },
       {
         "name": "pm10",
-        "concentration": "148.6 µg/m³"
+        "concentration": "100.6 µg/m³"
       },
       {
         "name": "o3",
-        "concentration": "13.7 µg/m³"
+        "concentration": "22.8 µg/m³"
       },
       {
         "name": "no2",
-        "concentration": "14.5 µg/m³"
+        "concentration": "12.1 µg/m³"
       },
       {
         "name": "so2",
-        "concentration": "8.4 µg/m³"
+        "concentration": "8.9 µg/m³"
       },
       {
         "name": "co",
-        "concentration": "1005 µg/m³"
+        "concentration": "750 µg/m³"
       }
     ]
   },
