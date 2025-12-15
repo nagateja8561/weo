@@ -259,15 +259,15 @@
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "56 µg/m³"
+        "concentration": "56.2 µg/m³"
       },
       {
         "name": "pm10",
-        "concentration": "87.1 µg/m³"
+        "concentration": "96.7 µg/m³"
       },
       {
         "name": "o3",
-        "concentration": "17.1 µg/m³"
+        "concentration": "16.6 µg/m³"
       },
       {
         "name": "no2",
