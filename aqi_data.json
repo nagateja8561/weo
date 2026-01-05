@@ -204,7 +204,7 @@
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "49.5 µg/m³"
+        "concentration": "49.2 µg/m³"
       }
     ]
   },
@@ -255,31 +255,31 @@
   {
     "id": "hxL7oShLseB9sgjpZ",
     "name": "Hyderabad",
-    "aqi": "117",
+    "aqi": "142",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "41.9 µg/m³"
+        "concentration": "52 µg/m³"
       },
       {
         "name": "pm10",
-        "concentration": "85.6 µg/m³"
+        "concentration": "89.9 µg/m³"
       },
       {
         "name": "o3",
-        "concentration": "23.2 µg/m³"
+        "concentration": "33.6 µg/m³"
       },
       {
         "name": "no2",
-        "concentration": "10.3 µg/m³"
+        "concentration": "22.3 µg/m³"
       },
       {
         "name": "so2",
-        "concentration": "8 µg/m³"
+        "concentration": "9.1 µg/m³"
       },
       {
         "name": "co",
-        "concentration": "585 µg/m³"
+        "concentration": "480 µg/m³"
       }
     ]
   },
@@ -440,11 +440,11 @@
   {
     "id": "5bac877524b967f0b5307d18",
     "name": "Lal Bahadur Nagar",
-    "aqi": "136",
+    "aqi": "135",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "49.7 µg/m³"
+        "concentration": "49.2 µg/m³"
       }
     ]
   },
@@ -473,11 +473,11 @@
   {
     "id": "5bac877524b967f0b5307d19",
     "name": "Malkajgiri",
-    "aqi": "136",
+    "aqi": "135",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "49.6 µg/m³"
+        "concentration": "49.2 µg/m³"
       }
     ]
   },
@@ -495,11 +495,11 @@
   {
     "id": "5bac877624b967f0b5307d1a",
     "name": "Mandamarri",
-    "aqi": "131",
+    "aqi": "121",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "47.6 µg/m³"
+        "concentration": "43.6 µg/m³"
       }
     ]
   },
@@ -649,11 +649,11 @@
   {
     "id": "5bac877624b967f0b5307d1c",
     "name": "Palwancha",
-    "aqi": "148",
+    "aqi": "143",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "54.7 µg/m³"
+        "concentration": "52.7 µg/m³"
       }
     ]
   },
@@ -686,18 +686,18 @@
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "49.6 µg/m³"
+        "concentration": "49.3 µg/m³"
       }
     ]
   },
   {
     "id": "5bac877724b967f0b5307d1e",
     "name": "Ramagundam",
-    "aqi": "135",
+    "aqi": "125",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "49.3 µg/m³"
+        "concentration": "45.2 µg/m³"
       }
     ]
   },
@@ -763,7 +763,7 @@
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "48.9 µg/m³"
+        "concentration": "49.2 µg/m³"
       }
     ]
   },
