@@ -255,31 +255,31 @@
   {
     "id": "hxL7oShLseB9sgjpZ",
     "name": "Hyderabad",
-    "aqi": "190",
+    "aqi": "155",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "111 µg/m³"
+        "concentration": "61 µg/m³"
       },
       {
         "name": "pm10",
-        "concentration": "83.6 µg/m³"
+        "concentration": "119 µg/m³"
       },
       {
         "name": "o3",
-        "concentration": "17.7 µg/m³"
+        "concentration": "18.8 µg/m³"
       },
       {
         "name": "no2",
-        "concentration": "13.9 µg/m³"
+        "concentration": "19.5 µg/m³"
       },
       {
         "name": "so2",
-        "concentration": "9.5 µg/m³"
+        "concentration": "6 µg/m³"
       },
       {
         "name": "co",
-        "concentration": "670 µg/m³"
+        "concentration": "690 µg/m³"
       }
     ]
   },
@@ -825,33 +825,33 @@
   {
     "id": "5bac876b24b967f0b5307cfd",
     "name": "Suriapet",
-    "aqi": "140",
+    "aqi": "148",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "51.6 µg/m³"
+        "concentration": "54.7 µg/m³"
       }
     ]
   },
   {
     "id": "5bac876b24b967f0b5307cfc",
     "name": "Tandur",
-    "aqi": "117",
+    "aqi": "120",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "41.9 µg/m³"
+        "concentration": "43.4 µg/m³"
       }
     ]
   },
   {
     "id": "5bac876b24b967f0b5307cfb",
     "name": "Uppal Kalan",
-    "aqi": "129",
+    "aqi": "126",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "47 µg/m³"
+        "concentration": "45.8 µg/m³"
       }
     ]
   },
@@ -884,18 +884,18 @@
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "41.5 µg/m³"
+        "concentration": "41.6 µg/m³"
       }
     ]
   },
   {
     "id": "5bac876a24b967f0b5307cf9",
     "name": "Warangal",
-    "aqi": "130",
+    "aqi": "125",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "47.2 µg/m³"
+        "concentration": "45.2 µg/m³"
       }
     ]
   },
