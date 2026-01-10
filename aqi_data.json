@@ -255,23 +255,23 @@
   {
     "id": "hxL7oShLseB9sgjpZ",
     "name": "Hyderabad",
-    "aqi": "100",
+    "aqi": "103",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "35.3 µg/m³"
+        "concentration": "36.3 µg/m³"
       },
       {
         "name": "pm10",
-        "concentration": "84 µg/m³"
+        "concentration": "89 µg/m³"
       },
       {
         "name": "o3",
-        "concentration": "35.3 µg/m³"
+        "concentration": "33.9 µg/m³"
       },
       {
         "name": "no2",
-        "concentration": "13.3 µg/m³"
+        "concentration": "14.3 µg/m³"
       },
       {
         "name": "so2",
@@ -279,7 +279,7 @@
       },
       {
         "name": "co",
-        "concentration": "465 µg/m³"
+        "concentration": "405 µg/m³"
       }
     ]
   },
@@ -847,11 +847,11 @@
   {
     "id": "5bac876b24b967f0b5307cfb",
     "name": "Uppal Kalan",
-    "aqi": "96",
+    "aqi": "95",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "33.6 µg/m³"
+        "concentration": "32.6 µg/m³"
       }
     ]
   },
@@ -880,22 +880,22 @@
   {
     "id": "5bac876b24b967f0b5307cfa",
     "name": "Wanparti",
-    "aqi": "99",
+    "aqi": "97",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "34.6 µg/m³"
+        "concentration": "34.1 µg/m³"
       }
     ]
   },
   {
     "id": "5bac876a24b967f0b5307cf9",
     "name": "Warangal",
-    "aqi": "101",
+    "aqi": "97",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "35.6 µg/m³"
+        "concentration": "33.9 µg/m³"
       }
     ]
   },
