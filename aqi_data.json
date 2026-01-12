@@ -259,15 +259,15 @@
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "34.8 µg/m³"
+        "concentration": "34.7 µg/m³"
       },
       {
         "name": "pm10",
-        "concentration": "80.6 µg/m³"
+        "concentration": "82.3 µg/m³"
       },
       {
         "name": "o3",
-        "concentration": "29.8 µg/m³"
+        "concentration": "33.7 µg/m³"
       },
       {
         "name": "no2",
@@ -275,11 +275,11 @@
       },
       {
         "name": "so2",
-        "concentration": "11.7 µg/m³"
+        "concentration": "12.7 µg/m³"
       },
       {
         "name": "co",
-        "concentration": "500 µg/m³"
+        "concentration": "510 µg/m³"
       }
     ]
   },
