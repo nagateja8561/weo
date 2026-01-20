@@ -255,31 +255,31 @@
   {
     "id": "hxL7oShLseB9sgjpZ",
     "name": "Hyderabad",
-    "aqi": "127",
+    "aqi": "160",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "46.1 µg/m³"
+        "concentration": "68.6 µg/m³"
       },
       {
         "name": "pm10",
-        "concentration": "84.4 µg/m³"
+        "concentration": "90 µg/m³"
       },
       {
         "name": "o3",
-        "concentration": "18.4 µg/m³"
+        "concentration": "18.6 µg/m³"
       },
       {
         "name": "no2",
-        "concentration": "12 µg/m³"
+        "concentration": "16.2 µg/m³"
       },
       {
         "name": "so2",
-        "concentration": "9.2 µg/m³"
+        "concentration": "8 µg/m³"
       },
       {
         "name": "co",
-        "concentration": "590 µg/m³"
+        "concentration": "525 µg/m³"
       }
     ]
   },
@@ -752,7 +752,7 @@
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "40.9 µg/m³"
+        "concentration": "40.7 µg/m³"
       }
     ]
   },
@@ -770,11 +770,11 @@
   {
     "id": "5bac876c24b967f0b5307cff",
     "name": "Siddipet",
-    "aqi": "123",
+    "aqi": "117",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "44.4 µg/m³"
+        "concentration": "42.3 µg/m³"
       }
     ]
   },
@@ -803,11 +803,11 @@
   {
     "id": "5bac876c24b967f0b5307cfe",
     "name": "Sirsilla",
-    "aqi": "128",
+    "aqi": "121",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "46.4 µg/m³"
+        "concentration": "43.7 µg/m³"
       }
     ]
   },
@@ -825,22 +825,22 @@
   {
     "id": "5bac876b24b967f0b5307cfd",
     "name": "Suriapet",
-    "aqi": "129",
+    "aqi": "136",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "47.1 µg/m³"
+        "concentration": "49.8 µg/m³"
       }
     ]
   },
   {
     "id": "5bac876b24b967f0b5307cfc",
     "name": "Tandur",
-    "aqi": "98",
+    "aqi": "103",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "34.5 µg/m³"
+        "concentration": "36.3 µg/m³"
       }
     ]
   },
@@ -880,22 +880,22 @@
   {
     "id": "5bac876b24b967f0b5307cfa",
     "name": "Wanparti",
-    "aqi": "98",
+    "aqi": "99",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "34.4 µg/m³"
+        "concentration": "35 µg/m³"
       }
     ]
   },
   {
     "id": "5bac876a24b967f0b5307cf9",
     "name": "Warangal",
-    "aqi": "138",
+    "aqi": "126",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "50.5 µg/m³"
+        "concentration": "45.8 µg/m³"
       }
     ]
   },
