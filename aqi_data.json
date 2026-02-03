@@ -255,11 +255,11 @@
   {
     "id": "hxL7oShLseB9sgjpZ",
     "name": "Hyderabad",
-    "aqi": "217",
+    "aqi": "204",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "142 µg/m³"
+        "concentration": "128.5 µg/m³"
       }
     ]
   },
@@ -508,19 +508,19 @@
   {
     "id": "5bc8217641fdcdf1939da199",
     "name": "Medak",
-    "aqi": "66",
+    "aqi": "68",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "17 µg/m³"
+        "concentration": "18 µg/m³"
       },
       {
         "name": "pm10",
-        "concentration": "39.2 µg/m³"
+        "concentration": "41.3 µg/m³"
       },
       {
         "name": "o3",
-        "concentration": "0.6 µg/m³"
+        "concentration": "0.5 µg/m³"
       },
       {
         "name": "no2",
