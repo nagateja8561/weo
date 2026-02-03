@@ -260,10 +260,6 @@
       {
         "name": "pm25",
         "concentration": "128.5 µg/m³"
-      },
-      {
-        "name": "co",
-        "concentration": "710 µg/m³"
       }
     ]
   },
