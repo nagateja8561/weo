@@ -2,22 +2,22 @@
   {
     "id": "5bac877424b967f0b5307d15",
     "name": "Adilabad",
-    "aqi": "147",
+    "aqi": "154",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "54.3 µg/m³"
+        "concentration": "59.3 µg/m³"
       }
     ]
   },
   {
     "id": "5bc8217e41fdcdf1939da72e",
     "name": "Alampur",
-    "aqi": "124",
+    "aqi": "130",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "44.8 µg/m³"
+        "concentration": "47.4 µg/m³"
       }
     ]
   },
@@ -28,106 +28,106 @@
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "64.5 µg/m³"
+        "concentration": "64.1 µg/m³"
       }
     ]
   },
   {
     "id": "5bc8217d41fdcdf1939da6d1",
     "name": "Asifabad",
-    "aqi": "144",
+    "aqi": "152",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "53.1 µg/m³"
+        "concentration": "57 µg/m³"
       }
     ]
   },
   {
     "id": "5bc8217e41fdcdf1939da777",
     "name": "Balapur",
-    "aqi": "158",
+    "aqi": "157",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "65.4 µg/m³"
+        "concentration": "64.4 µg/m³"
       }
     ]
   },
   {
     "id": "5bc8217c41fdcdf1939da668",
     "name": "Banswada",
-    "aqi": "156",
+    "aqi": "157",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "62.8 µg/m³"
+        "concentration": "63.6 µg/m³"
       }
     ]
   },
   {
     "id": "5bac877424b967f0b5307d16",
     "name": "Bellampalli",
-    "aqi": "152",
+    "aqi": "153",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "56.8 µg/m³"
+        "concentration": "58.8 µg/m³"
       }
     ]
   },
   {
     "id": "5bc8217c41fdcdf1939da616",
     "name": "Bhadrachalam",
-    "aqi": "159",
+    "aqi": "157",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "66.6 µg/m³"
+        "concentration": "64.7 µg/m³"
       }
     ]
   },
   {
     "id": "5bc8217c41fdcdf1939da613",
     "name": "Bhaisa",
-    "aqi": "156",
+    "aqi": "158",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "62.3 µg/m³"
+        "concentration": "64.9 µg/m³"
       }
     ]
   },
   {
     "id": "5bac877424b967f0b5307d14",
     "name": "Bhongir",
-    "aqi": "158",
+    "aqi": "157",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "66 µg/m³"
+        "concentration": "64.8 µg/m³"
       }
     ]
   },
   {
     "id": "5bc8217f41fdcdf1939da7e5",
     "name": "Bhupalpally",
-    "aqi": "158",
+    "aqi": "157",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "65 µg/m³"
+        "concentration": "63.5 µg/m³"
       }
     ]
   },
   {
     "id": "5bac877424b967f0b5307d13",
     "name": "Bodhan",
-    "aqi": "156",
+    "aqi": "157",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "62.9 µg/m³"
+        "concentration": "63.9 µg/m³"
       }
     ]
   },
@@ -138,51 +138,51 @@
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "64.5 µg/m³"
+        "concentration": "64.1 µg/m³"
       }
     ]
   },
   {
     "id": "5bc8217b41fdcdf1939da592",
     "name": "Chatakonda",
-    "aqi": "159",
+    "aqi": "158",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "67 µg/m³"
+        "concentration": "64.9 µg/m³"
       }
     ]
   },
   {
     "id": "5bc8217e41fdcdf1939da79f",
     "name": "Dasnapur",
-    "aqi": "148",
+    "aqi": "154",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "54.5 µg/m³"
+        "concentration": "59.5 µg/m³"
       }
     ]
   },
   {
     "id": "5bc8217a41fdcdf1939da517",
     "name": "Devarkonda",
-    "aqi": "153",
+    "aqi": "152",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "57.8 µg/m³"
+        "concentration": "57.6 µg/m³"
       }
     ]
   },
   {
     "id": "5bc8217a41fdcdf1939da4d9",
     "name": "Dornakal",
-    "aqi": "159",
+    "aqi": "158",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "67 µg/m³"
+        "concentration": "65.4 µg/m³"
       }
     ]
   },
@@ -193,62 +193,62 @@
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "61.8 µg/m³"
+        "concentration": "61.1 µg/m³"
       }
     ]
   },
   {
     "id": "5bac877524b967f0b5307d17",
     "name": "Gaddi Annaram",
-    "aqi": "158",
+    "aqi": "157",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "65.6 µg/m³"
+        "concentration": "64.5 µg/m³"
       }
     ]
   },
   {
     "id": "5bac877324b967f0b5307d12",
     "name": "Gadwal",
-    "aqi": "125",
+    "aqi": "137",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "45.4 µg/m³"
+        "concentration": "50.3 µg/m³"
       }
     ]
   },
   {
     "id": "5bc8217e41fdcdf1939da778",
     "name": "Ghatkesar",
-    "aqi": "158",
+    "aqi": "157",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "65.8 µg/m³"
+        "concentration": "64.6 µg/m³"
       }
     ]
   },
   {
     "id": "5bc8217a41fdcdf1939da45e",
     "name": "Gopalur",
-    "aqi": "138",
+    "aqi": "146",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "50.6 µg/m³"
+        "concentration": "53.8 µg/m³"
       }
     ]
   },
   {
     "id": "5bc8217941fdcdf1939da44c",
     "name": "Gudur",
-    "aqi": "158",
+    "aqi": "157",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "66 µg/m³"
+        "concentration": "64.7 µg/m³"
       }
     ]
   },
@@ -263,23 +263,23 @@
       },
       {
         "name": "pm10",
-        "concentration": "88 µg/m³"
+        "concentration": "83.6 µg/m³"
       },
       {
         "name": "o3",
-        "concentration": "19.5 µg/m³"
+        "concentration": "21.8 µg/m³"
       },
       {
         "name": "no2",
-        "concentration": "11.8 µg/m³"
+        "concentration": "11 µg/m³"
       },
       {
         "name": "so2",
-        "concentration": "8.7 µg/m³"
+        "concentration": "8.8 µg/m³"
       },
       {
         "name": "co",
-        "concentration": "510 µg/m³"
+        "concentration": "690 µg/m³"
       }
     ]
   },
@@ -290,29 +290,29 @@
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "65 µg/m³"
+        "concentration": "65.3 µg/m³"
       }
     ]
   },
   {
     "id": "5bc8217941fdcdf1939da3ba",
     "name": "Jangaon",
-    "aqi": "158",
+    "aqi": "157",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "66 µg/m³"
+        "concentration": "64.6 µg/m³"
       }
     ]
   },
   {
     "id": "5bc8217e41fdcdf1939da7ba",
     "name": "Kagaznagar",
-    "aqi": "143",
+    "aqi": "149",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "52.4 µg/m³"
+        "concentration": "55.1 µg/m³"
       }
     ]
   },
@@ -323,18 +323,18 @@
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "64.5 µg/m³"
+        "concentration": "64.2 µg/m³"
       }
     ]
   },
   {
     "id": "5bac877124b967f0b5307d0f",
     "name": "Karimnagar",
-    "aqi": "158",
+    "aqi": "157",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "65.4 µg/m³"
+        "concentration": "64.2 µg/m³"
       }
     ]
   },
@@ -345,7 +345,7 @@
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "67.7 µg/m³"
+        "concentration": "66.5 µg/m³"
       }
     ]
   },
@@ -356,7 +356,7 @@
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "67.6 µg/m³"
+        "concentration": "67.2 µg/m³"
       }
     ]
   },
@@ -367,62 +367,62 @@
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "65 µg/m³"
+        "concentration": "65.8 µg/m³"
       }
     ]
   },
   {
     "id": "5bc8217741fdcdf1939da28e",
     "name": "Kothapet",
-    "aqi": "142",
+    "aqi": "148",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "52 µg/m³"
+        "concentration": "54.6 µg/m³"
       }
     ]
   },
   {
     "id": "5bac877024b967f0b5307d0b",
     "name": "Kottagudem",
-    "aqi": "159",
+    "aqi": "158",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "67 µg/m³"
+        "concentration": "64.9 µg/m³"
       }
     ]
   },
   {
     "id": "5bc8217741fdcdf1939da285",
     "name": "Kottapalli",
-    "aqi": "158",
+    "aqi": "157",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "65.2 µg/m³"
+        "concentration": "64.2 µg/m³"
       }
     ]
   },
   {
     "id": "5bac876f24b967f0b5307d0a",
     "name": "Kukatpalli",
-    "aqi": "158",
+    "aqi": "157",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "65.6 µg/m³"
+        "concentration": "64.5 µg/m³"
       }
     ]
   },
   {
     "id": "5bc8217e41fdcdf1939da7a1",
     "name": "Kyathampalle",
-    "aqi": "148",
+    "aqi": "154",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "54.5 µg/m³"
+        "concentration": "59.5 µg/m³"
       }
     ]
   },
@@ -433,51 +433,51 @@
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "64.6 µg/m³"
+        "concentration": "63.5 µg/m³"
       }
     ]
   },
   {
     "id": "5bac877524b967f0b5307d18",
     "name": "Lal Bahadur Nagar",
-    "aqi": "158",
+    "aqi": "157",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "65.6 µg/m³"
+        "concentration": "64.5 µg/m³"
       }
     ]
   },
   {
     "id": "5bc8217641fdcdf1939da20f",
     "name": "Mahbubabad",
-    "aqi": "159",
+    "aqi": "158",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "66.3 µg/m³"
+        "concentration": "65 µg/m³"
       }
     ]
   },
   {
     "id": "5bac876f24b967f0b5307d09",
     "name": "Mahbubnagar",
-    "aqi": "145",
+    "aqi": "148",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "53.5 µg/m³"
+        "concentration": "54.8 µg/m³"
       }
     ]
   },
   {
     "id": "5bac877524b967f0b5307d19",
     "name": "Malkajgiri",
-    "aqi": "158",
+    "aqi": "157",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "65.7 µg/m³"
+        "concentration": "64.5 µg/m³"
       }
     ]
   },
@@ -488,40 +488,40 @@
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "63.1 µg/m³"
+        "concentration": "62 µg/m³"
       }
     ]
   },
   {
     "id": "5bac877624b967f0b5307d1a",
     "name": "Mandamarri",
-    "aqi": "154",
+    "aqi": "155",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "60.3 µg/m³"
+        "concentration": "60.6 µg/m³"
       }
     ]
   },
   {
     "id": "5bc8217641fdcdf1939da1b5",
     "name": "Manthani",
-    "aqi": "157",
+    "aqi": "156",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "63.8 µg/m³"
+        "concentration": "62.6 µg/m³"
       }
     ]
   },
   {
     "id": "5bc8217e41fdcdf1939da7a2",
     "name": "Manuguru",
-    "aqi": "158",
+    "aqi": "157",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "66 µg/m³"
+        "concentration": "64.5 µg/m³"
       }
     ]
   },
@@ -532,40 +532,40 @@
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "64.7 µg/m³"
+        "concentration": "64.2 µg/m³"
       }
     ]
   },
   {
     "id": "5bc8217641fdcdf1939da198",
     "name": "Medchal",
-    "aqi": "158",
+    "aqi": "157",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "65.7 µg/m³"
+        "concentration": "64.5 µg/m³"
       }
     ]
   },
   {
     "id": "5bac876e24b967f0b5307d07",
     "name": "Mirialguda",
-    "aqi": "158",
+    "aqi": "159",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "66 µg/m³"
+        "concentration": "66.4 µg/m³"
       }
     ]
   },
   {
     "id": "5bc8217541fdcdf1939da138",
     "name": "Nagar Karnul",
-    "aqi": "133",
+    "aqi": "140",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "48.5 µg/m³"
+        "concentration": "51.2 µg/m³"
       }
     ]
   },
@@ -576,18 +576,18 @@
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "65.8 µg/m³"
+        "concentration": "65.4 µg/m³"
       }
     ]
   },
   {
     "id": "5bc8217541fdcdf1939da109",
     "name": "Narayanpet",
-    "aqi": "147",
+    "aqi": "151",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "54.4 µg/m³"
+        "concentration": "55.7 µg/m³"
       }
     ]
   },
@@ -598,29 +598,29 @@
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "64.8 µg/m³"
+        "concentration": "64.3 µg/m³"
       }
     ]
   },
   {
     "id": "5bc8217541fdcdf1939da0fd",
     "name": "Naspur",
-    "aqi": "157",
+    "aqi": "156",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "63.5 µg/m³"
+        "concentration": "62.3 µg/m³"
       }
     ]
   },
   {
     "id": "5bac876e24b967f0b5307d05",
     "name": "Nirmal",
-    "aqi": "156",
+    "aqi": "158",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "63 µg/m³"
+        "concentration": "65.5 µg/m³"
       }
     ]
   },
@@ -631,84 +631,84 @@
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "63.8 µg/m³"
+        "concentration": "64.3 µg/m³"
       }
     ]
   },
   {
     "id": "5bac876d24b967f0b5307d03",
     "name": "Paloncha",
-    "aqi": "159",
+    "aqi": "158",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "66.9 µg/m³"
+        "concentration": "64.8 µg/m³"
       }
     ]
   },
   {
     "id": "5bac877624b967f0b5307d1c",
     "name": "Palwancha",
-    "aqi": "159",
+    "aqi": "158",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "66.9 µg/m³"
+        "concentration": "64.9 µg/m³"
       }
     ]
   },
   {
     "id": "5bc8217441fdcdf1939da073",
     "name": "Patancheru",
-    "aqi": "158",
+    "aqi": "157",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "65.1 µg/m³"
+        "concentration": "64.4 µg/m³"
       }
     ]
   },
   {
     "id": "5bc8217441fdcdf1939da05d",
     "name": "Peddapalli",
-    "aqi": "158",
+    "aqi": "157",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "65 µg/m³"
+        "concentration": "63.6 µg/m³"
       }
     ]
   },
   {
     "id": "5bac877624b967f0b5307d1b",
     "name": "Quthbullapur",
-    "aqi": "158",
+    "aqi": "157",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "65.7 µg/m³"
+        "concentration": "64.5 µg/m³"
       }
     ]
   },
   {
     "id": "5bac877724b967f0b5307d1e",
     "name": "Ramagundam",
-    "aqi": "157",
+    "aqi": "156",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "64.3 µg/m³"
+        "concentration": "62.8 µg/m³"
       }
     ]
   },
   {
     "id": "5bac876d24b967f0b5307d02",
     "name": "Ramgundam",
-    "aqi": "157",
+    "aqi": "156",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "64.1 µg/m³"
+        "concentration": "62.6 µg/m³"
       }
     ]
   },
@@ -719,7 +719,7 @@
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "64.1 µg/m³"
+        "concentration": "63.8 µg/m³"
       }
     ]
   },
@@ -730,51 +730,51 @@
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "64.6 µg/m³"
+        "concentration": "64.2 µg/m³"
       }
     ]
   },
   {
     "id": "5bc8217e41fdcdf1939da7a6",
     "name": "Sathupalli",
-    "aqi": "159",
+    "aqi": "158",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "67.3 µg/m³"
+        "concentration": "65 µg/m³"
       }
     ]
   },
   {
     "id": "5bac876c24b967f0b5307d00",
     "name": "Secunderabad",
-    "aqi": "158",
+    "aqi": "157",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "65.7 µg/m³"
+        "concentration": "64.5 µg/m³"
       }
     ]
   },
   {
     "id": "5bac877624b967f0b5307d1d",
     "name": "Serilingampalle",
-    "aqi": "158",
+    "aqi": "157",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "65.2 µg/m³"
+        "concentration": "64.4 µg/m³"
       }
     ]
   },
   {
     "id": "5bac876c24b967f0b5307cff",
     "name": "Siddipet",
-    "aqi": "158",
+    "aqi": "157",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "65.6 µg/m³"
+        "concentration": "64.5 µg/m³"
       }
     ]
   },
@@ -785,29 +785,29 @@
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "64.5 µg/m³"
+        "concentration": "63.9 µg/m³"
       }
     ]
   },
   {
     "id": "5bc8217241fdcdf1939d9edd",
     "name": "Sirpur",
-    "aqi": "133",
+    "aqi": "141",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "48.7 µg/m³"
+        "concentration": "51.9 µg/m³"
       }
     ]
   },
   {
     "id": "5bac876c24b967f0b5307cfe",
     "name": "Sirsilla",
-    "aqi": "158",
+    "aqi": "157",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "65.1 µg/m³"
+        "concentration": "64.3 µg/m³"
       }
     ]
   },
@@ -818,7 +818,7 @@
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "64.1 µg/m³"
+        "concentration": "63.6 µg/m³"
       }
     ]
   },
@@ -840,29 +840,29 @@
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "61 µg/m³"
+        "concentration": "60.9 µg/m³"
       }
     ]
   },
   {
     "id": "5bac876b24b967f0b5307cfb",
     "name": "Uppal Kalan",
-    "aqi": "158",
+    "aqi": "157",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "65.7 µg/m³"
+        "concentration": "64.5 µg/m³"
       }
     ]
   },
   {
     "id": "5bc8217141fdcdf1939d9df0",
     "name": "Vemalwada",
-    "aqi": "158",
+    "aqi": "157",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "65 µg/m³"
+        "concentration": "64.3 µg/m³"
       }
     ]
   },
@@ -873,40 +873,40 @@
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "62.8 µg/m³"
+        "concentration": "62.5 µg/m³"
       }
     ]
   },
   {
     "id": "5bac876b24b967f0b5307cfa",
     "name": "Wanparti",
-    "aqi": "129",
+    "aqi": "139",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "46.9 µg/m³"
+        "concentration": "50.9 µg/m³"
       }
     ]
   },
   {
     "id": "5bac876a24b967f0b5307cf9",
     "name": "Warangal",
-    "aqi": "158",
+    "aqi": "157",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "65.5 µg/m³"
+        "concentration": "64.2 µg/m³"
       }
     ]
   },
   {
     "id": "5bc8217041fdcdf1939d9dc5",
     "name": "Yellandu",
-    "aqi": "159",
+    "aqi": "158",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "66.9 µg/m³"
+        "concentration": "65 µg/m³"
       }
     ]
   },
@@ -917,7 +917,7 @@
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "62.6 µg/m³"
+        "concentration": "62.9 µg/m³"
       }
     ]
   }
