@@ -255,23 +255,23 @@
   {
     "id": "hxL7oShLseB9sgjpZ",
     "name": "Hyderabad",
-    "aqi": "126",
+    "aqi": "124",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "45.6 µg/m³"
+        "concentration": "44.7 µg/m³"
       },
       {
         "name": "pm10",
-        "concentration": "84.6 µg/m³"
+        "concentration": "88.3 µg/m³"
       },
       {
         "name": "o3",
-        "concentration": "25.1 µg/m³"
+        "concentration": "23.6 µg/m³"
       },
       {
         "name": "no2",
-        "concentration": "12.3 µg/m³"
+        "concentration": "11 µg/m³"
       },
       {
         "name": "so2",
@@ -279,7 +279,7 @@
       },
       {
         "name": "co",
-        "concentration": "660 µg/m³"
+        "concentration": "650 µg/m³"
       }
     ]
   },
@@ -528,27 +528,27 @@
   {
     "id": "5bc8217641fdcdf1939da199",
     "name": "Medak",
-    "aqi": "60",
+    "aqi": "62",
     "pollutants": [
       {
         "name": "pm25",
-        "concentration": "14 µg/m³"
+        "concentration": "15 µg/m³"
       },
       {
         "name": "pm10",
-        "concentration": "49.4 µg/m³"
+        "concentration": "50 µg/m³"
       },
       {
         "name": "o3",
-        "concentration": "0.6 µg/m³"
+        "concentration": "0.5 µg/m³"
       },
       {
         "name": "no2",
-        "concentration": "4.7 µg/m³"
+        "concentration": "4.8 µg/m³"
       },
       {
         "name": "so2",
-        "concentration": "6.8 µg/m³"
+        "concentration": "6.7 µg/m³"
       }
     ]
   },
