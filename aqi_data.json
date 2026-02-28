@@ -263,23 +263,23 @@
       },
       {
         "name": "pm10",
-        "concentration": "76 µg/m³"
+        "concentration": "81.6 µg/m³"
       },
       {
         "name": "o3",
-        "concentration": "19.4 µg/m³"
+        "concentration": "23.5 µg/m³"
       },
       {
         "name": "no2",
-        "concentration": "11.7 µg/m³"
+        "concentration": "12.4 µg/m³"
       },
       {
         "name": "so2",
-        "concentration": "8.4 µg/m³"
+        "concentration": "11 µg/m³"
       },
       {
         "name": "co",
-        "concentration": "690 µg/m³"
+        "concentration": "650 µg/m³"
       }
     ]
   },
