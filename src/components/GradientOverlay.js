@@ -1,221 +1,140 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { fadeIn } from "./animations";
-import { FaTree, FaSeedling, FaLeaf, FaWater } from "react-icons/fa";
-import { GiButterfly, GiBirdHouse } from "react-icons/gi";
+import React, { useRef, useEffect, useState } from "react";
 
-const GradientOverlay = ({ 
-  children, 
+const GradientOverlay = ({
+  children,
   className = "",
   title,
-  subtitle
+  subtitle,
+  backgroundImage
 }) => {
+  const titleRef = useRef(null);
+  const [scale, setScale] = useState(1);
+
+  // Dynamically scale title to fit one line if it overflows
+  useEffect(() => {
+    const adjustScale = () => {
+      if (titleRef.current) {
+        const element = titleRef.current;
+
+        setTimeout(() => {
+          const scrollWidth = element.scrollWidth;
+          const offsetWidth = element.offsetWidth;
+
+          if (scrollWidth > offsetWidth) {
+            const newScale = Math.max(0.6, offsetWidth / scrollWidth);
+            setScale(newScale);
+          } else {
+            setScale(1);
+          }
+        }, 50);
+      }
+    };
+
+    adjustScale();
+    window.addEventListener("resize", adjustScale);
+    return () => window.removeEventListener("resize", adjustScale);
+  }, [title]);
+
   return (
-    <motion.div
+    <div
       className={`relative overflow-hidden ${className}`}
-      initial="hidden"
-      animate="visible"
-      variants={fadeIn}
+      style={{
+        paddingTop: "var(--header-height, 80px)",
+        backgroundImage: backgroundImage ? `url(${backgroundImage})` : undefined,
+        backgroundSize: backgroundImage ? "cover" : undefined,
+        backgroundPosition: backgroundImage ? "top center" : undefined,
+        minHeight: "calc(55vh + var(--header-height, 80px))",
+      }}
     >
-      {/* Main Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#00aaff] to-[#00ff77]">
-        {/* Nature Elements Layer */}
-        <div className="absolute inset-0">
-          {/* Growing Trees */}
-          {[...Array(5)].map((_, i) => (
-            <motion.div
-              key={`tree-${i}`}
-              className="absolute bottom-0"
-              style={{
-                left: `${10 + (i * 20)}%`,
-              }}
-              initial={{ scale: 0, y: 50 }}
-              animate={{ 
-                scale: [0.9, 1.1, 0.9],
-                y: [2, -2, 2]
-              }}
-              transition={{
-                duration: 4,
-                repeat: Infinity,
-                delay: i * 0.5,
-                ease: "easeInOut",
-              }}
-            >
-              <FaTree 
-                className="text-white/40" 
-                size={60 + Math.random() * 40}
-              />
-            </motion.div>
-          ))}
+      <style>{`
+        @keyframes floaty {
+          0% { transform: translateY(0px) rotate(0deg); }
+          25% { transform: translateY(-6px) rotate(-0.5deg); }
+          50% { transform: translateY(-10px) rotate(0.5deg); }
+          75% { transform: translateY(-6px) rotate(-0.5deg); }
+          100% { transform: translateY(0px) rotate(0deg); }
+        }
 
-          {/* Growing Seedlings */}
-          {[...Array(8)].map((_, i) => (
-            <motion.div
-              key={`seedling-${i}`}
-              className="absolute bottom-10"
-              style={{
-                left: `${5 + (i * 12)}%`,
-              }}
-              initial={{ scale: 0 }}
-              animate={{ 
-                scale: [0.8, 1, 0.8],
-                rotate: [-5, 5, -5]
-              }}
-              transition={{
-                duration: 3,
-                repeat: Infinity,
-                delay: i * 0.3,
-                ease: "easeInOut",
-              }}
-            >
-              <FaSeedling 
-                className="text-white/30" 
-                size={25 + Math.random() * 15}
-              />
-            </motion.div>
-          ))}
+        .floaty {
+          animation: floaty 5s ease-in-out infinite;
+          will-change: transform;
+        }
 
-          {/* Floating Leaves */}
-          {[...Array(20)].map((_, i) => (
-            <motion.div
-              key={`leaf-${i}`}
-              className="absolute"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 70}%`,
-              }}
-              animate={{
-                x: [-20, 20, -20],
-                y: [-10, 10, -10],
-                rotate: [0, 180, 360],
-                scale: [0.8, 1, 0.8]
-              }}
-              transition={{
-                duration: 5 + Math.random() * 5,
-                repeat: Infinity,
-                delay: i * 0.2,
-                ease: "easeInOut",
-              }}
-            >
-              <FaLeaf 
-                className="text-white/20" 
-                size={10 + Math.random() * 8}
-              />
-            </motion.div>
-          ))}
+        .gradient-text {
+          background: linear-gradient(90deg, #00aaff 0%, #00ff77 50%, #00e0ff 100%);
+          -webkit-background-clip: text;
+          background-clip: text;
+          color: transparent;
+          text-shadow: 0 6px 18px rgba(0,0,0,0.45);
+        }
+      `}</style>
 
-          {/* Butterflies */}
-          {[...Array(6)].map((_, i) => (
-            <motion.div
-              key={`butterfly-${i}`}
-              className="absolute"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${20 + Math.random() * 40}%`,
-              }}
-              animate={{
-                x: [-50, 50, -50],
-                y: [-30, 30, -30],
-                scale: [1, 1.2, 1]
-              }}
-              transition={{
-                duration: 8 + Math.random() * 4,
-                repeat: Infinity,
-                delay: i * 0.5,
-                ease: "easeInOut",
-              }}
-            >
-              <GiButterfly 
-                className="text-white/25" 
-                size={20 + Math.random() * 10}
-              />
-            </motion.div>
-          ))}
+      {/* Light overlay */}
+      <div className="absolute inset-0 bg-black/20 md:bg-black/10" />
 
-          {/* Bird Houses */}
-          {[...Array(3)].map((_, i) => (
-            <motion.div
-              key={`birdhouse-${i}`}
-              className="absolute"
-              style={{
-                right: `${10 + (i * 25)}%`,
-                top: `${15 + (i * 10)}%`,
-              }}
-              animate={{
-                y: [-5, 5, -5],
-                rotate: [-3, 3, -3]
-              }}
-              transition={{
-                duration: 4,
-                repeat: Infinity,
-                delay: i * 1,
-                ease: "easeInOut",
-              }}
-            >
-              <GiBirdHouse 
-                className="text-white/30" 
-                size={35}
-              />
-            </motion.div>
-          ))}
+      <div className="relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-20 sm:py-24 md:py-28 lg:py-36">
 
-          {/* Water Droplets */}
-          {[...Array(10)].map((_, i) => (
-            <motion.div
-              key={`water-${i}`}
-              className="absolute"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-              }}
-              animate={{
-                y: [0, 100],
-                opacity: [0, 1, 0]
-              }}
-              transition={{
-                duration: 2 + Math.random() * 2,
-                repeat: Infinity,
-                delay: i * 0.3,
-                ease: "easeIn",
-              }}
-            >
-              <FaWater 
-                className="text-white/20" 
-                size={12}
-              />
-            </motion.div>
-          ))}
-        </div>
-      </div>
-
-      {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 md:px-8 py-16 sm:py-20 md:py-24 lg:py-32">
-        <motion.div 
-          className="relative z-10"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          <motion.div className="mb-4 sm:mb-6">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black tracking-tight leading-tight font-sans text-white drop-shadow-lg">
+          {/* Mobile */}
+          <div className="block md:hidden text-center">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight leading-tight text-white">
               {title}
             </h1>
-          </motion.div>
-          {subtitle && (
-            <motion.p 
-              className="text-base sm:text-lg md:text-xl lg:text-2xl font-light max-w-2xl leading-relaxed font-serif italic text-white/90 drop-shadow-lg"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              {subtitle}
-            </motion.p>
-          )}
-          {children}
-        </motion.div>
+
+            {subtitle && (
+              <p className="mt-4 text-sm sm:text-base font-light max-w-3xl mx-auto leading-relaxed text-white/90">
+                {subtitle}
+              </p>
+            )}
+
+            <div className="mt-6">{children}</div>
+          </div>
+
+          {/* Desktop */}
+          <div className="hidden md:block">
+            <div className="relative" style={{ minHeight: "40vh" }}>
+
+              {/* FULL WIDTH BOTTOM OVERLAY */}
+              <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/1 via-black/10 to-transparent py-900">
+              {/* <div className="absolute bottom-12 left-8"> */}
+                <div className="max-w-7xl mx-auto px-8">
+
+                  <div className="inline-block bg-black/6 backdrop-blur-sm px-6 py-5 rounded-lg">
+
+                    <h1
+                      ref={titleRef}
+                      className="floaty font-black tracking-tight leading-tight text-white whitespace-nowrap"
+                      style={{
+                        fontSize: "clamp(20px, 5vw, 60px)",
+                        lineHeight: 1,
+                        maxWidth: "100%",
+                        transform: `scaleX(${scale})`,
+                        transformOrigin: "left",
+                        transition: "transform 0.3s ease",
+                      }}
+                    >
+                      {title}
+                    </h1>
+
+                    {subtitle && (
+                      <p className="mt-3 text-lg md:text-xl lg:text-2xl font-light text-white/90">
+                        {subtitle}
+                      </p>
+                    )}
+
+                    <div className="mt-4">{children}</div>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
-export default GradientOverlay; 
+export default GradientOverlay;

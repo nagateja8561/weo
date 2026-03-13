@@ -15,9 +15,10 @@ const GetInvolved = () => {
         <div className="bg-gray-50 text-gray-800">
           {/* Hero Section */}
           <GradientOverlay 
-            className="text-white py-24"
+            className="text-white"
             title="Get Involved"
             subtitle="Join our global community of environmental champions. Together, we can create a sustainable future for generations to come."
+            backgroundImage="/images/getinvolved.jpeg"
           />
 
           {/* Ways to Support Section */}

@@ -24,9 +24,10 @@ const ContactUs = () => {
         >
           {/* Hero Section */}
           <GradientOverlay 
-            className="text-white py-24"
+            className="text-white"
             title="Contact Us"
             subtitle="Have questions, feedback, or want to get involved? Reach out to us—we'd love to hear from you!"
+            backgroundImage="/images/contactus.jpeg"
           />
 
           {/* Contact Form Section */}

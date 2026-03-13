@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef, useLayoutEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FaBars, FaTimes, FaChevronDown } from "react-icons/fa";
 
@@ -7,6 +7,8 @@ const Header = () => {
   const [isAboutUsOpen, setIsAboutUsOpen] = useState(false);
   const [isGetInvolvedOpen, setIsGetInvolvedOpen] = useState(false);
   const location = useLocation();
+  const headerRef = useRef(null);
+  const [isFixed, setIsFixed] = useState(false);
 
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
@@ -33,8 +35,49 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Measure header height and expose as CSS variable so pages can offset content.
+  // Use useLayoutEffect so measurement happens before paint. Make header fixed only after measuring
+  // function to measure and publish header height
+  const setHeaderHeight = () => {
+    if (headerRef.current) {
+      const h = headerRef.current.offsetHeight;
+      document.documentElement.style.setProperty("--header-height", `${h}px`);
+    }
+  };
+
+  useLayoutEffect(() => {
+    // initial set
+    setHeaderHeight();
+
+    // make header fixed after we've measured to avoid content jumping/overlap on first paint
+    // increased timeout for more robustness across environments
+    const t = setTimeout(() => setIsFixed(true), 80);
+
+    // update on resize (and orientation change)
+    window.addEventListener("resize", setHeaderHeight);
+    window.addEventListener("orientationchange", setHeaderHeight);
+
+    return () => {
+      clearTimeout(t);
+      window.removeEventListener("resize", setHeaderHeight);
+      window.removeEventListener("orientationchange", setHeaderHeight);
+    };
+  }, []);
+
+  // Re-measure and re-fix header when the route changes to avoid overlap after navigation
+  useEffect(() => {
+    // briefly unfix, re-measure, then fix again
+    setIsFixed(false);
+    setHeaderHeight();
+    const t = setTimeout(() => setIsFixed(true), 80);
+    return () => clearTimeout(t);
+  }, [location.pathname]);
+
   return (
-    <header className="fixed top-0 left-0 w-full bg-white shadow-md z-50 font-sans">
+    <header
+      ref={headerRef}
+      className={`${isFixed ? "fixed top-0 left-0" : "relative"} w-full bg-white shadow-md z-50 font-sans`}
+    >
       <div className="container mx-auto flex justify-between items-center p-4">
         {/* Logo and Navigation */}
         <div className="flex items-center space-x-8">

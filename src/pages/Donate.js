@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion"; // Import framer-motion for animations
 import PageTransition from "../components/PageTransition";
 import Layout from "../components/Layout";
-import GradientOverlay from "../components/GradientOverlay";
+// import GradientOverlay from "../components/GradientOverlay";
 import { FaHandHoldingHeart, FaGlobe, FaTree, FaUsers, FaBuilding } from "react-icons/fa";
 
 const Donate = () => {
@@ -11,11 +11,11 @@ const Donate = () => {
       <Layout>
         <div className="bg-gray-50 text-gray-800">
           {/* Hero Section */}
-          <GradientOverlay 
+          {/* <GradientOverlay 
             className="text-white py-24"
             title="Support Our Mission"
             subtitle="Your contribution helps us create a sustainable future for generations to come."
-          />
+          /> */}
 
           {/* Donation Methods Section */}
           <div className="py-16 bg-gray-50">

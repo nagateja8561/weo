@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import PageTransition from "../components/PageTransition";
 import Layout from "../components/Layout";
-import GradientOverlay from "../components/GradientOverlay";
+// import GradientOverlay from "../components/GradientOverlay";
 import { 
   fadeIn, 
   pageVariants,
@@ -29,11 +29,11 @@ const PrivacyPolicy = () => {
           exit="exit"
         >
           {/* Hero Section */}
-          <GradientOverlay 
+          {/* <GradientOverlay 
             className="text-white py-24"
             title="Privacy Policy"
             subtitle="Learn about how we protect and handle your personal information."
-          />
+          /> */}
 
           {/* Privacy Policy Content */}
           <motion.section

@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import { motion } from "framer-motion";
 import PageTransition from "../components/PageTransition";
 import Layout from "../components/Layout";
@@ -41,9 +41,10 @@ const Team = () => {
         <div className="bg-gray-50 text-gray-800">
           {/* Hero Section */}
           <GradientOverlay 
-            className="text-white py-24"
+            className="text-white"
             title="Our Team"
             subtitle="At World Environment Organization, we are united by a shared vision of a sustainable planet. Meet the change-makers leading our efforts to protect and nurture our environment."
+            backgroundImage="/images/ourteam.jpeg"
           />
 
           {/* Team Section */}

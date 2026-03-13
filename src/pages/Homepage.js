@@ -43,9 +43,10 @@ const Homepage = () => {
         >
           {/* Hero Section */}
           <GradientOverlay 
-            className="text-white py-24"
+            className="text-white"
             title="Let Us Unite to Protect Our Environment"
             subtitle="Save Nature, Save Future"
+            backgroundImage="/images/homepage.jpeg"
           />
 
           {/* Environmental Impact Stats */}

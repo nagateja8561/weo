@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import PageTransition from "../components/PageTransition";
 import Layout from "../components/Layout";
-import GradientOverlay from "../components/GradientOverlay";
+// import GradientOverlay from "../components/GradientOverlay";
 import { 
   fadeIn, 
   pageVariants, 
@@ -59,12 +59,12 @@ const Gallery = () => {
           animate="animate"
           exit="exit"
         >
-          {/* Hero Section */}
+          {/* Hero Section
           <GradientOverlay
             className="text-white py-24"
             title="Our Gallery"
             subtitle="Explore our journey through impactful environmental initiatives and community projects. Witness the transformation we're creating together."
-          />
+          /> */}
 
           {/* Toggle Buttons */}
           <div className="flex justify-center space-x-4 mt-8">
