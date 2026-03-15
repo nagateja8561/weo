@@ -21,7 +21,7 @@ const Donate = () => {
           <div className="py-16 bg-gray-50">
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 px-10">
               {/* QR Code Donation */}
-              {/* <motion.div
+              <motion.div
                 className="bg-white shadow-xl rounded-lg p-6 text-center transform hover:-translate-y-2 transition-all duration-300"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -44,7 +44,7 @@ const Donate = () => {
                   className="w-56 h-56 mx-auto rounded-lg shadow-md"
                   whileHover={{ scale: 1.1, rotate: 2 }}
                 />
-              </motion.div> */}
+              </motion.div>
 
               {/* Direct Donation */}
               <motion.div
@@ -58,7 +58,7 @@ const Donate = () => {
                   className="text-3xl font-bold mb-4"
                   whileHover={{ color: "#22c55e" }}
                 >
-                  Donation
+                  Direct Donation
                 </motion.h2>
                 <p className="text-lg leading-relaxed text-gray-600 mb-6">
                   Prefer to donate directly? Use the details below for bank

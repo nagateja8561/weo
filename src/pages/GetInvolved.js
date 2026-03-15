@@ -154,7 +154,7 @@ const GetInvolved = () => {
                   custom={0.2}
                 >
                   <FaTree className="text-4xl text-green-600 mx-auto mb-4" />
-                  <h3 className="text-2xl font-bold text-gray-800">10k+</h3>
+                  <h3 className="text-2xl font-bold text-gray-800">40k+</h3>
                   <p className="text-gray-600">Trees Planted</p>
                 </motion.div>
                 <motion.div

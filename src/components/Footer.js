@@ -86,8 +86,8 @@ const Footer = () => {
             <h3 className="text-xl font-semibold mb-4">Contact Information</h3>
             <p className="text-sm text-emerald-100">
               Email:{" "}
-              <a href="mailto:info@weoindia.in" className="text-white hover:underline">
-                info@weoindia.in
+              <a href="mailto:info@weo.earth" className="text-white hover:underline">
+                info@weo.earth
               </a>
             </p>
             <p className="text-sm text-emerald-100">

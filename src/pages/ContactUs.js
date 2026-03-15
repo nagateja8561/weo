@@ -129,7 +129,7 @@ const ContactUs = () => {
               <motion.div variants={fadeIn} custom={0.6} className="flex flex-col items-center text-center">
                 <FaEnvelope className="text-4xl text-[#00aaff] mb-4" />
                 <h3 className="text-xl font-bold mb-2">Email Us</h3>
-                <p>info@weoindia.in</p>
+                <p>info@weo.earth</p>
               </motion.div>
             </div>
           </motion.section>

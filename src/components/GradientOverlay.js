@@ -9,6 +9,19 @@ const GradientOverlay = ({
 }) => {
   const titleRef = useRef(null);
   const [scale, setScale] = useState(1);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detect mobile screens
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   // Dynamically scale title if it overflows
   useEffect(() => {
@@ -37,16 +50,15 @@ const GradientOverlay = ({
 
   return (
     <div
-      className={`relative overflow-hidden ${className}`}
-      style={{
-        paddingTop: "var(--header-height, 80px)",
-        backgroundImage: backgroundImage ? `url(${backgroundImage})` : undefined,
-        backgroundSize: "cover",
-        backgroundPosition: "top center",
-        backgroundRepeat: "no-repeat",
-        minHeight: "calc(60vh + var(--header-height, 80px))",
-      }}
-    >
+  className={`relative overflow-hidden h-[300px] sm:h-[360px] md:h-[500px] lg:h-[650px] ${className}`}
+  style={{
+    paddingTop: "var(--header-height, 80px)",
+    backgroundImage: backgroundImage ? `url(${backgroundImage})` : undefined,
+    backgroundSize: isMobile ? "contain" : "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+  }}
+>
       {/* Floating animation */}
       <style>{`
         @keyframes floaty {
@@ -64,10 +76,10 @@ const GradientOverlay = ({
       `}</style>
 
       {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-transparent" />
 
       {/* Hero content */}
-      <div className="relative z-10 flex items-start justify-center pt-20 md:pt-32 text-center">
+      <div className="relative z-10 flex items-start justify-center pt-16 md:pt-28 text-center">
 
         <div className="max-w-4xl px-6">
 
@@ -87,7 +99,7 @@ const GradientOverlay = ({
 
           {/* Subtitle */}
           {subtitle && (
-            <p className="mt-4 md:mt-6 text-lg md:text-2xl text-white/90 font-light">
+            <p className="mt-4 md:mt-6 text-base md:text-2xl text-white/90 font-light">
               {subtitle}
             </p>
           )}
