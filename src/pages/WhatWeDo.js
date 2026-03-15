@@ -182,7 +182,7 @@ const WhatWeDo = () => {
                   >
                     <FaGlobe className="text-3xl text-green-500 mx-auto" />
                   </motion.div>
-                  <div className="text-4xl md:text-5xl font-black text-[#00aaff] mb-2">50+</div>
+                  <div className="text-4xl md:text-5xl font-black text-[#00aaff] mb-2">5+</div>
                   <div className="text-lg md:text-xl text-gray-700 font-medium">Countries Reached</div>
                 </motion.div>
 

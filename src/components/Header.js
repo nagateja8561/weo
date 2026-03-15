@@ -178,6 +178,13 @@ const Header = () => {
               Gallery
             </Link>
 
+            <Link
+              to="/minute-a-day-read"
+              className="font-bold text-[15px] hover:text-primary hover:bg-gradient-to-r from-[#00aaff] to-[#00ff77] hover:shadow-md hover:rounded-lg transition-all duration-300 px-6 py-2"
+            >
+              Minute a Day Read
+            </Link>
+
             {/* <Link
               to="/telangana-aqi-data"
               className="font-bold text-[15px] hover:text-primary hover:bg-gradient-to-r from-[#00aaff] to-[#00ff77] hover:shadow-md hover:rounded-lg transition-all duration-300 px-6 py-2"
@@ -321,12 +328,18 @@ const Header = () => {
           Gallery
         </Link>
 
-        <Link
+        {/* <Link
           to="/telangana-aqi-data"
           className="font-bold text-[18px] text-gray-800 hover:text-primary hover:bg-gradient-to-r from-[#00aaff] to-[#00ff77] hover:shadow-md hover:rounded-lg transition-all duration-300 px-6 py-3"
           onClick={toggleNav}
         >
           AQI Data
+        </Link> */}
+        <Link
+          to="/minute-a-day-read"
+          className="font-bold text-[18px] text-gray-800 hover:text-primary hover:bg-gradient-to-r from-[#00aaff] to-[#00ff77] hover:shadow-md hover:rounded-lg transition-all duration-300 px-6 py-3"
+        >
+          Minute a Day Read
         </Link>
 
         {/* Donate Button (Mobile) */}

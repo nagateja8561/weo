@@ -15,6 +15,7 @@ import Donate from "./pages/Donate";
 import ContactUs from "./pages/ContactUs";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Gallery from "./pages/Gallery";
+import MinuteADayRead from "./pages/minuteaday";
 // import TelanganaAQIDataPage from "./pages/TelanganaAQIDataPage";
 
 // ScrollToTop Component to reset scroll position on route change
@@ -116,6 +117,14 @@ const AnimatedRoutes = () => {
               </PageWrapper>
             }
           /> */}
+          <Route
+            path="/minute-a-day-read"
+            element={
+              <PageWrapper>
+                <MinuteADayRead />
+              </PageWrapper>
+            }
+          />
         </Routes>
       </AnimatePresence>
     </>
