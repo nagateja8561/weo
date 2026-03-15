@@ -178,13 +178,13 @@ const Header = () => {
               Gallery
             </Link>
 
-            <Link
+            {/* <Link
               to="/telangana-aqi-data"
               className="font-bold text-[15px] hover:text-primary hover:bg-gradient-to-r from-[#00aaff] to-[#00ff77] hover:shadow-md hover:rounded-lg transition-all duration-300 px-6 py-2"
               onClick={toggleNav}
             >
               AQI Data
-            </Link>
+            </Link> */}
           </nav>
         </div>
 

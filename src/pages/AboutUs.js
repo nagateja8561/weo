@@ -33,7 +33,7 @@ const AboutUs = () => {
           />
 
           {/* About Us Content Section */}
-          {/* <motion.section
+          <motion.section
             className="py-12 md:py-20 px-4 sm:px-8 bg-white"
             initial="hidden"
             animate="visible"
@@ -57,10 +57,10 @@ const AboutUs = () => {
                 greener planet. By tackling challenges such as sustainability,
                 equality, and development, we strive to leave a lasting, positive
                 impact on the world.
-              </motion.p> */}
+              </motion.p>
               
               {/* Special Lines */}
-              {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 mt-8 md:mt-12">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 mt-8 md:mt-12">
                 <motion.div 
                   className="bg-gradient-to-br from-green-50 to-blue-50 p-6 md:p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
                   variants={fadeIn}
@@ -90,10 +90,10 @@ const AboutUs = () => {
                   <div className="text-4xl md:text-5xl font-black text-[#00aaff] mb-2 md:mb-3">1000+</div>
                   <div className="text-lg md:text-xl text-gray-700 font-medium">Lives Impacted</div>
                 </motion.div>
-              </div> */}
+              </div>
 
               {/* Key Values */}
-              {/* <motion.div 
+              <motion.div 
                 className="mt-12 md:mt-16"
                 variants={fadeIn}
                 custom={1.6}
@@ -139,10 +139,10 @@ const AboutUs = () => {
                 </div>
               </motion.div>
             </div>
-          </motion.section> */}
+          </motion.section>
 
           {/* Decorative Pattern Section */}
-          {/* <motion.section 
+          <motion.section 
             className="py-12 md:py-20 px-4 sm:px-8 bg-gradient-to-b from-white to-green-50"
             initial="hidden"
             animate="visible"
@@ -199,10 +199,10 @@ const AboutUs = () => {
                 </motion.div>
               </div>
             </div>
-          </motion.section> */}
+          </motion.section>
 
           {/* Mission & Vision Section */}
-          {/* <motion.section
+          <motion.section
             className="py-12 md:py-20 px-4 sm:px-8 bg-white"
             initial="hidden"
             animate="visible"
@@ -211,9 +211,9 @@ const AboutUs = () => {
             <motion.div
               className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 text-center"
               variants={staggerContainer}
-            > */}
+            >
               {/* Mission */}
-              {/* <motion.div
+              <motion.div
                 className="bg-gradient-to-r from-[#00aaff] to-[#00ff77] p-6 md:p-10 rounded-lg shadow-lg text-white"
                 variants={{
                   ...fadeIn,
@@ -231,10 +231,10 @@ const AboutUs = () => {
                   build a world where progress is inclusive, impactful, and
                   aligned with our planet's needs.
                 </p>
-              </motion.div> */}
+              </motion.div>
 
               {/* Vision */}
-              {/* <motion.div
+              <motion.div
                 className="bg-gradient-to-r from-[#00aaff] to-[#00ff77] p-6 md:p-10 rounded-lg shadow-lg text-white"
                 variants={{
                   ...fadeIn,
@@ -251,116 +251,10 @@ const AboutUs = () => {
                   coexist, enabling generations to thrive with sustainable
                   practices, clean energy, and a greener Earth.
                 </p>
-              </motion.div> */}
+              </motion.div>
             </motion.div>
-          {/* </motion.section> */}
-        {/* </motion.div> */}
-
-<motion.section
-  className="py-16 md:py-24 px-4 sm:px-8 bg-white"
-  initial="hidden"
-  animate="visible"
-  variants={sectionFadeIn}
->
-  <div className="max-w-6xl mx-auto text-center">
-
-    <motion.h2
-      className="text-3xl sm:text-4xl md:text-5xl font-black mb-10 tracking-tight"
-      variants={fadeIn}
-      custom={0.2}
-    >
-      About WEO: Helping Our Earth, Helping People
-    </motion.h2>
-
-    <div className="max-w-4xl mx-auto text-left space-y-8 text-lg md:text-xl text-gray-700 leading-relaxed">
-
-      <div>
-        <h3 className="text-2xl font-bold text-[#00aaff] mb-2">
-          What is WEO?
-        </h3>
-        <p>
-          We are a Public Charitable Trust functioning as a Global Stewardship
-          Sanctuary. We bridge ancient tribal wisdom with modern scientific
-          research to restore our planet’s health and protect human life.
-        </p>
-      </div>
-
-      <div>
-        <h3 className="text-2xl font-bold text-[#00aaff] mb-2">
-          How We Work
-        </h3>
-
-        <ul className="space-y-3 list-disc pl-6">
-          <li>
-            <strong>Heritage & Science Sync:</strong> We fuse indigenous
-            ecological knowledge with cutting-edge technology to solve
-            modern environmental crises.
-          </li>
-
-          <li>
-            <strong>WEO Green Rangers:</strong> Our research-backed curriculum
-            transforms students into active guardians to build Net-Zero schools.
-          </li>
-
-          <li>
-            <strong>Community Restoration:</strong> We adopt villages to create
-            self-sufficient sustainability models while providing vital
-            medical aid and social support.
-          </li>
-        </ul>
-      </div>
-
-      <div>
-        <h3 className="text-2xl font-bold text-[#00aaff] mb-2">
-          Why We Exist
-        </h3>
-
-        <p>
-          We are responding to a global health emergency. Scientific research
-          shows that the average person unknowingly ingests approximately
-          <strong> 5 grams of microplastics every week</strong> — the
-          equivalent weight of a credit card.
-        </p>
-
-        <p>
-          This toxic exposure is linked to growing health concerns and
-          environmental damage across the globe.
-        </p>
-      </div>
-
-      <div>
-        <h3 className="text-2xl font-bold text-[#00aaff] mb-2">
-          Our Goal: A Pollution-Free 2050
-        </h3>
-
-        <p className="mb-4">
-          We are dedicated to restoring the absolute purity of the three
-          elements of life:
-        </p>
-
-        <div className="flex gap-4 flex-wrap">
-          <span className="px-5 py-2 rounded-full bg-blue-100 text-blue-700 font-semibold">
-            Water
-          </span>
-
-          <span className="px-5 py-2 rounded-full bg-green-100 text-green-700 font-semibold">
-            Soil
-          </span>
-
-          <span className="px-5 py-2 rounded-full bg-gray-200 text-gray-700 font-semibold">
-            Air
-          </span>
-        </div>
-      </div>
-
-    </div>
-
-    <div className="mt-12 text-xl md:text-2xl font-bold text-[#00aaff]">
-      "LET US UNITE - PROTECT OUR ENVIRONMENT"
-    </div>
-
-  </div>
-</motion.section>
+          </motion.section>
+        </motion.div>
       </Layout>
     </PageTransition>
   );

@@ -18,7 +18,7 @@ const GetInvolved = () => {
             className="text-white"
             title="Get Involved"
             subtitle="Join our global community of environmental champions. Together, we can create a sustainable future for generations to come."
-            backgroundImage="/images/getinvolved.jpeg"
+            backgroundImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3JlZW4lMjBsYW5kc2NhcGV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60"
           />
 
           {/* Ways to Support Section */}

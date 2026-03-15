@@ -34,7 +34,8 @@ const Gallery = () => {
 
   const videos = [
     { id: 101, type: "video", src: "/videos/gallery/1.mp4" },
-    { id: 102, type: "video", src: "/videos/gallery/2.mp4" }
+    { id: 102, type: "video", src: "/videos/gallery/2.mp4" },
+    { id: 103, type: "video", src: "/videos/gallery/3.mp4" },
   ];
 
   const banners = [
